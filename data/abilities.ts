@@ -75,69 +75,69 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: {},
 		name: "Predatory",
 		rating: 4,
-		num: 42,
+		num: -101,
 },
-	silverclaws: {
+	Silverclaws: {
 		onBasePowerPriority: 21,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['contact']) {
 				return this.chainModify([5325, 4096]);
 			}
-	},
-		onStart(pokemon){
-			this.add('-ability', pokemon, 'Silver Claws');
-		onModifyMove(move);
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Mold Breaker');
+		},
+		onModifyMove(move) {
 			move.ignoreAbility = true;
-	}
-	},
+		},
+		},
 		flags: {},
 		name: "Silver Claws",
 		rating: 3.5,
-		num: -100,
+		num: -102,
 	},
 	hothead: {
-			onBasePowerPriority: 23,
+		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.recoil || move.hasCrashDamage) {
 				const bestStat = source.getBestStat(true, true);
 				this.boost({ [bestStat]: length }, source);
 			}
 			}
-},
 		flags: {},
 		name: "Hot Head",
 		rating: 3,
-		num: -100,
-},
-ecoshell:
+		num: -103,
+	},
+ecoshell: {
 		onDamagingHit(damage, target, source, move) {
 			if (['Water', 'Grass'].includes(move.type)) {
-				this.boost({ spd: 6 });
-            this.heal(target.baseMaxhp / 4);
+				this.boost({ spd: 1 });
+            (!this.heal(target.baseMaxhp / 4)) 
 			}
-		},
-      onDamagingHit(damage, target, source, move) {
+			}
+		onDamagingHit(damage, target, source, move) {
 			if (['Rock', 'Ground'].includes(move.type)) {
 				this.boost({ def: 1 });
-            this.heal(target.baseMaxhp / 4); 
+            (!this.heal(target.baseMaxhp / 4)) 
 			}
-		},
+			}
+	},
    	flags: {},
 		name: "Eco-Shell",
 		rating: 2,
-		num: -101,	
+		num: -104,	
 	},
 	fairycurtain: {
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.category === 'Special') {
 				return this.chainModify(0.4);
 			}
-		}
+		},
 		flags: { breakable: 1 },
 		name: "Fairy Curtain",
 		rating: 4,
-		num: -102,
-  },
+		num: -105,
+	},
    octobrain: {
 		onAnyModifyBoost(boosts, pokemon) {
 			const unawareUser = this.effectState.target;
@@ -165,7 +165,7 @@ ecoshell:
 		flags: {},
 		name: "Octobrain",
 		rating: 3.5,
-		num: -103,
+		num: -106,
 	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
