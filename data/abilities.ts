@@ -77,7 +77,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 42,
 },
-	Silverclaws: {
+	silverclaws: {
 		onBasePowerPriority: 21,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['contact']) {
@@ -89,7 +89,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onModifyMove(move) {
 			move.ignoreAbility = true;
 	}
-		},
+	}
 		flags: {},
 		name: "Silver Claws",
 		rating: 3.5,
@@ -103,12 +103,13 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				this.boost({ [bestStat]: length }, source);
 			}
 			}
+},
 		flags: {},
 		name: "Hot Head",
 		rating: 3,
 		num: -100,
 },
-ecoshell: {
+ecoshell:
 		onDamagingHit(damage, target, source, move) {
 			if (['Water', 'Grass'].includes(move.type)) {
 				this.boost({ spd: 6 });
