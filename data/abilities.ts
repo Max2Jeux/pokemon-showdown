@@ -88,7 +88,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		onModifyMove(move) {
 			move.ignoreAbility = true;
-		},
+	}
 		flags: {},
 		name: "Silver Claws",
 		rating: 3.5,
@@ -106,7 +106,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Hot Head",
 		rating: 3,
 		num: -100,
-	},	 
+},
 ecoshell: {
 		onDamagingHit(damage, target, source, move) {
 			if (['Water', 'Grass'].includes(move.type)) {
@@ -130,12 +130,12 @@ ecoshell: {
 			if (move.category === 'Special') {
 				return this.chainModify(0.4);
 			}
-		},
+		}
 		flags: { breakable: 1 },
 		name: "Fairy Curtain",
 		rating: 4,
 		num: -102,
-	},
+  },
    octobrain: {
 		onAnyModifyBoost(boosts, pokemon) {
 			const unawareUser = this.effectState.target;
@@ -146,7 +146,6 @@ ecoshell: {
 				boosts['evasion'] = 0;
 	}
 		},
-      {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Psychic') {
@@ -161,7 +160,6 @@ ecoshell: {
 				return this.chainModify(1.2);
 			}
 		},
-      },
 		flags: {},
 		name: "Octobrain",
 		rating: 3.5,
