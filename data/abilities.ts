@@ -89,7 +89,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onModifyMove(move) {
 			move.ignoreAbility = true;
 		},
-		},
 		flags: {},
 		name: "Silver Claws",
 		rating: 3.5,
@@ -107,21 +106,22 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Hot Head",
 		rating: 3,
 		num: -100,
-	},
+	},	 
 ecoshell: {
 		onDamagingHit(damage, target, source, move) {
 			if (['Water', 'Grass'].includes(move.type)) {
 				this.boost({ spd: 1 });
             (!this.heal(target.baseMaxhp / 4)) 
-			}
-			}
-		onDamagingHit(damage, target, source, move) {
+		}
+		}
+         {
+      	onDamagingHit(damage, target, source, move) {
 			if (['Rock', 'Ground'].includes(move.type)) {
 				this.boost({ def: 1 });
             (!this.heal(target.baseMaxhp / 4)) 
 			}
 			}
-	},
+				},
    	flags: {},
 		name: "Eco-Shell",
 		rating: 2,
@@ -148,6 +148,7 @@ ecoshell: {
 				boosts['evasion'] = 0;
 	}
 		},
+      {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Psychic') {
@@ -162,6 +163,7 @@ ecoshell: {
 				return this.chainModify(1.2);
 			}
 		},
+      },
 		flags: {},
 		name: "Octobrain",
 		rating: 3.5,
