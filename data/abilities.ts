@@ -109,7 +109,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -100,
 	},	 
 ecoshell: {
-		onDamagingHit(damage, target, source, move) {
+		onDamagingHit(damage, target, source, move)
 			if (['Water', 'Fire'].includes(move.type));
 				this.boost({ spe: 6 });
             (!this.heal(target.baseMaxhp / 4)) 
