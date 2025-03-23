@@ -110,17 +110,16 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},	 
 ecoshell: {
 		onDamagingHit(damage, target, source, move) {
-			if (['Water', 'Fire'].includes(move.type)) {
+			if (['Water', 'Fire'].includes(move.type));
 				this.boost({ spe: 6 });
             (!this.heal(target.baseMaxhp / 4)) 
 	}
-		},
       onDamagingHit(damage, target, source, move) {
-			if (['Rock', 'Ground'].includes(move.type)) {
+			if (['Rock', 'Ground'].includes(move.type));
 				this.boost({ def: 1 });
             (!this.heal(target.baseMaxhp / 4)) 
 	}
-		},
+},
    	flags: {},
 		name: "Eco-Shell",
 		rating: 2,
