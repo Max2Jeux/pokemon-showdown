@@ -1,7 +1,5 @@
 /*
 
-/*
-
 Ratings and how they work:
 
 -1: Detrimental
@@ -77,7 +75,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: {},
 		name: "Predatory",
 		rating: 4,
-		num: 42,
+		num: -101,
 },
 	Silverclaws: {
 		onBasePowerPriority: 21,
@@ -85,17 +83,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			if (move.flags['contact']) {
 				return this.chainModify([5325, 4096]);
 			}
-		onStart(pokemon) {
-			this.add('-ability', pokemon, 'Mold Breaker');
-		},
+			}
+		onStart(pokemon)	 {
+			this.add('-ability', pokemon, 'Silver Claws');
 		onModifyMove(move) {
 			move.ignoreAbility = true;
-		},
+		}
 		},
 		flags: {},
 		name: "Silver Claws",
 		rating: 3.5,
-		num: -100,
+		num: -102,
 	},
 	hothead: {
 		onBasePowerPriority: 23,
@@ -108,7 +106,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: {},
 		name: "Hot Head",
 		rating: 3,
-		num: -100,
+		num: -103,
 	},
 ecoshell: {
 		onDamagingHit(damage, target, source, move) {
@@ -127,17 +125,18 @@ ecoshell: {
    	flags: {},
 		name: "Eco-Shell",
 		rating: 2,
-		num: -101,	
+		num: -104,	
 	},
 	fairycurtain: {
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.category === 'Special') {
 				return this.chainModify(0.4);
 			}
-		flags: { breakable: 1 ≈,
+		},
+		flags: { breakable: 1 },
 		name: "Fairy Curtain",
 		rating: 4,
-		num: -102,
+		num: -105,
 	},
    octobrain: {
 		onAnyModifyBoost(boosts, pokemon) {
@@ -166,7 +165,7 @@ ecoshell: {
 		flags: {},
 		name: "Octobrain",
 		rating: 3.5,
-		num: -103,
+		num: -106,
 	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
