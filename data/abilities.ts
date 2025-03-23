@@ -90,6 +90,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			move.ignoreAbility = true;
 	}
 	}
+	},
 		flags: {},
 		name: "Silver Claws",
 		rating: 3.5,
