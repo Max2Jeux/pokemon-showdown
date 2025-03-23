@@ -84,8 +84,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				return this.chainModify([5325, 4096]);
 			}
 			}
-			}
-		onStart(pokemon);
+		onStart(pokemon)	 {
 			this.add('-ability', pokemon, 'Silver Claws');
 		onModifyMove(move) {
 			move.ignoreAbility = true;
