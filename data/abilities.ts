@@ -39,6 +39,133 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "No Ability",
 		rating: 0.1,
 		num: 0,
+},
+		fearedhunter: {
+		onSourceAfterFaint(length, target, source, effect) {
+			let totaldef = 0;
+			let totalspd = 0;
+			for (const target of pokemon.foes()) {
+				totaldef += target.getStat('def', false, true);
+				totalspd += target.getStat('spd', false, true);
+			}
+			if (totaldef && totaldef >= totalspd) {
+				this.boost({ atk: 1 });
+			} else if (totalspd) {
+				this.boost({ spe: 1 });
+			}
+		},
+		flags: {},
+		name: "Feared Hunter",
+		rating: 3.5,
+		num: -100,
+},
+		predatory: {
+		onFoeTrapPokemon(pokemon) {
+			if (pokemon.hasType('Steel') && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (!pokemon.knownType || pokemon.hasType('Steel')) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+		flags: {},
+		name: "Predatory",
+		rating: 4,
+		num: 42,
+},
+	Silverclaws: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['contact']) {
+				return this.chainModify([5325, 4096]);
+			}
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Mold Breaker');
+		},
+		onModifyMove(move) {
+			move.ignoreAbility = true;
+		},
+		},
+		flags: {},
+		name: "Silver Claws",
+		rating: 3.5,
+		num: -100,
+	},
+	hothead: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.recoil || move.hasCrashDamage) {
+				const bestStat = source.getBestStat(true, true);
+				this.boost({ [bestStat]: length }, source);
+			}
+			}
+		flags: {},
+		name: "Hot Head",
+		rating: 3,
+		num: -100,
+	},
+ecoshell: {
+		onDamagingHit(damage, target, source, move) {
+			if (['Water', 'Grass'].includes(move.type)) {
+				this.boost({ spd: 1 });
+            (!this.heal(target.baseMaxhp / 4)) 
+			}
+			}
+		onDamagingHit(damage, target, source, move) {
+			if (['Rock', 'Ground'].includes(move.type)) {
+				this.boost({ def: 1 });
+            (!this.heal(target.baseMaxhp / 4)) 
+			}
+			}
+	},
+   	flags: {},
+		name: "Eco-Shell",
+		rating: 2,
+		num: -101,	
+	},
+	fairycurtain: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category === 'Special') {
+				return this.chainModify(0.4);
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Fairy Curtain",
+		rating: 4,
+		num: -102,
+	},
+   octobrain: {
+		onAnyModifyBoost(boosts, pokemon) {
+			const unawareUser = this.effectState.target;
+			if (unawareUser === pokemon) return;
+			if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+				boosts['def'] = 0;
+				boosts['spd'] = 0;
+				boosts['evasion'] = 0;
+	}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Psychic') {
+				this.debug('Octobrain\'s boost');
+				return this.chainModify(1.2);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Dragon') {
+				this.debug('Octobrain\'s boost');
+				return this.chainModify(1.2);
+			}
+		},
+		flags: {},
+		name: "Octobrain",
+		rating: 3.5,
+		num: -103,
 	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
