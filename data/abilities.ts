@@ -41,10 +41,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 0,
 },
 	fearedhunter: {
-		  
+		  let atkhunter:boolean;
         onStart(pokemon) {
-			   let atkhunter = 0;
-        		let spehunter = 0;
             let totaldef = 0;
             let totalspd = 0;
             for (const target of pokemon.foes()) {
@@ -52,19 +50,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
                 totalspd += target.getStat('spd', false, true);
             }
             if (totaldef && totaldef >= totalspd) {
-            atkhunter = 1;
-            spehunter = 0;
-            this.debug(`Il s'apprête à gagner en Attaque...`);
+				this.debug(`Il s'apprête à gagner en Attaque...`);
+            atkhunter=true;
             } else if (totalspd) {
-                atkhunter = 0;
-                spehunter = 1;
                 this.debug(`Il s'apprête à gagner en Vitesse... `);
+					atkhunter=false;
             }
         },
         onSourceAfterFaint(length, target, source, effect) {
             if (effect && effect.effectType === 'Move') {
                 const bestStat = source.getBestStat(true, true);
-                if (atkhunter === 1) {
+                if (atkhunter == true) {
                     this.boost({ atk: 1 }, pokemon);
                 }
                 else {
