@@ -207,7 +207,7 @@ ecoshell: {
 			this.add('-ability', pokemon, 'Norma-blessing');
 			this.add('-ability', pokemon, 'Normalize');
 		},
-	onStart(target, source) {
+	onFoe(target, source) {
 			const oldAbility = target.setAbility(source.ability);
 			if (oldAbility) {
 				this.add('-ability', target, target.getAbility().name, '[from] move: Entrainment');
