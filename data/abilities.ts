@@ -60,7 +60,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
         onSourceAfterFaint(length, target, source, effect) {
             if (effect && effect.effectType === 'Move') {
                 const bestStat = source.getBestStat(true, true);
-                if (atkhunter == true) {
+                if (atkhunter == 1) {
                     this.boost({ atk: 1 }, pokemon);
                 }
                 else {
