@@ -17,6 +17,87 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Cool",
+},
+	overcharged: {
+		num: 506,
+		accuracy: 100,
+		basePower: 55,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'par' || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		name: "Overcharged",
+		pp: 16,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		zMove: { basePower: 130 },
+		contestType: "Clever",
+	},
+	sensofduty: {
+		num: 151,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sens of Duty",
+		pp: 20,
+		priority: 0,
+		flags: { snatch: 1, metronome: 1 },
+      onHit(target) {
+			if (target.hp <= target.maxhp / 2 || target.boosts.atk >= 6 || target.maxhp === 1) { // Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({ atk: 12 }, target);
+		},
+		boosts: {
+			spd: 2,
+		},
+		secondary: null,
+		target: "self",
+		type: "Poison",
+		zMove: { effect: 'clearnegativeboost' },
+		contestType: "Tough",
+	},
+	sharpsplitter: {
+		num: 400,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Sharp Splitter",
+		pp: 15,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1 },
+		Willcrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		contestType: "Cool",
+	},
+	mastersstance: {
+		num: 568,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Master's Stance",
+		pp: 30,
+		priority: 0,
+		flags: { protect: 1, reflectable: 1, mirror: 1, metronome: 1 },
+		boosts: {
+			def: -1,
+			spd: -1,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		zMove: { boost: { def: 1 } },
+		contestType: "Tough",
 	},
 	absorb: {
 		num: 71,
