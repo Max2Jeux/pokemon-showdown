@@ -114,12 +114,9 @@ ecoshell: {
 				this.boost({ spd: 1 });
             (!this.heal(target.baseMaxhp / 4)) 
 			}
-			},
-		onDamagingHit(damage, target, source, move) {
 			if (['Rock', 'Ground'].includes(move.type)) {
 				this.boost({ def: 1 });
             (!this.heal(target.baseMaxhp / 4)) 
-			}
 			},
    	flags: {},
 		name: "Eco-Shell",
