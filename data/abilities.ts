@@ -178,21 +178,14 @@ ecoshell: {
 		num: -106,
 	},
   normablessing: {
-		onModifyTypePriority: 1,
-		onModifyType(move, pokemon) {
-			const noModifyType = [
-				'hiddenpower', 'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball',
-			];
-			if (!(move.isZ && move.category !== 'Status') && !noModifyType.includes(move.id) &&
-				// TODO: Figure out actual interaction
-				!(move.name === 'Tera Blast' && pokemon.terastallized)) {
-				move.type = 'Normal';
-				move.typeChangerBoosted = this.effect;
+			onSwitchIn(target, source) {
+			const oldAbility = target.setAbility(source.ability);
+			if (oldAbility) {
+				this.add('Normalize', target, target.getAbility().name);
+				if (!target.isAlly(source)) target.volatileStaleness = 'external';
+				return;
 			}
-		},
-		onBasePowerPriority: 23,
-		onBasePower(basePower, pokemon, target, move) {
-			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+			return oldAbility as false | null;
 		},
 		flags: {},
 		name: "Norma-blessing",
