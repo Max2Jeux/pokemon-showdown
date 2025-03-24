@@ -203,7 +203,10 @@ ecoshell: {
 		num: 31,
 	},
   normablessing: {
-	      onStart(target, source) {
+   onStart(target, pokemon, source) {
+			this.add('-ability', pokemon, 'Norma-blessing');
+			this.add('-ability', pokemon, 'Normalize');
+		},
 			const oldAbility = target.setAbility(Normalize);
 			if (oldAbility) {
 				this.add('-ability', target, target.getAbility().name, '[from] ability: Norma-blessing');
