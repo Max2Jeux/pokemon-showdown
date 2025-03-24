@@ -120,8 +120,7 @@ ecoshell: {
 				this.boost({ def: 1 });
             (!this.heal(target.baseMaxhp / 4)) 
 			}
-			}
-	},
+			},
    	flags: {},
 		name: "Eco-Shell",
 		rating: 2,
