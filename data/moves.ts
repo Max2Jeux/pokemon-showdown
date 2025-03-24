@@ -213,7 +213,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			chance: 20,
 			status: 'par',
 		},
-		secondary: null,
 		target: "normal",
 		type: "Poison",
 		contestType: "Tough",
