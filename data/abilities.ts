@@ -41,7 +41,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 0,
 },
 		fearedhunter: {
-		onSourceAfterFaint(length, target, source, effect) {
+		onSourceAfterFaint(pokemon, length, target, source, effect) {
 			let totaldef = 0;
 			let totalspd = 0;
 			for (const target of pokemon.foes()) {
@@ -99,7 +99,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
         onDamage(damage, target, source, effect, length) {
             if (effect.id === 'recoil') {
                 const bestStat = source.getBestStat(true, true);
-                this.boost({ [bestStat]: length }, source);
+                this.boost({ [bestStat]: 1 }, source);
             }
         },
         flags: {},
