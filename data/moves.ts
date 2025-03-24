@@ -166,15 +166,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		flags: { snatch: 1, dance: 1, metronome: 1 },
 		  onHit(target) {
 		if (this.field.isWeather(['snowscape'])) 
-         this.boost({ spe: 2 }, target);
-         this.boost({ spa: 2 }, target);
+         this.boost({ spe: 2, spa: 2 }, target);
       if (this.field.isWeather(['sunnyday'])) {
-         this.boost({ spe: 2 }, target);
-         this.boost({ atk: 2 }, target);
+         this.boost({ spe: 2, atk: 2 }, target);
       if (this.field.isWeather(['sandstorm'])) {
-         this.boost({ spe: 2 }, target);
-         this.boost({ def: 1 }, target);
-         this.boost({ spd: 1 }, target);
+         this.boost({ spe: 2, def: 1, spd: 1 }, target);
      	}
      	}
       },
@@ -217,7 +213,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Poison",
 		contestType: "Tough",
 	},
-   sideslicer: {
+   sidesslicer: {
 		num: 1000,
 		accuracy: 100,
 		basePower: 65,
