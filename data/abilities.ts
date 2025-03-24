@@ -44,7 +44,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 },
 	fearedhunter: {
 
-        onResidual(pokemon) {
+        onPrepareHit(source, target, move, pokemon)  {
 			console.log("Debug check : entrée dans onresidual");
             let totaldef = 0;
             let totalspd = 0;
