@@ -9206,7 +9206,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Samurott-Fighter",
 		baseSpecies: "Samurott",
 		forme: "Hisui",
-		types: ["Water", "Fight"],
+		types: ["Water", "Fighting"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 95, atk: 120, def: 90, spa: 55, spd: 70, spe: 75 },
 		abilities: { 0: "Shell Armor", H: "Sharpness" },
