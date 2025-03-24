@@ -203,7 +203,7 @@ ecoshell: {
 		num: 31,
 	},
   normablessing: {
-   onStart(target, pokemon, source) {
+   onStart(target) {
 			this.add('-ability', target, 'Normalize');
 		},
 		flags: {},
