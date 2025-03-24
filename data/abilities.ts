@@ -40,25 +40,42 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 0.1,
 		num: 0,
 },
-		fearedhunter: {
-		onSourceAfterFaint(pokemon, length, target, source, effect) {
-			let totaldef = 0;
-			let totalspd = 0;
-			for (const target of pokemon.foes()) {
-				totaldef += target.getStat('def', false, true);
-				totalspd += target.getStat('spd', false, true);
-			}
-			if (totaldef && totaldef >= totalspd) {
-				this.boost({ atk: 1 });
-			} else if (totalspd) {
-				this.boost({ spe: 1 });
-			}
-		},
-		flags: {},
-		name: "Feared Hunter",
-		rating: 3.5,
-		num: -100,
-},
+	fearedhunter: {
+        const atkhunter = 0;
+        const spehunter = 0;
+        onStart(pokemon) {
+            let totaldef = 0;
+            let totalspd = 0;
+            for (const target of pokemon.foes()) {
+                totaldef += target.getStat('def', false, true);
+                totalspd += target.getStat('spd', false, true);
+            }
+            if (totaldef && totaldef >= totalspd) {
+            atkhunter = 1;
+            spehunter = 0;
+            this.debug(`Il s'apprête à gagner en Attaque...`);
+            } else if (totalspd) {
+                atkhunter = 0;
+                spehunter = 1;
+                this.debug(`Il s'apprête à gagner en Vitesse... `);
+            }
+        },
+        onSourceAfterFaint(length, target, source, effect) {
+            if (effect && effect.effectType === 'Move') {
+                const bestStat = source.getBestStat(true, true);
+                if (atkhunter === 1) {
+                    this.boost({ atk: 1 }, pokemon);
+                }
+                else {
+                    this.boost({ spe: 1 }, pokemon);
+                }
+            }
+        },
+        flags: {},
+        name: "Feared Hunter",
+        rating: 3.5,
+        num: -100,
+	},
 		predatory: {
 		onFoeTrapPokemon(pokemon) {
 			if (pokemon.hasType('Steel') && pokemon.isAdjacent(this.effectState.target)) {
