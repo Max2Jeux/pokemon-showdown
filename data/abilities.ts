@@ -41,9 +41,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 0,
 },
 	fearedhunter: {
-        const atkhunter = 0;
-        const spehunter = 0;
+		  
         onStart(pokemon) {
+			   const atkhunter = 0;
+        		const spehunter = 0;
             let totaldef = 0;
             let totalspd = 0;
             for (const target of pokemon.foes()) {
