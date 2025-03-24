@@ -202,12 +202,11 @@ ecoshell: {
 		rating: 3,
 		num: 31,
 	},
-
   normablessing: {
-			onSwitchIn(target, source) {
-			const oldAbility = target.setAbility(source.ability);
+	      onStart(target, source) {
+			const oldAbility = target.setAbility(Normalize);
 			if (oldAbility) {
-				this.add('Normalize', target, target.getAbility().name);
+				this.add('-ability', target, target.getAbility().name, '[from] ability: Norma-blessing');
 				if (!target.isAlly(source)) target.volatileStaleness = 'external';
 				return;
 			}
