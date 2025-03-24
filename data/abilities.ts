@@ -41,7 +41,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 0,
 },
 	fearedhunter: {
-		var hunterstate = true;
+		let hunterstate = true
         onStart(pokemon) {
             let totaldef = 0;
             let totalspd = 0;
