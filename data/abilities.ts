@@ -45,16 +45,16 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	fearedhunter: {
 
         onPrepareHit(source, target, move)  {
-			console.log("Debug check : entrée dans onresidual");
+			
             let totaldef = 0;
             let totalspd = 0;
             totaldef += target.getStat('def', false, true);
             totalspd += target.getStat('spd', false, true);
             if (totaldef && totaldef >= totalspd) {
-				console.log(`Il s'apprête à gagner en Attaque...`);
+				
             hunterstate = true;
             } else if (totalspd) {
-                console.log(`Il s'apprête à gagner en Vitesse... `);
+                
 					hunterstate = false;
             }
         },
