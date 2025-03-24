@@ -95,15 +95,15 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: -102,
 	},
-	hothead: {
-        onSourceDamagingHit(length, damage, target, source, move) {
-            if (move.recoil || move.hasCrashDamage) {
+   heated: {
+        onDamage(damage, target, source, effect, length) {
+            if (effect.id === 'recoil') {
                 const bestStat = source.getBestStat(true, true);
                 this.boost({ [bestStat]: length }, source);
-			}
-            },
+            }
+        },
         flags: {},
-        name: "Hot Head",
+        name: "Heated",
         rating: 3,
         num: -103,
 	},
