@@ -257,11 +257,14 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	dragonjaw: {
 		num: 337,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		name: "Dragon Claw",
 		pp: 15,
 		priority: 0,
+    	onHit(target, source, move) {
+			return target.addVolatile('trapped', source, move, 'trapper');
+		},
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
 		secondary: null,
 		target: "normal",
