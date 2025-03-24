@@ -96,7 +96,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -102,
 	},
 	hothead: {
-        onSourceDamagingHit(damage, target, source, move) {
+        onSourceDamagingHit(length, damage, target, source, move) {
             if (move.recoil || move.hasCrashDamage) {
                 const bestStat = source.getBestStat(true, true);
                 this.boost({ [bestStat]: length }, source);
