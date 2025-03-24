@@ -50,31 +50,29 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: { snatch: 1, metronome: 1 },
       onHit(target) {
-			if (target.hp <= target.maxhp / 2 || target.boosts.atk >= 6 || target.maxhp === 1) { // Shedinja clause
+			if (target.hp <= target.maxhp / 4 || target.boosts.spd >= 2 || target.boosts.def >= 2 target.maxhp === 1) || { // Shedinja clause
 				return false;
 			}
-			this.directDamage(target.maxhp / 2);
-			this.boost({ atk: 12 }, target);
-		},
-		boosts: {
-			spd: 2,
+			this.directDamage(target.maxhp / 4);
+			this.boost({ spd: 2 },target);
+         this.boost({ def: 2 },target);
 		},
 		secondary: null,
 		target: "self",
-		type: "Poison",
+		type: "Steel",
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Tough",
 	},
 	sharpsplitter: {
 		num: 400,
 		accuracy: 100,
-		basePower: 75,
+		basePower: 60,
 		category: "Physical",
 		name: "Sharp Splitter",
 		pp: 15,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1 },
-		Willcrit: true,
+		willCrit: true,
 		secondary: null,
 		target: "normal",
 		type: "Rock",
