@@ -117,6 +117,7 @@ ecoshell: {
 			if (['Rock', 'Ground'].includes(move.type)) {
 				this.boost({ def: 1 });
             (!this.heal(target.baseMaxhp / 4)) 
+			}
 			},
    	flags: {},
 		name: "Eco-Shell",
