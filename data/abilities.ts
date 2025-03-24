@@ -204,17 +204,7 @@ ecoshell: {
 	},
   normablessing: {
    onStart(target, pokemon, source) {
-			this.add('-ability', pokemon, 'Norma-blessing');
-			this.add('-ability', source, 'Normalize');
-		},
-	onFoe(target, source) {
-			const oldAbility = target.setAbility(source.ability);
-			if (oldAbility) {
-				this.add('-ability', target, target.getAbility().name, '[from] ability: Norma-blessing');
-				if (!target.isAlly(source)) target.volatileStaleness = 'external';
-				return;
-			}
-			return oldAbility as false | null;
+			this.add('-ability', target, 'Normalize');
 		},
 		flags: {},
 		name: "Norma-blessing",
