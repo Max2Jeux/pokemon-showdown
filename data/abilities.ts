@@ -177,6 +177,32 @@ ecoshell: {
 		rating: 3.5,
 		num: -106,
 	},
+   insulatingsword: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				if (!this.boost({ atk: 1 })) {
+					this.add('-immune', target, '[from] ability: Insulating Sword');
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Electric' || move.flags['pledgecombo']) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectState.target !== target) {
+					this.add('-activate', this.effectState.target, 'ability: Lightning Rod');
+				}
+				return this.effectState.target;
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Insulating Sword",
+		rating: 3,
+		num: 31,
+	},
+
   normablessing: {
 			onSwitchIn(target, source) {
 			const oldAbility = target.setAbility(source.ability);
