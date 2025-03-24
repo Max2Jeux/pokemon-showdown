@@ -112,6 +112,77 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		contestType: "Cool",
 	},
+	devotionsflare: {
+		num: 53,
+		accuracy: 100,
+		basePower: 110,
+		category: "Special",
+		name: "Devotion's Flare",
+		pp: 8,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 ,bypasssub: 1 },
+      breaksProtect: true,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
+		contestType: "Beautiful",
+	},
+   omnivenom: {
+		num: 331,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Omnivenom",
+		pp: 30,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, bullet: 1 },
+		multihit: [3, 5],
+      onBasePower(basePower, pokemon, target) {
+			if (target.status === 'psn' || target.status === 'tox') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Poison",
+		zMove: { basePower: 140 },
+		maxMove: { basePower: 130 },
+		contestType: "Cool",
+	},
+   naturalvibe: {
+		num: 483,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Natural Vibe",
+		pp: 1,
+		priority: 1,
+		flags: { snatch: 1, dance: 1, metronome: 1 },
+		onModifyMove(move) {
+		if (this.field.isWeather(['snowscape'])) 
+         this.boost({ spe: 2 }, target);
+         this.boost({ spa: 2 }, target);
+      if (this.field.isWeather(['sunnyday'])) {
+         this.boost({ spe: 2 }, target);
+         this.boost({ atk: 2 }, target);
+      if (this.field.isWeather(['sandstorm'])) {
+         this.boost({ spe: 2 }, target);
+         this.boost({ def: 1 }, target);
+         this.boost({ spd: 1 }, target);
+     	}
+     	},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: { effect: 'clearnegativeboost' },
+		contestType: "Beautiful",
+	},
 	absorb: {
 		num: 71,
 		accuracy: 100,
