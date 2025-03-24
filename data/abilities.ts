@@ -96,16 +96,16 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -102,
 	},
 	hothead: {
-		onSourceDamagingHit(basePower, attacker, defender, move) {
-			if (move.recoil || move.hasCrashDamage) {
-				const bestStat = source.getBestStat(true, true);
-				this.boost({ [bestStat]: length }, source);
+        onSourceDamagingHit(damage, target, source, move) {
+            if (move.recoil || move.hasCrashDamage) {
+                const bestStat = source.getBestStat(true, true);
+                this.boost({ [bestStat]: length }, source);
 			}
-			},
-		flags: {},
-		name: "Hot Head",
-		rating: 3,
-		num: -103,
+            },
+        flags: {},
+        name: "Hot Head",
+        rating: 3,
+        num: -103,
 	},
 ecoshell: {
 		onDamagingHit(damage, target, source, move) {
