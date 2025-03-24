@@ -177,6 +177,28 @@ ecoshell: {
 		rating: 3.5,
 		num: -106,
 	},
+  normablessing: {
+		onModifyTypePriority: 1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'hiddenpower', 'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (!(move.isZ && move.category !== 'Status') && !noModifyType.includes(move.id) &&
+				// TODO: Figure out actual interaction
+				!(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Normal';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Norma-blessing",
+		rating: 0,
+		num: 96,
+	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
 			if (move.forceSTAB || source.hasType(move.type)) {
@@ -3050,8 +3072,7 @@ ecoshell: {
 		num: 99,
 	},
 	normalize: {
-		onModifyTypePriority: 1,
-		onModifyType(move, pokemon) {
+		onFoe(target, move, pokemon) {
 			const noModifyType = [
 				'hiddenpower', 'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball',
 			];
