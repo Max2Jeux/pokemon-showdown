@@ -52,10 +52,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
                 totalspd += target.getStat('spd', false, true);
             }
             if (totaldef && totaldef >= totalspd) {
-				this.debug(`Il s'apprête à gagner en Attaque...`);
+				console.log(`Il s'apprête à gagner en Attaque...`);
             hunterstate = true;
             } else if (totalspd) {
-                this.debug(`Il s'apprête à gagner en Vitesse... `);
+                console.log(`Il s'apprête à gagner en Vitesse... `);
 					hunterstate = false;
             }
         },
