@@ -203,8 +203,11 @@ ecoshell: {
 		num: 31,
 	},
   normablessing: {
-   onStart(target) {
-			this.add('-ability', target, 'Normalize');
+   onTryHit(pokemon, target, move) {
+			const sourceAbility = source.getAbility();
+			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'Normalize') {
+				return;
+			}
 		},
 		flags: {},
 		name: "Norma-blessing",
