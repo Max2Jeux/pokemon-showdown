@@ -102,7 +102,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				const bestStat = source.getBestStat(true, true);
 				this.boost({ [bestStat]: length }, source);
 			}
-			}
+			},
 		flags: {},
 		name: "Hot Head",
 		rating: 3,
