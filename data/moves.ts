@@ -164,7 +164,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 1,
 		priority: 1,
 		flags: { snatch: 1, dance: 1, metronome: 1 },
-		onModifyMove(move) {
+		  onHit(target) {
 		if (this.field.isWeather(['snowscape'])) 
          this.boost({ spe: 2 }, target);
          this.boost({ spa: 2 }, target);
