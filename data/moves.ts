@@ -299,6 +299,30 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Steel",
 	},
+	idontmind: {
+		num: 909,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "I don't mind",
+		pp: 8,
+		priority: 1,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === 'move' ? action.move : null;
+			if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+				return false;
+			}
+		},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Clever",
+	},
 	absorb: {
 		num: 71,
 		accuracy: 100,
