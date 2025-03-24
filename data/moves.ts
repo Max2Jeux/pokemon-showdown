@@ -176,12 +176,98 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
          this.boost({ def: 1 }, target);
          this.boost({ spd: 1 }, target);
      	}
-     	},
+     	}
+      },
 		secondary: null,
 		target: "self",
 		type: "Normal",
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Beautiful",
+	},
+	doomdash: {
+		num: 36,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Doom Dash",
+		pp: 20,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		recoil: [1, 4],
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Tough",
+	},
+   viscopendix: {
+		num: 463,
+		accuracy: 75,
+		basePower: 70,
+		category: "Physical",
+		name: "Viscopendix",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		volatileStatus: 'partiallytrapped',
+      secondary: {
+			chance: 20,
+			status: 'par',
+		},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		contestType: "Tough",
+	},
+   sideslicer: {
+		num: 1000,
+		accuracy: 100,
+		basePower: 65,
+		category: "Physical",
+		name: "Sides Slicer",
+		pp: 16,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxsteelsurge');
+				}
+			},
+		},
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: G-Max Steelsurge');
+			},
+			onSwitchIn(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				// Ice Face and Disguise correctly get typed damage from Stealth Rock
+				// because Stealth Rock bypasses Substitute.
+				// They don't get typed damage from Steelsurge because Steelsurge doesn't,
+				// so we're going to test the damage of a Steel-type Stealth Rock instead.
+				const steelHazard = this.dex.getActiveMove('Stealth Rock');
+				steelHazard.type = 'Steel';
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(steelHazard), -6, 6);
+				this.damage(pokemon.maxhp * (2 ** typeMod) / 8);
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Steel",
+		contestType: "Cool",
+	},
+	dragonjaw: {
+		num: 337,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Dragon Claw",
+		pp: 15,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		contestType: "Cool",
 	},
 	absorb: {
 		num: 71,
