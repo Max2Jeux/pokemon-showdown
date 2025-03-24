@@ -50,12 +50,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: { snatch: 1, metronome: 1 },
       onHit(target) {
-			if (target.hp <= target.maxhp / 4 || target.boosts.spd >= 2 || target.boosts.def >= 2 target.maxhp === 1) || { // Shedinja clause
+			if (target.hp <= target.maxhp / 4 || target.boosts.spd >= 6 || target.maxhp === 1) { // Shedinja clause
 				return false;
 			}
 			this.directDamage(target.maxhp / 4);
-			this.boost({ spd: 2 },target);
-         this.boost({ def: 2 },target);
+			this.boost({ spd: 2 }, target);
 		},
 		secondary: null,
 		target: "self",
