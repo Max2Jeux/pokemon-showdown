@@ -204,6 +204,7 @@ ecoshell: {
 	},
    fullmoon: {
 		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
+				}
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Water') {
 				if (!this.boost({ spa: 1 })) {
