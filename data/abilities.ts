@@ -207,10 +207,10 @@ ecoshell: {
 			const sourceAbility = source.getAbility();
 			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'Normalize') {
 				return;
-			}
-			const oldAbility = source.setAbility('Normalize', target);
-			if (oldAbility) {
-					this.add('-activate', target, 'ability: Normalize', this.dex.abilities.get(oldAbility).name, `[of] ${source}`);
+			}  
+				const oldAbility = source.setAbility('mummy', target){
+				if (oldAbility) {
+					this.add('-activate', target, 'ability: Mummy', this.dex.abilities.get(oldAbility).name, `[of] ${source}`);
 				}
 			}
 		},
