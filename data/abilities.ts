@@ -311,11 +311,31 @@ ecoshell: {
 				}
 				return null;
 			},
-	   onStart(source) {
-      this.field.set('trickroom');
-	},
+	   onModifyAtkPriority: 5,
+		onModifyAtk(spa) {
+			return this.chainModify(1.2);
+		},
 		flags: { breakable: 1 },
 		name: "Full Moon",
+		rating: 3,
+		num: 31,
+	},
+  sunshine: {
+		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Grass') {
+				if (!this.boost({ atk: 1 })) {
+					this.add('-immune', target, '[from] ability: Sunshine');
+}
+				}
+				return null;
+			},
+	   onModifyAtkPriority: 5,
+		onModifyAtk(atk) {
+			return this.chainModify(1.2);
+		},
+		flags: { breakable: 1 },
+		name: "Sunshine",
 		rating: 3,
 		num: 31,
 	},
