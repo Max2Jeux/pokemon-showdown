@@ -72,8 +72,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
         name: "Feared Hunter",
         rating: 3.5,
         num: -100,
+ },
 	predatory: {
-
         onDamagingHit(damage, target, source, move) {
             if (this.checkMoveMakesContact(move, source, target, true)) {
                 this.add('-ability', target, 'Gooey');
