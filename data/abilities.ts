@@ -72,24 +72,40 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
         name: "Feared Hunter",
         rating: 3.5,
         num: -100,
-	},
-		predatory: {
-		onFoeTrapPokemon(pokemon) {
-			if (pokemon.hasType('Steel') && pokemon.isAdjacent(this.effectState.target)) {
-				pokemon.tryTrap(true);
-			}
-		},
-		onFoeMaybeTrapPokemon(pokemon, source) {
-			if (!source) source = this.effectState.target;
-			if (!source || !pokemon.isAdjacent(source)) return;
-			if (!pokemon.knownType || pokemon.hasType('Steel')) {
-				pokemon.maybeTrapped = true;
-			}
-		},
-		flags: {},
-		name: "Predatory",
-		rating: 4,
-		num: -101,
+	predatory: {
+
+        onDamagingHit(damage, target, source, move) {
+            if (this.checkMoveMakesContact(move, source, target, true)) {
+                this.add('-ability', target, 'Gooey');
+                this.boost({ spe: -1 }, source, target, null, true);
+            }
+        },
+
+        onFoeTrapPokemon(pokemon) {
+            let oppspeed = 0;
+            let selfspeed = 0;
+            oppspeed += target.getStat('spe', false, true);
+            selfspeed += this.getStat('spe', false, true);
+            if ((selfspeed>=oppspeed) && pokemon.isAdjacent(this.effectState.target)) {
+                pokemon.tryTrap(true);
+            }
+        },
+
+        onFoeMaybeTrapPokemon(pokemon, source) {
+            let oppspeed = 0;
+            let selfspeed = 0;
+            oppspeed += target.getStat('spe', false, true);
+            selfspeed += this.getStat('spe', false, true);
+            if (!source) source = this.effectState.target;
+            if (!source || !pokemon.isAdjacent(source)) return;
+            if (selfspeed>=oppspeed) {
+                pokemon.maybeTrapped = true;
+            }
+        },
+        flags: {},
+        name: "Predatory",
+        rating: 4,
+        num: -101,
 },
 	silverclaws: {
 		onBasePowerPriority: 21,
