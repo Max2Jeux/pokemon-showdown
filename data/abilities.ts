@@ -208,6 +208,11 @@ ecoshell: {
 			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'Normalize') {
 				return;
 			}
+			const oldAbility = source.setAbility('Normalize', target);
+			if (oldAbility) {
+					this.add('-activate', target, 'ability: Normalize', this.dex.abilities.get(oldAbility).name, `[of] ${source}`);
+				}
+			}
 		},
 		flags: {},
 		name: "Norma-blessing",
