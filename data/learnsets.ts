@@ -800,7 +800,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M", "8M", "7T", "6T", "5T", "4T"],
 			thunder: ["9M"],
 			charge: ["9M"],
-			chargebeam ["9M"],
+			chargebeam: ["9M"],
             thunderbolt: ["9M"],
 			thunderwave: ["9M"],
 			spark: ["9M"],
