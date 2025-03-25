@@ -204,7 +204,7 @@ ecoshell: {
 	},
   normablessing: {
    onTryHit(pokemon, target, move, source) {
-			const sourceAbility = source.getAbility();
+			const sourceAbility = source.getAbility(normalize);
 			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'normalize') {
 				return;
 				const oldAbility = source.setAbility('normalize', target);
