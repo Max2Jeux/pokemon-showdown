@@ -212,7 +212,7 @@ ecoshell: {
 				return null;
 			}
 	   onStart(source) { 
-      this.field.set('trickroom');
+      this.field.setPseudoWeather('trickroom');
 			},
 		flags: { breakable: 1 },
 		name: "Full Moon",
