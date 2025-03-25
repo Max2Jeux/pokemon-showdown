@@ -101,7 +101,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		accuracy: 100,
 		basePower: 130,
 		category: "Physical",
-		name: "gravelimpact",
+		name: "Gravelimpact",
 		pp: 12,
 		priority: 0,
    	selfSwitch: true,

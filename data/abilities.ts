@@ -72,24 +72,40 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
         name: "Feared Hunter",
         rating: 3.5,
         num: -100,
-	},
-		predatory: {
-		onFoeTrapPokemon(pokemon) {
-			if (pokemon.hasType('Steel') && pokemon.isAdjacent(this.effectState.target)) {
-				pokemon.tryTrap(true);
-			}
-		},
-		onFoeMaybeTrapPokemon(pokemon, source) {
-			if (!source) source = this.effectState.target;
-			if (!source || !pokemon.isAdjacent(source)) return;
-			if (!pokemon.knownType || pokemon.hasType('Steel')) {
-				pokemon.maybeTrapped = true;
-			}
-		},
-		flags: {},
-		name: "Predatory",
-		rating: 4,
-		num: -101,
+ },
+	predatory: {
+        onDamagingHit(damage, target, source, move) {
+            if (this.checkMoveMakesContact(move, source, target, true)) {
+                this.add('-ability', target, 'Gooey');
+                this.boost({ spe: -1 }, source, target, null, true);
+            }
+        },
+
+        onFoeTrapPokemon(pokemon) {
+            let oppspeed = 0;
+            let selfspeed = 0;
+            oppspeed += target.getStat('spe', false, true);
+            selfspeed += this.getStat('spe', false, true);
+            if ((selfspeed>=oppspeed) && pokemon.isAdjacent(this.effectState.target)) {
+                pokemon.tryTrap(true);
+            }
+        },
+
+        onFoeMaybeTrapPokemon(pokemon, source) {
+            let oppspeed = 0;
+            let selfspeed = 0;
+            oppspeed += target.getStat('spe', false, true);
+            selfspeed += this.getStat('spe', false, true);
+            if (!source) source = this.effectState.target;
+            if (!source || !pokemon.isAdjacent(source)) return;
+            if (selfspeed>=oppspeed) {
+                pokemon.maybeTrapped = true;
+            }
+        },
+        flags: {},
+        name: "Predatory",
+        rating: 4,
+        num: -101,
 },
 	silverclaws: {
 		onBasePowerPriority: 21,
@@ -202,26 +218,7 @@ ecoshell: {
 		rating: 3,
 		num: 31,
 	},
-   fullmoon: {
-		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Water') {
-				if (!this.boost({ spa: 1 })) {
-					this.add('-immune', target, '[from] ability: Full Moon');
-}
-				}
-				return null;
-			},
-	   onStart(source);
-      this.field.setPseudoWeather('trickroom');
-	},
-		flags: { breakable: 1 },
-		name: "Full Moon",
-		rating: 3,
-		num: 31,
-	},
   myworstnightmare: {
-   onTryHit(pokemon, target, move, source) {
 				onDamagingHit(damage, target, source, move) {
 			const sourceAbility = source.getAbility();
 			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'mummy') {
@@ -303,6 +300,44 @@ ecoshell: {
 		name: "Air Lock",
 		rating: 1.5,
 		num: 76,
+	},
+  fullmoon: {
+		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.boost({ spa: 1 })) {
+					this.add('-immune', target, '[from] ability: Full Moon');
+}
+				}
+				return null;
+			},
+	   onModifyAtkPriority: 5,
+		onModifyAtk(spa) {
+			return this.chainModify(1.2);
+		},
+		flags: { breakable: 1 },
+		name: "Full Moon",
+		rating: 3,
+		num: 31,
+	},
+  sunshine: {
+		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Grass') {
+				if (!this.boost({ atk: 1 })) {
+					this.add('-immune', target, '[from] ability: Sunshine');
+}
+				}
+				return null;
+			},
+	   onModifyAtkPriority: 5,
+		onModifyAtk(atk) {
+			return this.chainModify(1.2);
+		},
+		flags: { breakable: 1 },
+		name: "Sunshine",
+		rating: 3,
+		num: 31,
 	},
 	analytic: {
 		onBasePowerPriority: 21,

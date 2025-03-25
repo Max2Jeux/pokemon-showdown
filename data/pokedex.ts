@@ -5483,9 +5483,9 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	whismur: {
 		num: 293,
 		name: "Whismur",
-		types: ["Normal"],
+		types: ["Electric"],
 		baseStats: { hp: 64, atk: 51, def: 23, spa: 51, spd: 23, spe: 28 },
-		abilities: { 0: "Soundproof", H: "Rattled" },
+		abilities: { 0: "Soundproof", H: "Punk Rock" },
 		heightm: 0.6,
 		weightkg: 16.3,
 		color: "Pink",
@@ -5495,9 +5495,9 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	loudred: {
 		num: 294,
 		name: "Loudred",
-		types: ["Normal"],
-		baseStats: { hp: 84, atk: 71, def: 43, spa: 71, spd: 43, spe: 48 },
-		abilities: { 0: "Soundproof", H: "Scrappy" },
+		types: ["Normal", "Electric"],
+		baseStats: { hp: 84, atk: 61, def: 43, spa: 75, spd: 43, spe: 68 },
+		abilities: { 0: "Soundproof", H: "Punk Rock" },
 		heightm: 1,
 		weightkg: 40.5,
 		color: "Blue",
@@ -5509,9 +5509,9 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	exploud: {
 		num: 295,
 		name: "Exploud",
-		types: ["Normal"],
-		baseStats: { hp: 104, atk: 91, def: 63, spa: 91, spd: 73, spe: 68 },
-		abilities: { 0: "Soundproof", H: "Scrappy" },
+		types: ["Normal", "Electric"],
+		baseStats: { hp: 104, atk: 80, def: 63, spa: 101, spd: 73, spe: 98 },
+		abilities: { 0: "Soundproof", H: "Punk Rock" },
 		heightm: 1.5,
 		weightkg: 84,
 		color: "Blue",
@@ -9187,7 +9187,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	samurott: {
 		num: 503,
-		name: "Samurott-Swordman",
+		name: "Samurott",
 		types: ["Water", "Rock"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 95, atk: 100, def: 70, spa: 55, spd: 90, spe: 120 },
@@ -9203,7 +9203,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	samurotthisui: {
 		num: 503,
-		name: "Samurott-Fighter",
+		name: "Samurott-Hisui",
 		baseSpecies: "Samurott",
 		forme: "Hisui",
 		types: ["Water", "Fighting"],
@@ -18214,7 +18214,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	ogerponwellspring: {
 		num: 1017,
-		name: "Ogerpon-Glacial",
+		name: "Ogerpon-Wellspring",
 		baseSpecies: "Ogerpon",
 		forme: "Wellspring",
 		types: ["Grass", "Ice"],
@@ -18231,7 +18231,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	ogerponhearthflame: {
 		num: 1017,
-		name: "Ogerpon-Corruption",
+		name: "Ogerpon-Heartflame",
 		baseSpecies: "Ogerpon",
 		forme: "Hearthflame",
 		types: ["Grass","Poison"],
