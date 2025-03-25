@@ -202,19 +202,22 @@ ecoshell: {
 		rating: 3,
 		num: 31,
 	},
-  normablessing: {
+  myworstnightmare: {
    onTryHit(pokemon, target, move, source) {
-			const sourceAbility = source.getAbility(normalize);
-			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'normalize') {
+				onDamagingHit(damage, target, source, move) {
+			const sourceAbility = source.getAbility();
+			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'mummy') {
 				return;
-				const oldAbility = source.setAbility('normalize', target);
+			}
+			if (this.checkMoveMakesContact(move, source, target, !source.isAlly(target))) {
+				const oldAbility = source.setAbility('mummy', target);
 				if (oldAbility) {
-					this.add('-activate', target, 'ability: normalize', this.dex.abilities.get(oldAbility).name, `[of] ${source}`);
+					this.add('-activate', target, 'ability: Mummy', this.dex.abilities.get(oldAbility).name, `[of] ${source}`);
 				}
 			}
 		},
 		flags: {},
-		name: "Norma-blessing",
+		name: "myworstnightmare",
 		rating: 0,
 		num: 96,
 	},
