@@ -9187,7 +9187,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	samurott: {
 		num: 503,
-		name: "Samurott-Swordman",
+		name: "Samurott",
 		types: ["Water", "Rock"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 95, atk: 100, def: 70, spa: 55, spd: 90, spe: 120 },
@@ -9203,7 +9203,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	samurotthisui: {
 		num: 503,
-		name: "Samurott-Fighter",
+		name: "Samurott-Hisui",
 		baseSpecies: "Samurott",
 		forme: "Hisui",
 		types: ["Water", "Fighting"],
@@ -18214,7 +18214,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	ogerponwellspring: {
 		num: 1017,
-		name: "Ogerpon-Glacial",
+		name: "Ogerpon-Wellspring",
 		baseSpecies: "Ogerpon",
 		forme: "Wellspring",
 		types: ["Grass", "Ice"],
@@ -18231,7 +18231,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	ogerponhearthflame: {
 		num: 1017,
-		name: "Ogerpon-Corruption",
+		name: "Ogerpon-Heartflame",
 		baseSpecies: "Ogerpon",
 		forme: "Hearthflame",
 		types: ["Grass","Poison"],
