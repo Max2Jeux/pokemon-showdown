@@ -203,7 +203,7 @@ ecoshell: {
 		num: 31,
 	},
    fullmoon: {
-		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded;
+		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Water') {
 				if (!this.boost({ spa: 1 })) {
@@ -221,7 +221,6 @@ ecoshell: {
 		num: 31,
 	},
   myworstnightmare: {
-   onTryHit(pokemon, target, move, source) {
 				onDamagingHit(damage, target, source, move) {
 			const sourceAbility = source.getAbility();
 			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'mummy') {
