@@ -220,7 +220,7 @@ ecoshell: {
 		num: 31,
 	},
   myworstnightmare: {
-   onTryHit(pokemon, target, move, source) {
+   onTryHit(pokemon, target, move, source);
 				onDamagingHit(damage, target, source, move) {
 			const sourceAbility = source.getAbility();
 			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'mummy') {
