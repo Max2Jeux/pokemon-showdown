@@ -208,11 +208,13 @@ ecoshell: {
 			if (target !== source && move.type === 'Water') {
 				if (!this.boost({ spa: 1 })) {
 					this.add('-immune', target, '[from] ability: Full Moon');
+}
 				}
 				return null;
-			}
+			},
 	   onStart(source);
       this.field.setPseudoWeather('trickroom');
+	},
 		flags: { breakable: 1 },
 		name: "Full Moon",
 		rating: 3,
