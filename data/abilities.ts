@@ -76,7 +76,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	predatory: {
         onDamagingHit(damage, target, source, move) {
             if (this.checkMoveMakesContact(move, source, target, true)) {
-                this.add('-ability', target, 'Gooey');
+                this.add('-ability', target, 'Predatory');
                 this.boost({ spe: -1 }, source, target, null, true);
             }
         },
@@ -88,7 +88,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				oppspeed += target.getStat('spe', false, true);
 			}
             selfspeed += pokemon.getStat('spe', false, true);
-            if ((selfspeed>=oppspeed) && pokemon.isAdjacent(this.effectState.target)) {
+            if ((selfspeed<=oppspeed) && pokemon.isAdjacent(this.effectState.target)) {
                 pokemon.tryTrap(true);
             }
         },
@@ -102,7 +102,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
             selfspeed += pokemon.getStat('spe', false, true);
             if (!source) source = this.effectState.target;
             if (!source || !pokemon.isAdjacent(source)) return;
-            if (selfspeed>=oppspeed) {
+            if (selfspeed<=oppspeed) {
                 pokemon.maybeTrapped = true;
             }
         },
