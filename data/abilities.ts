@@ -336,7 +336,7 @@ spiritruler: {
 			return this.chainModify(mod);
 		},
 		flags: {},
-		name: "Adaptability",
+		name: "Grizzly",
 		rating: 4,
 		num: 91,
 	},
@@ -367,6 +367,22 @@ spiritruler: {
 		name: "Supreme Samurai",
 		rating: 4,
 		num: 293,
+	},
+	thearsonist: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of pokemon.foes()) {
+				if (target.status === 'brd' || target.hasAbility('comatose')) {
+					this.damage(target.baseMaxhp / 8, target, pokemon);
+				}
+			}
+		},
+		flags: {},
+		name: "The Arsonist",
+		rating: 4,
+		num: 91,
 	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
