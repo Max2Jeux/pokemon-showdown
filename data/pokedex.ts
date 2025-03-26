@@ -17073,7 +17073,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	ceruledge: {
 		num: 937,
 		name: "Ceruledge",
-		types: ["Fire", "Flying"],
+		types: ["Fight", "Flying"],
 		baseStats: { hp: 75, atk: 125, def: 80, spa: 60, spd: 100, spe: 115 },
 		abilities: { 0: "Flash Fire", H: "Weak Armor" },
 		heightm: 1.6,
