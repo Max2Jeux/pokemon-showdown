@@ -81,11 +81,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
             }
         },
 
-        onFoeTrapPokemon(pokemon) {
+        onFoeTrapPokemon(pokemon, source) {
             let oppspeed = 0;
             let selfspeed = 0;
             oppspeed += pokemon.getStat('spe', false, true);
-            selfspeed += this.getStat('spe', false, true);
+			   Console.log(pokemon.getStat('spe', false, true));
+            selfspeed += source.getStat('spe', false, true);
             if ((selfspeed>=oppspeed) && pokemon.isAdjacent(this.effectState.target)) {
                 pokemon.tryTrap(true);
             }
@@ -95,7 +96,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
             let oppspeed = 0;
             let selfspeed = 0;
             oppspeed += pokemon.getStat('spe', false, true);
-            selfspeed += this.getStat('spe', false, true);
+            selfspeed += source.getStat('spe', false, true);
             if (!source) source = this.effectState.target;
             if (!source || !pokemon.isAdjacent(source)) return;
             if (selfspeed>=oppspeed) {
@@ -220,7 +221,16 @@ ecoshell: {
 	},
   myworstnightmare: {
 			onStart(pokemon) {
-			const oldAbility = pokemon.setAbility('insomnia');
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Intimidate', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					const oldAbility = pokemon.setAbility('insomnia');
 			if (oldAbility) {
 				this.add('-ability', pokemon, 'Insomnia', '[from] move: Worry Seed');
 				if (pokemon.status === 'slp') {
@@ -229,6 +239,8 @@ ecoshell: {
 				return;
 			}
 			return oldAbility as false | null;
+				}
+			}
 		},
 		flags: {},
 		name: "myworstnightmare",
