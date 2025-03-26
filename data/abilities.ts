@@ -369,15 +369,21 @@ spiritruler: {
 		num: 293,
 	},
 	thearsonist: {
-		onResidualOrder: 28,
+	   onResidualOrder: 28,
 		onResidualSubOrder: 2,
 		onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
-				if (target.status === 'brd' || target.hasAbility('comatose')) {
-					this.damage(target.baseMaxhp / 8, target, pokemon);
+				if (target.status === 'brn' || target.hasAbility('comatose')) {
+					this.damage(target.baseMaxhp / 4, target, pokemon);
 				}
 			}
+		},
+	  onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Grass', 'Bug', 'Steel', 'Ice') {
+			this.damage(target.baseMaxhp / 4, target, pokemon);
+				}
+				return null;
 		},
 		flags: {},
 		name: "The Arsonist",
