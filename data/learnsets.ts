@@ -49398,6 +49398,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			weatherball: ["9M", "8M", "7E", "6E", "5E", "4E"],
 			waterfall: ["9M"],
 			hydropump: ["9M"],
+			scald: ["9M"],
 			blizzard: ["9M"],
 			bubblebeam: ["9M"],
 			bubble: ["9L4"],
@@ -49500,6 +49501,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			trickroom: ["9M"],
 			weatherball: ["9M", "8M"],
 			waterfall: ["9M"],
+			scald: ["9M"],
 			hydropump: ["9M"],
 			blizzard: ["9M"],
 			bubblebeam: ["9M"],
@@ -63303,7 +63305,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 	},
 	haxorus: {
 		learnset: {
-			learnset: {
 			aerialace: ["9M", "7M", "6M", "5M"],
 			aquatail: ["9E", "7T", "6T", "5T"],
 			attract: ["8M", "7M", "6M", "5M"],
