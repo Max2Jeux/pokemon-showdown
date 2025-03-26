@@ -85,7 +85,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
             let oppspeed = 0;
             let selfspeed = 0;
             oppspeed += pokemon.getStat('spe', false, true);
-			   Console.log(pokemon.getStat('spe', false, true));
+			   console.log(pokemon.getStat('spe', false, true));
             selfspeed += source.getStat('spe', false, true);
             if ((selfspeed>=oppspeed) && pokemon.isAdjacent(this.effectState.target)) {
                 pokemon.tryTrap(true);
