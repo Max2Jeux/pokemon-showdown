@@ -62,8 +62,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
    thearsonist: {
 		name: "The Arsonist",
-		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
-		shortDesc: "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.",
+		desc: "Pokemon making contact with this Pokemon with a Grass/Bug/Steel/Ice move lose 1/4 of their maximum HP, rounded down. Pokemon affected by the burning statut lose 1/4 of their maximum HP, rounded down.",
+		shortDesc: "Grass/Bug/Steel/Ice contact-moves damages 1/8 of Opponent's max HP. Damages 1/8 of Opponen't max HP if burned.",
 	},
    adaptability: {
 		name: "Adaptability",
@@ -78,7 +78,6 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon's Normal-type moves become Flying-type moves and have their power multiplied by 1.3. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
 			shortDesc: "This Pokemon's Normal-type moves become Flying type and have 1.3x power.",
 		},
-	},
 	aftermath: {
 		name: "Aftermath",
 		desc: "If this Pokemon is knocked out with a contact move, that move's user loses 1/4 of its maximum HP, rounded down. If any active Pokemon has the Damp Ability, this effect is prevented.",
