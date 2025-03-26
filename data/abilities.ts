@@ -234,10 +234,10 @@ ecoshell: {
 			const oldAbility = target.setAbility('insomnia');
 			if (oldAbility) {
 				this.add('-ability', target, 'Normalize', '[from] ability: Norma-blessing');
+            this.add('-activate', target, 'ability: Normalize');
 				return;
 			}
-			return oldAbility as false | null;
-				
+			return oldAbility as false | null;			
 			}
 		},
 		flags: {},
@@ -380,7 +380,7 @@ spiritruler: {
 				}
 			}
 		},
-	  onTryHit(target, source, move) {
+	  onTryHit(target, source, move, pokemon) {
 			if (target !== source && move.type === 'Grass', 'Bug', 'Steel', 'Ice') {
 			this.damage(target.baseMaxhp / 4, target, pokemon);
 				}
