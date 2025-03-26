@@ -10858,9 +10858,9 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	cryogonal: {
 		num: 615,
 		name: "Cryogonal",
-		types: ["Ice"],
+		types: ["Fire"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 50, def: 50, spa: 95, spd: 135, spe: 105 },
+		baseStats: { hp: 80, atk: 50, def: 70, spa: 95, spd: 135, spe: 95 },
 		abilities: { 0: "Levitate" },
 		heightm: 1.1,
 		weightkg: 148,

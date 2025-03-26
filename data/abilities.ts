@@ -84,7 +84,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
         onFoeTrapPokemon(pokemon) {
             let oppspeed = 0;
             let selfspeed = 0;
-            oppspeed += target.getStat('spe', false, true);
+            oppspeed += pokemon.getStat('spe', false, true);
             selfspeed += this.getStat('spe', false, true);
             if ((selfspeed>=oppspeed) && pokemon.isAdjacent(this.effectState.target)) {
                 pokemon.tryTrap(true);
@@ -94,7 +94,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
         onFoeMaybeTrapPokemon(pokemon, source) {
             let oppspeed = 0;
             let selfspeed = 0;
-            oppspeed += target.getStat('spe', false, true);
+            oppspeed += pokemon.getStat('spe', false, true);
             selfspeed += this.getStat('spe', false, true);
             if (!source) source = this.effectState.target;
             if (!source || !pokemon.isAdjacent(source)) return;
@@ -219,15 +219,16 @@ ecoshell: {
 		num: 31,
 	},
   myworstnightmare: {
-				onDamagingHit(damage, target, source, move) {
-			const sourceAbility = source.getAbility();
-			if (sourceAbility.flags['cantsuppress'] || sourceAbility.id === 'mummy') {
-				return;
-				const oldAbility = source.setAbility('mummy', target);
-				if (oldAbility) {
-					this.add('-activate', target, 'ability: Mummy', this.dex.abilities.get(oldAbility).name, `[of] ${source}`);
+			onStart(pokemon) {
+			const oldAbility = pokemon.setAbility('insomnia');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Insomnia', '[from] move: Worry Seed');
+				if (pokemon.status === 'slp') {
+					pokemon.cureStatus();
 				}
+				return;
 			}
+			return oldAbility as false | null;
 		},
 		flags: {},
 		name: "myworstnightmare",
