@@ -41,7 +41,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
    idontmind: {
 		name: "I don't mind",
-		desc: "Fails if the target did not select a physical attack, special attack, or Me First for use this turn, or if the target moves before the user. Has a 20% chance to confuse the target.",",
+		desc: "Fails if the target did not select a physical attack, special attack, or Me First for use this turn, or if the target moves before the user. Has a 20% chance to confuse the target.",
 		shortDesc: "Usually goes first. Fails if target is not attacking. 20% to confuse the target.",
 	},
    deflation: {
