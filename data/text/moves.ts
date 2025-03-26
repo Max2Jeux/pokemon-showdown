@@ -4,96 +4,6 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a very high chance for a critical hit.",
 		shortDesc: "Very high critical hit ratio.",
 	},
-  doomdash: {
-		name: "Doom Dash",
-		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
-		shortDesc: "Has 1/4 recoil.",
-	},
-  profiling: {
-		name: "Profiling",
-		desc: "The user transforms into the target. The target's current stats, stat stages, types, moves, Ability, weight, gender, and sprite are copied. The user's level and HP remain the same and each copied move receives only 5 PP, with a maximum of 5 PP each. The user can no longer change formes if it would have the ability to do so. This move fails if it hits a substitute, if either the user or the target is already transformed, or if either is behind an Illusion. Raises the user's Speed by 1 stage.",
-		shortDesc: "Copies target's stats, moves, types, and Ability. Raises the user's Speed by 1.",
-	},
-  viscopendix: {
-		name: "Viscopendix",
-		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Shed Tail, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Mortal Spin, Rapid Spin, or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
-		shortDesc: "Traps and damages the target for 4-5 turns.",
-	},
-   sidesslicer: {
-		name: "Sides Slicer",
-		desc: "If this move is successful, it sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Steel type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, or is hit by Defog.",
-		shortDesc: "Foes: Steel hazard.",
-	},
-   dragonjaw: {
-		name: "Dragon Jaw",
-		desc: "Prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field.",
-		shortDesc: "Prevents the target from switching out.",
-	},
-   curtainsrepair: {
-		name: "Curtain's Repair",
-		desc: "Each Pokemon on the user's side restores 1/4 of its maximum HP, rounded half up, and has its status condition cured.",
-		shortDesc: "User and allies: healed 1/4 max HP, status cured.",
-	},
-   algaecrush: {
-		name: "Algae Crush",
-		desc: "Damage is calculated using the user's Special Defense stat as its Special Attack, including stat stage changes. Other effects that modify the Special Attack stat are used as normal.",
-		shortDesc: "Uses user's Sp. Def stat as Sp. Atk in damage calculation.",
-	},
-   idontmind: {
-		name: "I don't mind",
-		desc: "Fails if the target did not select a physical attack, special attack, or Me First for use this turn, or if the target moves before the user. Has a 20% chance to confuse the target.",
-		shortDesc: "Usually goes first. Fails if target is not attacking. 20% to confuse the target.",
-	},
-   deflation: {
-		name: "Overcharged",
-		desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
-		shortDesc: "Hits adjacent Pokemon. The user faints.",
-	},
-   overcharged: {
-		name: "Overcharged",
-		desc: "Power doubles if the target has a paralysed statut condition.",
-		shortDesc: "Power doubles if the target is paralysed.",
-	},
-   sensofduty: {
-		name: "Sens of Duty",
-		desc: "Raises the user's Special Defense by 2 stages in exchange for the user losing 1/4 of its maximum HP, rounded down. Fails if the user would faint or if its Special Defense stat stage is 6.",
-		shortDesc: "User loses 25% max HP. Raises Sp. Def by 2.",
-	},
-   mastersstance: {
-		name: "Master's Stance",
-		desc: "Lowers the target's Defense and Special Defense by 1 stage.",
-		shortDesc: "Lowers the target's Defense and Sp. Def by 1.",
-	},
-   sharpsplitter: {
-		name: "Sharp Splitter",
-		desc: "This move always crit its target.",
-		shortDesc: "Always crit.",
-	},
-   miracleslap: {
-		name: "Miracle Slap",
-		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
-		shortDesc: "User recovers 75% of the damage dealt.",
-	},
-   gravelimpact: {
-		name: "Gravelimpact",
-		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
-		shortDesc: "User switches out after damaging the target.",
-	},
-   devotionflare: {
-		name: "Devotion Flare",
-		desc: "Has a 100% chance to burn the target.",
-		shortDesc: "Burn the target.",
-	},
-   omnivenom: {
-		name: "Omnivenom",
-		desc: "Hits three to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. Has a 30% chance to poison the target. Power doubles if the target is poisoned. ",
-		shortDesc: "Hits 2-5 times in one turn with 30% chance to poison the target. Power doubles if the target is poisoned.",
-	},
-   naturalvibe: {
-		name: "Natural Vibe",
-		desc: "If the weather is Snow, this move raises the user's Speed and Special Attack by 2 stages. If the weather is Sunny Day, this move raises the user's Speed and Attack by 2 stages. If the weather is Sandstorm, this move raises the user's Speed by 2 stages and Defense + Special Defense by 1 stage.",
-		shortDesc: "Raises user's Speed and Sp. Atk by 2 in Snow. Raises user's Speed and Atk by 2 in Sun. Raises user's Speed by 2, Atk and Spa by 1 in Sand.",
-	},
 	absorb: {
 		name: "Absorb",
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
@@ -4361,6 +4271,46 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "This move and its effects ignore the Abilities of other Pokemon.",
 		shortDesc: "Ignores the Abilities of other Pokemon.",
 	},
+   doomdash: {
+		name: "Doom Dash",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/4 recoil.",
+	},
+   profiling: {
+		name: "Profiling",
+		desc: "The user transforms into the target. The target's current stats, stat stages, types, moves, Ability, weight, gender, and sprite are copied. The user's level and HP remain the same and each copied move receives only 5 PP, with a maximum of 5 PP each. The user can no longer change formes if it would have the ability to do so. This move fails if it hits a substitute, if either the user or the target is already transformed, or if either is behind an Illusion. Raises the user's Speed by 1 stage.",
+		shortDesc: "Copies target's stats, moves, types, and Ability. Raises the user's Speed by 1.",
+	},
+  viscopendix: {
+		name: "Viscopendix",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Shed Tail, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Mortal Spin, Rapid Spin, or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+	},
+   sidesslicer: {
+		name: "Sides Slicer",
+		desc: "If this move is successful, it sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Steel type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, or is hit by Defog.",
+		shortDesc: "Foes: Steel hazard.",
+	},
+   dragonjaw: {
+		name: "Dragon Jaw",
+		desc: "Prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field.",
+		shortDesc: "Prevents the target from switching out.",
+	},
+   curtainsrepair: {
+		name: "Curtain's Repair",
+		desc: "Each Pokemon on the user's side restores 1/4 of its maximum HP, rounded half up, and has its status condition cured.",
+		shortDesc: "User and allies: healed 1/4 max HP, status cured.",
+	},
+   algaecrush: {
+		name: "Algae Crush",
+		desc: "Damage is calculated using the user's Special Defense stat as its Special Attack, including stat stage changes. Other effects that modify the Special Attack stat are used as normal.",
+		shortDesc: "Uses user's Sp. Def stat as Sp. Atk in damage calculation.",
+	},
+   idontmind: {
+		name: "I don't mind",
+		desc: "Fails if the target did not select a physical attack, special attack, or Me First for use this turn, or if the target moves before the user. Has a 20% chance to confuse the target.",
+		shortDesc: "Usually goes first. Fails if target is not attacking. 20% to confuse the target.",
+	},
 	moonlight: {
 		name: "Moonlight",
 		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Primordial Sea, Rain Dance, Sandstorm, or Snow, all rounded half down.",
@@ -5216,6 +5166,56 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Razor Shell",
 		desc: "Has a 50% chance to lower the target's Defense by 1 stage.",
 		shortDesc: "50% chance to lower the target's Defense by 1.",
+	},
+ deflation: {
+		name: "Overcharged",
+		desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
+   overcharged: {
+		name: "Overcharged",
+		desc: "Power doubles if the target has a paralysed statut condition.",
+		shortDesc: "Power doubles if the target is paralysed.",
+	},
+   sensofduty: {
+		name: "Sens of Duty",
+		desc: "Raises the user's Special Defense by 2 stages in exchange for the user losing 1/4 of its maximum HP, rounded down. Fails if the user would faint or if its Special Defense stat stage is 6.",
+		shortDesc: "User loses 25% max HP. Raises Sp. Def by 2.",
+	},
+   mastersstance: {
+		name: "Master's Stance",
+		desc: "Lowers the target's Defense and Special Defense by 1 stage.",
+		shortDesc: "Lowers the target's Defense and Sp. Def by 1.",
+	},
+   sharpsplitter: {
+		name: "Sharp Splitter",
+		desc: "This move always crit its target.",
+		shortDesc: "Always crit.",
+	},
+   miracleslap: {
+		name: "Miracle Slap",
+		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 75% of the damage dealt.",
+	},
+   gravelimpact: {
+		name: "Gravelimpact",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+	},
+   devotionflare: {
+		name: "Devotion Flare",
+		desc: "Has a 100% chance to burn the target.",
+		shortDesc: "Burn the target.",
+	},
+   omnivenom: {
+		name: "Omnivenom",
+		desc: "Hits three to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. Has a 30% chance to poison the target. Power doubles if the target is poisoned. ",
+		shortDesc: "Hits 2-5 times in one turn with 30% chance to poison the target. Power doubles if the target is poisoned.",
+	},
+   naturalvibe: {
+		name: "Natural Vibe",
+		desc: "If the weather is Snow, this move raises the user's Speed and Special Attack by 2 stages. If the weather is Sunny Day, this move raises the user's Speed and Attack by 2 stages. If the weather is Sandstorm, this move raises the user's Speed by 2 stages and Defense + Special Defense by 1 stage.",
+		shortDesc: "Raises user's Speed and Sp. Atk by 2 in Snow. Raises user's Speed and Atk by 2 in Sun. Raises user's Speed by 2, Atk and Spa by 1 in Sand.",
 	},
 	razorwind: {
 		name: "Razor Wind",
