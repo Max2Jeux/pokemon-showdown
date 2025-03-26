@@ -358,7 +358,7 @@ spiritruler: {
 				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
 				this.debug(`Supreme Samurai boost: ${powMod[this.effectState.fallen]}/4096`);
 				return this.chainModify([powMod[this.effectState.fallen], 4096]);
-		},
+		}
 		onModifySpe(spe, pokemon) {
 				this.debug('Supreme Samurai boost');
 				return this.chainModify(5325, 4096);
