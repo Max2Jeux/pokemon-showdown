@@ -222,18 +222,18 @@ ecoshell: {
 		rating: 3,
 		num: 31,
 	},
-  myworstnightmare: {
+  normablessing: {
 			onStart(pokemon) {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {
-					this.add('-ability', pokemon, 'My Worst Nightmare', 'boost');
+					this.add('-ability', pokemon, 'Norma-blessing', 'boost');
 					activated = true;
 				}
 				
 			const oldAbility = target.setAbility('insomnia');
 			if (oldAbility) {
-				this.add('-ability', target, 'Insomnia', '[from] ability: My Worst Nightmare');
+				this.add('-ability', target, 'Normalize', '[from] ability: Norma-blessing');
 				return;
 			}
 			return oldAbility as false | null;
@@ -241,9 +241,87 @@ ecoshell: {
 			}
 		},
 		flags: {},
-		name: "myworstnightmare",
+		name: "Norma-blessing",
 		rating: 0,
 		num: 96,
+	},
+ fullmoon: {
+		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.boost({ spa: 1 })) {
+					this.add('-immune', target, '[from] ability: Full Moon');
+}
+				}
+				return null;
+			},
+	   	onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ice') {
+				this.debug('Full Moon boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ice') {
+				this.debug('Full Moon boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Full Moon",
+		rating: 3,
+		num: 31,
+	},
+  sunshine: {
+		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Grass') {
+				if (!this.boost({ atk: 1 })) {
+					this.add('-immune', target, '[from] ability: Sunshine');
+}
+				}
+				return null;
+				},
+			onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Sunshine boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Sunshine boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Sunshine",
+		rating: 3,
+		num: 31,
+	},
+spiritruler: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Psychic') {
+				this.debug('Spirit Ruler boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Psychic') {
+				this.debug('Spirit Ruler boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Spirit Ruler",
+		rating: 4,
+		num: 91,
 	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
@@ -311,44 +389,6 @@ ecoshell: {
 		name: "Air Lock",
 		rating: 1.5,
 		num: 76,
-	},
-  fullmoon: {
-		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Water') {
-				if (!this.boost({ spa: 1 })) {
-					this.add('-immune', target, '[from] ability: Full Moon');
-}
-				}
-				return null;
-			},
-	   onModifyAtkPriority: 5,
-		onModifyAtk(spa) {
-			return this.chainModify(1.2);
-		},
-		flags: { breakable: 1 },
-		name: "Full Moon",
-		rating: 3,
-		num: 31,
-	},
-  sunshine: {
-		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Grass') {
-				if (!this.boost({ atk: 1 })) {
-					this.add('-immune', target, '[from] ability: Sunshine');
-}
-				}
-				return null;
-			},
-	   onModifyAtkPriority: 5,
-		onModifyAtk(atk) {
-			return this.chainModify(1.2);
-		},
-		flags: { breakable: 1 },
-		name: "Sunshine",
-		rating: 3,
-		num: 31,
 	},
 	analytic: {
 		onBasePowerPriority: 21,
@@ -4891,7 +4931,10 @@ ecoshell: {
 				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
 				this.debug(`Supreme Overlord boost: ${powMod[this.effectState.fallen]}/4096`);
 				return this.chainModify([powMod[this.effectState.fallen], 4096]);
-			}
+		},
+		onModifySpe(spe, pokemon) {
+				this.debug('Supreme Overlord boost');
+				return this.chainModify(5325, 4096);
 		},
 		flags: {},
 		name: "Supreme Overlord",
