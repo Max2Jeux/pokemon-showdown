@@ -2332,10 +2332,7 @@ spiritruler: {
 				pokemon.formeChange('Eiscue', this.effect, true);
 			}
 		},
-		flags: {
-			failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1,
-			breakable: 1, notransform: 1,
-		},
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, breakable: 1, notransform: 1,},
 		name: "Ice Face",
 		rating: 3,
 		num: 248,
