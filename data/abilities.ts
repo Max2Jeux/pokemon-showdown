@@ -230,12 +230,9 @@ ecoshell: {
 				if (target.volatiles['substitute']) {
 					this.add('-immune', target);
 				} else {
-					const oldAbility = pokemon.setAbility('insomnia');
+					const oldAbility = target.setAbility('insomnia');
 			if (oldAbility) {
-				this.add('-ability', pokemon, 'Insomnia', '[from] move: Worry Seed');
-				if (pokemon.status === 'slp') {
-					pokemon.cureStatus();
-				}
+				this.add('-ability', target, 'Insomnia', '[from] move: Worry Seed');
 				return;
 			}
 			return oldAbility as false | null;
