@@ -323,6 +323,51 @@ spiritruler: {
 		rating: 4,
 		num: 91,
 	},
+  grizzly: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk) {
+			return this.chainModify(2);
+		},
+	onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.type === 'Fire') mod *= 2;
+         if (move.type === 'Water') mod *= 2;
+			if (move.flags['contact']) mod /= 1.5;
+			return this.chainModify(mod);
+		},
+		flags: {},
+		name: "Adaptability",
+		rating: 4,
+		num: 91,
+	},
+  supremesamurai: {
+		onStart(pokemon) {
+			if (pokemon.side.totalFainted) {
+				this.add('-activate', pokemon, 'ability: Supreme Samurai');
+				const fallen = Math.min(pokemon.side.totalFainted, 5);
+				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
+				this.effectState.fallen = fallen;
+			}
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.effectState.fallen) {
+				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
+				this.debug(`Supreme Samurai boost: ${powMod[this.effectState.fallen]}/4096`);
+				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+		},
+		onModifySpe(spe, pokemon) {
+				this.debug('Supreme Samurai boost');
+				return this.chainModify(5325, 4096);
+		},
+		flags: {},
+		name: "Supreme Samurai",
+		rating: 4,
+		num: 293,
+	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
 			if (move.forceSTAB || source.hasType(move.type)) {
@@ -4912,34 +4957,6 @@ spiritruler: {
 		name: "Supersweet Syrup",
 		rating: 1.5,
 		num: 306,
-	},
-	supremesamurai: {
-		onStart(pokemon) {
-			if (pokemon.side.totalFainted) {
-				this.add('-activate', pokemon, 'ability: Supreme Samurai');
-				const fallen = Math.min(pokemon.side.totalFainted, 5);
-				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
-				this.effectState.fallen = fallen;
-			}
-		},
-		onEnd(pokemon) {
-			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
-		},
-		onBasePowerPriority: 21,
-		onBasePower(basePower, attacker, defender, move) {
-			if (this.effectState.fallen) {
-				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
-				this.debug(`Supreme Samurai boost: ${powMod[this.effectState.fallen]}/4096`);
-				return this.chainModify([powMod[this.effectState.fallen], 4096]);
-		},
-		onModifySpe(spe, pokemon) {
-				this.debug('Supreme Samurai boost');
-				return this.chainModify(5325, 4096);
-		},
-		flags: {},
-		name: "Supreme Samurai",
-		rating: 4,
-		num: 293,
 	},
 	surgesurfer: {
 		onModifySpe(spe) {
