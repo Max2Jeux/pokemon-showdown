@@ -76,18 +76,19 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	predatory: {
         onDamagingHit(damage, target, source, move) {
             if (this.checkMoveMakesContact(move, source, target, true)) {
-                this.add('-ability', target, 'Gooey');
+                this.add('-ability', target, 'Predatory');
                 this.boost({ spe: -1 }, source, target, null, true);
             }
         },
 
-        onFoeTrapPokemon(pokemon, source) {
+        onFoeTrapPokemon(pokemon) {
             let oppspeed = 0;
             let selfspeed = 0;
-            oppspeed += pokemon.getStat('spe', false, true);
-			   console.log(pokemon.getStat('spe', false, true));
-            selfspeed += source.getStat('spe', false, true);
-            if ((selfspeed>=oppspeed) && pokemon.isAdjacent(this.effectState.target)) {
+            for (const target of pokemon.foes()) {
+				oppspeed += target.getStat('spe', false, true);
+			}
+            selfspeed += pokemon.getStat('spe', false, true);
+            if ((selfspeed<=oppspeed) && pokemon.isAdjacent(this.effectState.target)) {
                 pokemon.tryTrap(true);
             }
         },
@@ -95,11 +96,13 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
         onFoeMaybeTrapPokemon(pokemon, source) {
             let oppspeed = 0;
             let selfspeed = 0;
-            oppspeed += pokemon.getStat('spe', false, true);
-            selfspeed += source.getStat('spe', false, true);
+            for (const target of pokemon.foes()) {
+				oppspeed += target.getStat('spe', false, true);
+			}
+            selfspeed += pokemon.getStat('spe', false, true);
             if (!source) source = this.effectState.target;
             if (!source || !pokemon.isAdjacent(source)) return;
-            if (selfspeed>=oppspeed) {
+            if (selfspeed<=oppspeed) {
                 pokemon.maybeTrapped = true;
             }
         },
@@ -224,19 +227,17 @@ ecoshell: {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {
-					this.add('-ability', pokemon, 'Intimidate', 'boost');
+					this.add('-ability', pokemon, 'My Worst Nightmare', 'boost');
 					activated = true;
 				}
-				if (target.volatiles['substitute']) {
-					this.add('-immune', target);
-				} else {
-					const oldAbility = target.setAbility('insomnia');
+				
+			const oldAbility = target.setAbility('insomnia');
 			if (oldAbility) {
-				this.add('-ability', target, 'Insomnia', '[from] move: Worry Seed');
+				this.add('-ability', target, 'Insomnia', '[from] ability: My Worst Nightmare');
 				return;
 			}
 			return oldAbility as false | null;
-				}
+				
 			}
 		},
 		flags: {},
