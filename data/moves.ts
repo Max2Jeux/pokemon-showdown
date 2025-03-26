@@ -11201,7 +11201,7 @@ doomdash: {
 		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
-		type: "Fire",
+		type: "Steel",
 		contestType: "Tough",
 	},
 profiling: {
