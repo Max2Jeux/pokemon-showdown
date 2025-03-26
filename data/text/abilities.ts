@@ -32,6 +32,20 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Octobrain",
 		shortDesc: "This Pokemon's offensive stat is multiplied by 1.2 while using a Psychic-type attack. Ignores other Pokemon's stat changes when dealing damage.",
 	},
+   insulatingsword: {
+		name: "Insulating Sword",
+		desc: "This Pokemon is immune to Electric-type moves and raises its Attack by 1 stage when hit by an Electric-type move. If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
+		shortDesc: "This Pokemon draws Electric moves to itself to raise Atk by 1; Electric immunity.",
+	},
+   normablessing: {
+		name: "Norma-Blessing",
+		shortDesc: "Target's ability becomes Normalize",
+	},
+   adaptability: {
+		name: "Adaptability",
+		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
+		shortDesc: "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.",
+	},
 	adaptability: {
 		name: "Adaptability",
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
