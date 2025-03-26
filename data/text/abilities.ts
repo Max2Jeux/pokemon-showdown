@@ -41,12 +41,16 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Norma-Blessing",
 		shortDesc: "Target's ability becomes Normalize",
 	},
+   fullmoon: {
+		name: "Full Moon",
+		desc: "This Pokemon is immune to Ground-type moves and raises its Special Attack if it by a Water-type move. Ice-type moves are 1.5 more powerful.",
+		shortDesc: "Immune to Ground. Raises Sp. Atk if hits by Water. Ice-type moves are 1.5 more powerful. ",
+	},
    adaptability: {
 		name: "Adaptability",
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
 		shortDesc: "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.",
 	},
-	
 	aerilate: {
 		name: "Aerilate",
 		desc: "This Pokemon's Normal-type moves become Flying-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
