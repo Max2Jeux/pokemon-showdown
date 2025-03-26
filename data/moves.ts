@@ -210,10 +210,33 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Fire",
 		contestType: "Tough",
 	},
+profiling: {
+			num: 144,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Profiling",
+		pp: 10,
+		priority: 0,
+		flags: { allyanim: 1, failencore: 1, noassist: 1, failcopycat: 1, failmimic: 1, failinstruct: 1 },
+		onHit(target, pokemon) {
+			if (!pokemon.transformInto(target)) {
+				return false;
+			}
+		},
+      boosts: {
+			spe: 1,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		zMove: { effect: 'heal' },
+		contestType: "Clever",
+	},
    viscopendix: {
 		num: 463,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		name: "Viscopendix",
 		pp: 5,
@@ -231,7 +254,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
    sidesslicer: {
 		num: 1000,
 		accuracy: 100,
-		basePower: 65,
+		basePower: 75,
 		category: "Physical",
 		name: "Sides Slicer",
 		pp: 16,
@@ -270,7 +293,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
-		name: "Dragon Claw",
+		name: "Dragon Jaw",
 		pp: 15,
 		priority: 0,
     	onHit(target, source, move) {
@@ -281,6 +304,23 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Dragon",
 		contestType: "Cool",
+	},
+curtainsrepair: {
+		num: 849,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Curtain's Repair",
+		pp: 5,
+		priority: 0,
+		flags: { snatch: 1, heal: 1, metronome: 1 },
+		onHit(pokemon) {
+			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
+			return pokemon.cureStatus() || success;
+		},
+		secondary: null,
+		target: "allies",
+		type: "Fairy",
 	},
 	algaecrush: {
 		num: 776,
@@ -295,20 +335,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Grass",
-	},
-   cargocrush: {
-		num: 776,
-		accuracy: 100,
-		basePower: 70,
-		category: "Physical",
-		name: "Cargocrush",
-		pp: 12,
-		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
-		overrideOffensiveStat: 'def',
-		secondary: null,
-		target: "normal",
-		type: "Steel",
 	},
 	idontmind: {
 		num: 909,
