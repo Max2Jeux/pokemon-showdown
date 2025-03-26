@@ -3,6 +3,16 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "No Ability",
 		shortDesc: "Does nothing.",
 	},
+   fearedhunter: {
+		name: "Feared Hunter",
+		desc: "This Pokemon's Attack is raised by 1 stage if it attacks and knocks out another Pokemon. Raises this Pokemon's Speed instead if the Special Defense of its opponent is higher than its Defense.",
+		shortDesc: "This Pokemon's Attack is raised by 1 stage if it attacks and KOes another Pokemon. Raises Speed instead if opponent's Sp. Def > Def",
+	},
+   predatory: {
+		name: "Predatory",
+		desc: "This Pokemon's opponent can't switch if its Speed is lower than User's. Pokemon making contact with this Pokemon have their Speed lowered by 1 stage",
+		shortDesc: "Opponent can't switch if its Speed is lower than User's. Speed lowered by 1 stage if contact",
+	},
 	adaptability: {
 		name: "Adaptability",
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
