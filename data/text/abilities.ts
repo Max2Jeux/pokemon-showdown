@@ -77,7 +77,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		gen6: {
 			desc: "This Pokemon's Normal-type moves become Flying-type moves and have their power multiplied by 1.3. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
 			shortDesc: "This Pokemon's Normal-type moves become Flying type and have 1.3x power.",
-		},
+		}
+     },
 	aftermath: {
 		name: "Aftermath",
 		desc: "If this Pokemon is knocked out with a contact move, that move's user loses 1/4 of its maximum HP, rounded down. If any active Pokemon has the Damp Ability, this effect is prevented.",
