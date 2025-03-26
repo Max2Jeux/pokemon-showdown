@@ -19,6 +19,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Lowers the target's Defense and Special Defense by 1 stage.",
 		shortDesc: "Lowers the target's Defense and Sp. Def by 1.",
 	},
+   sharpsplitter: {
+		name: "Sharp Splitter",
+		desc: "This move always crit its target.",
+		shortDesc: "Always crit.",
+	},
    miracleslap: {
 		name: "Miracle Slap",
 		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
