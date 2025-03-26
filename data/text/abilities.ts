@@ -53,7 +53,17 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
    spiritruler: {
 		name: "Spirit Ruler",
-		hortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Psychic-type attack.",
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Psychic-type attack.",
+	},
+   grizzly: {
+		name: "Grizzly",
+		desc: "This Pokemon's Attack is doubled. This Pokemon receives 1/2 damage from contact moves, but double damage from Fire/Water moves.",
+      shortDesc: "This Pokemon's Attack is doubled. Receives 1/2 damage from contact moves, but double damage from Fire/Water moves.",
+	},
+   thearsonist: {
+		name: "The Arsonist",
+		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
+		shortDesc: "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.",
 	},
    adaptability: {
 		name: "Adaptability",
