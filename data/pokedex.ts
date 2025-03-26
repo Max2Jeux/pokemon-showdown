@@ -14580,7 +14580,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	poipole: {
 		num: 803,
 		name: "Poipole",
-		types: ["Poison"],
+		types: ["Poison", "Grass"],
 		gender: "N",
 		baseStats: { hp: 67, atk: 73, def: 67, spa: 73, spd: 67, spe: 73 },
 		abilities: { 0: "Beast Boost" },
