@@ -4,6 +4,46 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a very high chance for a critical hit.",
 		shortDesc: "Very high critical hit ratio.",
 	},
+   overcharged: {
+		name: "Overcharged",
+		desc: "Power doubles if the target has a paralysed statut condition.",
+		shortDesc: "Power doubles if the target is paralysed.",
+	},
+   sensofduty: {
+		name: "Sens of Duty",
+		desc: "Raises the user's Special Defense by 2 stages in exchange for the user losing 1/4 of its maximum HP, rounded down. Fails if the user would faint or if its Special Defense stat stage is 6.",
+		shortDesc: "User loses 25% max HP. Raises Sp. Def by 2.",
+	},
+   mastersstance: {
+		name: "Master's Stance",
+		desc: "Lowers the target's Defense and Special Defense by 1 stage.",
+		shortDesc: "Lowers the target's Defense and Sp. Def by 1.",
+	},
+   miracleslap: {
+		name: "Miracle Slap",
+		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 75% of the damage dealt.",
+	},
+   gravelimpact: {
+		name: "Gravelimpact",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+	},
+   devotionflare: {
+		name: "Devotion Flare",
+		desc: "Has a 100% chance to burn the target.",
+		shortDesc: "Burn the target.",
+	},
+   omnivenom: {
+		name: "Omnivenom",
+		desc: "Hits three to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. Has a 30% chance to poison the target. Power doubles if the target is poisoned. ",
+		shortDesc: "Hits 2-5 times in one turn with 30% chance to poison the target. Power doubles if the target is poisoned.",
+	},
+   naturalvibe: {
+		name: "Natural Vibe",
+		desc: "If the weather is Snow, this move raises the user's Speed and Special Attack by 2 stages. If the weather is Sunny Day, this move raises the user's Speed and Attack by 2 stages. If the weather is Sandstorm, this move raises the user's Speed by 2 stages and Defense + Special Defense by 1 stage.",
+		shortDesc: "Raises user's Speed and Sp. Atk by 2 in Snow. Raises user's Speed and Atk by 2 in Sun. Raises user's Speed by 2, Atk and Spa by 1 in Sand.",
+	},
 	absorb: {
 		name: "Absorb",
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
