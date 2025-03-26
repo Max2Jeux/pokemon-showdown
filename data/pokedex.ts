@@ -11623,7 +11623,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	frogadier: {
 		num: 657,
 		name: "Frogadier",
-		types: ["Water"],
+		types: ["Water", "Poison"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 54, atk: 63, def: 52, spa: 83, spd: 56, spe: 97 },
 		abilities: { 0: "Torrent", H: "Protean" },
@@ -11656,7 +11656,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Greninja-Bond",
 		baseSpecies: "Greninja",
 		forme: "Bond",
-		types: ["Water", "Dark"],
+		types: ["Water", "Poison"],
 		gender: "M",
 		baseStats: { hp: 72, atk: 95, def: 67, spa: 103, spd: 71, spe: 122 },
 		abilities: { 0: "Battle Bond" },
