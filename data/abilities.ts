@@ -4913,10 +4913,10 @@ spiritruler: {
 		rating: 1.5,
 		num: 306,
 	},
-	supremeoverlord: {
+	supremesamurai: {
 		onStart(pokemon) {
 			if (pokemon.side.totalFainted) {
-				this.add('-activate', pokemon, 'ability: Supreme Overlord');
+				this.add('-activate', pokemon, 'ability: Supreme Samurai');
 				const fallen = Math.min(pokemon.side.totalFainted, 5);
 				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
 				this.effectState.fallen = fallen;
@@ -4929,15 +4929,15 @@ spiritruler: {
 		onBasePower(basePower, attacker, defender, move) {
 			if (this.effectState.fallen) {
 				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
-				this.debug(`Supreme Overlord boost: ${powMod[this.effectState.fallen]}/4096`);
+				this.debug(`Supreme Samurai boost: ${powMod[this.effectState.fallen]}/4096`);
 				return this.chainModify([powMod[this.effectState.fallen], 4096]);
 		},
 		onModifySpe(spe, pokemon) {
-				this.debug('Supreme Overlord boost');
+				this.debug('Supreme Samurai boost');
 				return this.chainModify(5325, 4096);
 		},
 		flags: {},
-		name: "Supreme Overlord",
+		name: "Supreme Samurai",
 		rating: 4,
 		num: 293,
 	},
