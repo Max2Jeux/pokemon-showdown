@@ -17,363 +17,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Cool",
-},
-	overcharged: {
-		num: 506,
-		accuracy: 100,
-		basePower: 55,
-		basePowerCallback(pokemon, target, move) {
-			if (target.status === 'par' || target.hasAbility('comatose')) {
-				this.debug('BP doubled from status condition');
-				return move.basePower * 2;
-			}
-			return move.basePower;
-		},
-		category: "Special",
-		name: "Overcharged",
-		pp: 16,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
-		secondary: null,
-		target: "normal",
-		type: "Electric",
-		zMove: { basePower: 130 },
-		contestType: "Clever",
-	},
-	sensofduty: {
-		num: 151,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Sens of Duty",
-		pp: 20,
-		priority: 0,
-		flags: { snatch: 1, metronome: 1 },
-      onHit(target) {
-			if (target.hp <= target.maxhp / 4 || target.boosts.spd >= 6 || target.maxhp === 1) { // Shedinja clause
-				return false;
-			}
-			this.directDamage(target.maxhp / 4);
-			this.boost({ spd: 2 }, target);
-		},
-		secondary: null,
-		target: "self",
-		type: "Steel",
-		zMove: { effect: 'clearnegativeboost' },
-		contestType: "Tough",
-	},
-	sharpsplitter: {
-		num: 400,
-		accuracy: 100,
-		basePower: 60,
-		category: "Physical",
-		name: "Sharp Splitter",
-		pp: 15,
-		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1 },
-		willCrit: true,
-		secondary: null,
-		target: "normal",
-		type: "Rock",
-		contestType: "Cool",
-	},
-	mastersstance: {
-		num: 568,
-		accuracy: 100,
-		basePower: 0,
-		category: "Status",
-		name: "Master's Stance",
-		pp: 30,
-		priority: 0,
-		flags: { protect: 1, reflectable: 1, mirror: 1, metronome: 1 },
-		boosts: {
-			def: -1,
-			spd: -1,
-		},
-		secondary: null,
-		target: "normal",
-		type: "Fighting",
-		zMove: { boost: { def: 1 } },
-		contestType: "Tough",
-	},
-	gravelimpact: {
-		num: 444,
-		accuracy: 100,
-		basePower: 130,
-		category: "Physical",
-		name: "Gravelimpact",
-		pp: 12,
-		priority: 0,
-   	selfSwitch: true,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
-		secondary: null,
-		target: "normal",
-		type: "Rock",
-		contestType: "Tough",
-	},
-   miracleslap: {
-		num: 613,
-		accuracy: 90,
-		basePower: 80,
-		category: "Physical",
-		isNonstandard: "Past",
-		name: "Miracle Slap",
-		pp: 10,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, distance: 1, heal: 1, metronome: 1 },
-		drain: [3, 4],
-		secondary: null,
-		target: "any",
-		type: "Normal",
-		contestType: "Cool",
-	},
-	devotionsflare: {
-		num: 53,
-		accuracy: 100,
-		basePower: 110,
-		category: "Special",
-		name: "Devotion's Flare",
-		pp: 8,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1 ,bypasssub: 1 },
-      breaksProtect: true,
-		secondary: {
-			chance: 100,
-			status: 'brn',
-		},
-		target: "normal",
-		type: "Fire",
-		contestType: "Beautiful",
-	},
-   omnivenom: {
-		num: 331,
-		accuracy: 100,
-		basePower: 40,
-		category: "Physical",
-		name: "Omnivenom",
-		pp: 30,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, bullet: 1 },
-		multihit: [3, 5],
-      onBasePower(basePower, pokemon, target) {
-			if (target.status === 'psn' || target.status === 'tox') {
-				return this.chainModify(2);
-			}
-		},
-		secondary: {
-			chance: 30,
-			status: 'psn',
-		},
-		target: "normal",
-		type: "Poison",
-		zMove: { basePower: 140 },
-		maxMove: { basePower: 130 },
-		contestType: "Cool",
-	},
-   naturalvibe: {
-		num: 483,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Natural Vibe",
-		pp: 1,
-		priority: 1,
-		flags: { snatch: 1, dance: 1, metronome: 1 },
-		  onHit(target) {
-		if (this.field.isWeather(['snowscape'])) 
-         this.boost({ spe: 2, spa: 2 }, target);
-      if (this.field.isWeather(['sunnyday'])) {
-         this.boost({ spe: 2, atk: 2 }, target);
-      if (this.field.isWeather(['sandstorm'])) {
-         this.boost({ spe: 2, def: 1, spd: 1 }, target);
-     	}
-     	}
-      },
-		secondary: null,
-		target: "self",
-		type: "Normal",
-		zMove: { effect: 'clearnegativeboost' },
-		contestType: "Beautiful",
-	},
-	doomdash: {
-		num: 36,
-		accuracy: 90,
-		basePower: 100,
-		category: "Physical",
-		name: "Doom Dash",
-		pp: 20,
-		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
-		recoil: [1, 4],
-		secondary: null,
-		target: "normal",
-		type: "Fire",
-		contestType: "Tough",
-	},
-profiling: {
-			num: 144,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Profiling",
-		pp: 10,
-		priority: 0,
-		flags: { allyanim: 1, failencore: 1, noassist: 1, failcopycat: 1, failmimic: 1, failinstruct: 1 },
-		onHit(target, pokemon) {
-			if (!pokemon.transformInto(target)) {
-				return false;
-			}
-		},
-      boosts: {
-			spe: 1,
-		},
-		secondary: null,
-		target: "normal",
-		type: "Psychic",
-		zMove: { effect: 'heal' },
-		contestType: "Clever",
-	},
-   viscopendix: {
-		num: 463,
-		accuracy: 100,
-		basePower: 90,
-		category: "Physical",
-		name: "Viscopendix",
-		pp: 5,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
-		volatileStatus: 'partiallytrapped',
-      secondary: {
-			chance: 20,
-			status: 'par',
-		},
-		target: "normal",
-		type: "Poison",
-		contestType: "Tough",
-	},
-   sidesslicer: {
-		num: 1000,
-		accuracy: 100,
-		basePower: 75,
-		category: "Physical",
-		name: "Sides Slicer",
-		pp: 16,
-		priority: 0,
-		flags: {},
-		self: {
-			onHit(source) {
-				for (const side of source.side.foeSidesWithConditions()) {
-					side.addSideCondition('gmaxsteelsurge');
-				}
-			},
-		},
-		condition: {
-			onSideStart(side) {
-				this.add('-sidestart', side, 'move: G-Max Steelsurge');
-			},
-			onSwitchIn(pokemon) {
-				if (pokemon.hasItem('heavydutyboots')) return;
-				// Ice Face and Disguise correctly get typed damage from Stealth Rock
-				// because Stealth Rock bypasses Substitute.
-				// They don't get typed damage from Steelsurge because Steelsurge doesn't,
-				// so we're going to test the damage of a Steel-type Stealth Rock instead.
-				const steelHazard = this.dex.getActiveMove('Stealth Rock');
-				steelHazard.type = 'Steel';
-				const typeMod = this.clampIntRange(pokemon.runEffectiveness(steelHazard), -6, 6);
-				this.damage(pokemon.maxhp * (2 ** typeMod) / 8);
-			},
-		},
-		secondary: null,
-		target: "adjacentFoe",
-		type: "Steel",
-		contestType: "Cool",
-	},
-	dragonjaw: {
-		num: 337,
-		accuracy: 100,
-		basePower: 90,
-		category: "Physical",
-		name: "Dragon Jaw",
-		pp: 15,
-		priority: 0,
-    	onHit(target, source, move) {
-			return target.addVolatile('trapped', source, move, 'trapper');
-		},
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
-		secondary: null,
-		target: "normal",
-		type: "Dragon",
-		contestType: "Cool",
-	},
-curtainsrepair: {
-		num: 849,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Curtain's Repair",
-		pp: 5,
-		priority: 0,
-		flags: { snatch: 1, heal: 1, metronome: 1 },
-		onHit(pokemon) {
-			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
-			return pokemon.cureStatus() || success;
-		},
-		secondary: null,
-		target: "allies",
-		type: "Fairy",
-	},
-	algaecrush: {
-		num: 776,
-		accuracy: 100,
-		basePower: 70,
-		category: "Special",
-		name: "Algaecrush",
-		pp: 12,
-		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
-		overrideOffensiveStat: 'spd',
-		secondary: null,
-		target: "normal",
-		type: "Grass",
-	},
-	idontmind: {
-		num: 909,
-		accuracy: 100,
-		basePower: 60,
-		category: "Special",
-		name: "I don't mind",
-		pp: 8,
-		priority: 1,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onTry(source, target) {
-			const action = this.queue.willMove(target);
-			const move = action?.choice === 'move' ? action.move : null;
-			if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
-				return false;
-			}
-		},
-		secondary: {
-			chance: 30,
-			volatileStatus: 'confusion',
-		},
-		target: "normal",
-		type: "Electric",
-		contestType: "Clever",
-	},
-	deflation: {
-	num: 153,
-		accuracy: 100,
-		basePower: 200,
-		category: "Physical",
-		name: "Deflation",
-		pp: 5,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, noparentalbond: 1 },
-		selfdestruct: "always",
-		secondary: null,
-		target: "allAdjacent",
-		type: "Water",
-		contestType: "Beautiful",
 	},
 	absorb: {
 		num: 71,
@@ -10281,6 +9924,183 @@ curtainsrepair: {
 		target: "normal",
 		type: "Ghost",
 	},
+overcharged: {
+		num: 506,
+		accuracy: 100,
+		basePower: 55,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'par' || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		name: "Overcharged",
+		pp: 16,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		zMove: { basePower: 130 },
+		contestType: "Clever",
+	},
+	sensofduty: {
+		num: 151,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sens of Duty",
+		pp: 20,
+		priority: 0,
+		flags: { snatch: 1, metronome: 1 },
+      onHit(target) {
+			if (target.hp <= target.maxhp / 4 || target.boosts.spd >= 6 || target.maxhp === 1) { // Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 4);
+			this.boost({ spd: 2 }, target);
+		},
+		secondary: null,
+		target: "self",
+		type: "Steel",
+		zMove: { effect: 'clearnegativeboost' },
+		contestType: "Tough",
+	},
+	sharpsplitter: {
+		num: 400,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Sharp Splitter",
+		pp: 15,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1 },
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		contestType: "Cool",
+	},
+	mastersstance: {
+		num: 568,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Master's Stance",
+		pp: 30,
+		priority: 0,
+		flags: { protect: 1, reflectable: 1, mirror: 1, metronome: 1 },
+		boosts: {
+			def: -1,
+			spd: -1,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		zMove: { boost: { def: 1 } },
+		contestType: "Tough",
+	},
+	gravelimpact: {
+		num: 444,
+		accuracy: 100,
+		basePower: 130,
+		category: "Physical",
+		name: "Gravelimpact",
+		pp: 12,
+		priority: 0,
+   	selfSwitch: true,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		contestType: "Tough",
+	},
+   miracleslap: {
+		num: 613,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		isNonstandard: "Past",
+		name: "Miracle Slap",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, distance: 1, heal: 1, metronome: 1 },
+		drain: [3, 4],
+		secondary: null,
+		target: "any",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	devotionsflare: {
+		num: 53,
+		accuracy: 100,
+		basePower: 110,
+		category: "Special",
+		name: "Devotion's Flare",
+		pp: 8,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 ,bypasssub: 1 },
+      breaksProtect: true,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
+		contestType: "Beautiful",
+	},
+   omnivenom: {
+		num: 331,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Omnivenom",
+		pp: 30,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, bullet: 1 },
+		multihit: [3, 5],
+      onBasePower(basePower, pokemon, target) {
+			if (target.status === 'psn' || target.status === 'tox') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Poison",
+		zMove: { basePower: 140 },
+		maxMove: { basePower: 130 },
+		contestType: "Cool",
+	},
+   naturalvibe: {
+		num: 483,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Natural Vibe",
+		pp: 1,
+		priority: 1,
+		flags: { snatch: 1, dance: 1, metronome: 1 },
+		  onHit(target) {
+		if (this.field.isWeather(['snowscape'])) 
+         this.boost({ spe: 2, spa: 2 }, target);
+      if (this.field.isWeather(['sunnyday'])) {
+         this.boost({ spe: 2, atk: 2 }, target);
+      if (this.field.isWeather(['sandstorm'])) {
+         this.boost({ spe: 2, def: 1, spd: 1 }, target);
+     	}
+     	}
+      },
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: { effect: 'clearnegativeboost' },
+		contestType: "Beautiful",
+	},
 	inferno: {
 		num: 517,
 		accuracy: 50,
@@ -11369,6 +11189,185 @@ curtainsrepair: {
 		type: "Psychic",
 		contestType: "Beautiful",
 	},
+doomdash: {
+		num: 36,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Doom Dash",
+		pp: 20,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		recoil: [1, 4],
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Tough",
+	},
+profiling: {
+			num: 144,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Profiling",
+		pp: 10,
+		priority: 0,
+		flags: { allyanim: 1, failencore: 1, noassist: 1, failcopycat: 1, failmimic: 1, failinstruct: 1 },
+		onHit(target, pokemon) {
+			if (!pokemon.transformInto(target)) {
+				return false;
+			}
+		},
+      boosts: {
+			spe: 1,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		zMove: { effect: 'heal' },
+		contestType: "Clever",
+	},
+   viscopendix: {
+		num: 463,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Viscopendix",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		volatileStatus: 'partiallytrapped',
+      secondary: {
+			chance: 20,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Poison",
+		contestType: "Tough",
+	},
+   sidesslicer: {
+		num: 1000,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Sides Slicer",
+		pp: 16,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxsteelsurge');
+				}
+			},
+		},
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: G-Max Steelsurge');
+			},
+			onSwitchIn(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				// Ice Face and Disguise correctly get typed damage from Stealth Rock
+				// because Stealth Rock bypasses Substitute.
+				// They don't get typed damage from Steelsurge because Steelsurge doesn't,
+				// so we're going to test the damage of a Steel-type Stealth Rock instead.
+				const steelHazard = this.dex.getActiveMove('Stealth Rock');
+				steelHazard.type = 'Steel';
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(steelHazard), -6, 6);
+				this.damage(pokemon.maxhp * (2 ** typeMod) / 8);
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Steel",
+		contestType: "Cool",
+	},
+	dragonjaw: {
+		num: 337,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Dragon Jaw",
+		pp: 15,
+		priority: 0,
+    	onHit(target, source, move) {
+			return target.addVolatile('trapped', source, move, 'trapper');
+		},
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		contestType: "Cool",
+	},
+curtainsrepair: {
+		num: 849,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Curtain's Repair",
+		pp: 5,
+		priority: 0,
+		flags: { snatch: 1, heal: 1, metronome: 1 },
+		onHit(pokemon) {
+			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
+			return pokemon.cureStatus() || success;
+		},
+		secondary: null,
+		target: "allies",
+		type: "Fairy",
+	},
+	algaecrush: {
+		num: 776,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Algaecrush",
+		pp: 12,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		overrideOffensiveStat: 'spd',
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
+	idontmind: {
+		num: 909,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "I don't mind",
+		pp: 8,
+		priority: 1,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === 'move' ? action.move : null;
+			if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+				return false;
+			}
+		},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Clever",
+	},
+	deflation: {
+	num: 153,
+		accuracy: 100,
+		basePower: 200,
+		category: "Physical",
+		name: "Deflation",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, noparentalbond: 1 },
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Water",
+		contestType: "Beautiful",
 	lunge: {
 		num: 679,
 		accuracy: 100,
