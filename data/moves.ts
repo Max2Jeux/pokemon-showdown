@@ -11368,6 +11368,7 @@ curtainsrepair: {
 		target: "allAdjacent",
 		type: "Water",
 		contestType: "Beautiful",
+},
 	lunge: {
 		num: 679,
 		accuracy: 100,
