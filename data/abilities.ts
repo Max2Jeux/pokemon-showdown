@@ -382,7 +382,7 @@ spiritruler: {
 		},
 	  onTryHit(target, source, move, pokemon) {
 			if (target !== source && move.type === 'Grass', 'Bug', 'Steel', 'Ice') {
-			this.damage(target.baseMaxhp / 4, target);
+			this.damage(target.baseMaxhp / 4, pokemon);
 				}
 				return null;
 		},
