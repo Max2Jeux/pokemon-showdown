@@ -444,13 +444,11 @@ spiritruler: {
 					this.boost({ atk: -1 }, target, pokemon, null, true);
 				}
 			}
-		},
-         onStart(pokemon) {
-			if (pokemon.swordBoost) return;
+         if (pokemon.swordBoost) return;
 			pokemon.swordBoost = true;
 			this.boost({ atk: 1, spe: 1 }, pokemon);
  },
-        flags: {},
+     flags: {},
         name: "Prehistoric Resize",
         rating: 3,
         num: -1000,
