@@ -11222,7 +11222,7 @@ profiling: {
 			spe: 1,
 		},
 		secondary: null,
-		target: "normal",
+		target: "self",
 		type: "Psychic",
 		zMove: { effect: 'heal' },
 		contestType: "Clever",
