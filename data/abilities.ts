@@ -435,20 +435,21 @@ spiritruler: {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {
-					this.add('-ability', pokemon, 'Prehistoric Resize', 'boost');
+					this.add('-ability', pokemon, 'Intimidate', 'boost');
 					activated = true;
 				}
 				if (target.volatiles['substitute']) {
 					this.add('-immune', target);
 				} else {
-					this.boost({ atk: -1, spa: -1, spe: -1 }, target, pokemon, null, true);
-				},
+					this.boost({ atk: -1 }, target, pokemon, null, true);
+				}
+			}
+		},
          onStart(pokemon) {
 			if (pokemon.swordBoost) return;
 			pokemon.swordBoost = true;
 			this.boost({ atk: 1, spe: 1 }, pokemon);
-		}
-      },
+ },
         flags: {},
         name: "Prehistoric Resize",
         rating: 3,
