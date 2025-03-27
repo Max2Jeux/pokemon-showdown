@@ -220,7 +220,7 @@ ecoshell: {
 		flags: { breakable: 1 },
 		name: "Insulating Sword",
 		rating: 3,
-		num: 31,
+		num: -34,
 	},
   normablessing: {
 			onStart(pokemon) {
@@ -243,7 +243,7 @@ ecoshell: {
 		flags: {},
 		name: "Norma-blessing",
 		rating: 0,
-		num: 96,
+		num: -99,
 	},
  fullmoon: {
 		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
@@ -272,7 +272,7 @@ ecoshell: {
 		flags: { breakable: 1 },
 		name: "Full Moon",
 		rating: 3,
-		num: 31,
+		num: -62,
 	},
   sunshine: {
 		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
@@ -301,7 +301,7 @@ ecoshell: {
 		flags: { breakable: 1 },
 		name: "Sunshine",
 		rating: 3,
-		num: 31,
+		num: -61,
 	},
 spiritruler: {
 		onModifyAtkPriority: 5,
@@ -321,7 +321,7 @@ spiritruler: {
 		flags: {},
 		name: "Spirit Ruler",
 		rating: 4,
-		num: 91,
+		num: -71,
 	},
   grizzly: {
 		onModifyAtkPriority: 5,
@@ -338,7 +338,7 @@ spiritruler: {
 		flags: {},
 		name: "Grizzly",
 		rating: 4,
-		num: 91,
+		num: -91,
 	},
   supremesamurai: {
 		onStart(pokemon) {
@@ -367,7 +367,7 @@ spiritruler: {
 		flags: {},
 		name: "Supreme Samurai",
 		rating: 4,
-		num: 293,
+		num: -293,
 	},
 	thearsonist: {
 	   onResidualOrder: 28,
@@ -389,7 +389,7 @@ spiritruler: {
 		flags: {},
 		name: "The Arsonist",
 		rating: 4,
-		num: 91,
+		num: -167,
 	},
  supremeoverlord: {
 		onStart(pokemon) {
@@ -415,6 +415,15 @@ spiritruler: {
 		name: "Supreme Overlord",
 		rating: 4,
 		num: 293,
+	},
+ toxicplace: {
+        onStart(pokemon, source) {
+			this.SetStatus('tox', source);
+		},
+        flags: {},
+        name: "Toxic Place",
+        rating: 3,
+        num: -153,
 	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
