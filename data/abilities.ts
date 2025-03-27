@@ -425,6 +425,45 @@ spiritruler: {
         rating: 3,
         num: -153,
 	},
+ benedictionofspeed: {
+ onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({ spe: 1 });
+			}
+		},
+		flags: {},
+		name: "Benedictionofspeed",
+		rating: 4.5,
+		num: -171,
+	},
+benedictionofdefense: {
+ onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({ def: 1 });
+			}
+		},
+		flags: {},
+		name: "Benediction of Defense",
+		rating: 4.5,
+		num: -172,
+	},
+benedictionofattack: {
+ onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({ atk: 1 });
+			}
+		},
+		flags: {},
+		name: "Benediction of Attack",
+		rating: 4.5,
+		num: -173,
+	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
 			if (move.forceSTAB || source.hasType(move.type)) {
