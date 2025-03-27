@@ -380,12 +380,11 @@ spiritruler: {
 				}
 			}
 		},
-	  onTryHit(target, source, move, pokemon) {
-			if (target !== source && move.type === 'Grass', 'Bug', 'Steel', 'Ice') {
-			this.damage(target.baseMaxhp / 4, target, '[from] ability: The Arsonist');
-				}
-				return null;
-		},
+onTryHit(target, source, move) {
+            if (target !== source && move.type === 'Grass', 'Bug', 'Steel', 'Ice') {
+                this.damage(source.baseMaxhp / 4, source, target);
+            }
+},
 		flags: {},
 		name: "The Arsonist",
 		rating: 4,
