@@ -65,6 +65,26 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Pokemon making contact with this Pokemon with a Grass/Bug/Steel/Ice move lose 1/4 of their maximum HP, rounded down. Pokemon affected by the burning statut lose 1/4 of their maximum HP, rounded down.",
 		shortDesc: "Grass/Bug/Steel/Ice contact-moves damages 1/8 of Opponent's max HP. Damages 1/8 of Opponen't max HP if burned.",
 	},
+   prehistoricresize: {
+		name: "Prehistoric Resize",
+		desc: "On switch-in, this Pokemon lowers the Attack of opposing Pokemon by 1 stage. Pokemon with the Inner Focus, Oblivious, Own Tempo, or Scrappy Abilities and Pokemon behind a substitute are immune. This Pokemon Attack and Speed raises by one stage.",
+		shortDesc: "On switch-in, this Pokemon lowers the Atk & Spe of opponents by 1 stage. Boost Atk and Spe by 1 stage.",
+	},
+   benedictionofspeed: {
+		name: "Benediction of Speed",
+		desc: "This Pokemon's Speed is raised by 1 stage at the end of each full turn it has been on the field.",
+		shortDesc: "This Pokemon's Speed is raised 1 stage at the end of each full turn on the field.",
+	},
+ benedictionofdefense: {
+		name: "Benediction of Defense",
+		desc: "This Pokemon's Defense is raised by 1 stage at the end of each full turn it has been on the field.",
+		shortDesc: "This Pokemon's Defense is raised 1 stage at the end of each full turn on the field.",
+	},
+ benedictionofattack: {
+		name: "Benediction of Attack",
+		desc: "This Pokemon's Attack is raised by 1 stage at the end of each full turn it has been on the field.",
+		shortDesc: "This Pokemon's Attack is raised 1 stage at the end of each full turn on the field.",
+	},
    adaptability: {
 		name: "Adaptability",
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
