@@ -381,7 +381,7 @@ spiritruler: {
 			}
 		},
 	  onTryHit(target, source, move, pokemon) {
-			if (target !== move.type === 'Grass', 'Bug', 'Steel', 'Ice') {
+			if (target !== source && move.type === 'Grass', 'Bug', 'Steel', 'Ice') {
 			this.damage(target.baseMaxhp / 4, target, '[from] ability: The Arsonist');
 				}
 				return null;
