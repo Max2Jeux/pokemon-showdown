@@ -11231,7 +11231,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Bug"],
 	},
 	queenfighter: {
-		num: 632,
+		num: -634,
 		name: "Queen-Figter",
 		types: ["Bug", "Steel"],
 		baseStats: { hp: 90, atk: 140, def: 80, spa: 140, spd: 80, spe: 110 },
@@ -11242,7 +11242,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Bug"],
 	},
 	queennester: {
-		num: -632,
+		num: -635,
 		name: "Queen-Nester",
 		types: ["Bug", "Steel"],
 		baseStats: { hp: 80, atk: 98, def: 140, spa: 98, spd: 140, spe: 110 },
@@ -11253,7 +11253,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Bug"],
 	},
 	queenscouter: {
-		num: -633,
+		num: -636,
 		name: "Queen-Scout",
 		types: ["Bug", "Steel"],
 		baseStats: { hp: 80, atk: 100, def: 80, spa: 100, spd: 80, spe: 140 },
