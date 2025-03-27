@@ -231,7 +231,7 @@ ecoshell: {
 					activated = true;
 				}
 				
-			const oldAbility = target.setAbility('insomnia');
+			const oldAbility = target.setAbility('normalize');
 			if (oldAbility) {
 				this.add('-ability', target, 'Normalize', '[from] ability: Norma-blessing');
             this.add('-activate', target, 'ability: Normalize');
@@ -241,7 +241,7 @@ ecoshell: {
 			}
 		},
 		flags: {},
-		name: "Norma-blessing",
+		name: "Norma-blesssing",
 		rating: 0,
 		num: -99,
 	},
@@ -382,7 +382,7 @@ spiritruler: {
 		},
 	  onTryHit(target, source, move, pokemon) {
 			if (target !== source && move.type === 'Grass', 'Bug', 'Steel', 'Ice') {
-			this.damage(target.baseMaxhp / 4, target, pokemon);
+			this.damage(target.baseMaxhp / 4, target);
 				}
 				return null;
 		},
@@ -434,7 +434,7 @@ spiritruler: {
 			}
 		},
 		flags: {},
-		name: "Benedictionofspeed",
+		name: "Benediction of Speed",
 		rating: 4.5,
 		num: -171,
 	},
@@ -443,7 +443,7 @@ benedictionofdefense: {
 		onResidualSubOrder: 2,
 		onResidual(pokemon) {
 			if (pokemon.activeTurns) {
-				this.boost({ def: 1 });
+				this.boost({ spd: 1 });
 			}
 		},
 		flags: {},
@@ -483,17 +483,18 @@ benedictionofattack: {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {
-					this.add('-ability', pokemon, 'Intimidate', 'boost');
+					this.add('-ability', pokemon, 'Resize', 'boost');
 					activated = true;
 				}
 				if (target.volatiles['substitute']) {
 					this.add('-immune', target);
 				} else {
-					this.boost({ atk: -1 }, target, pokemon, null, true);
+					this.boost({ atk: -1, spe: -1 }, target, pokemon, null, true);
 				}
 			}
          if (pokemon.swordBoost) return;
 			pokemon.swordBoost = true;
+         this.add('-ability', pokemon, 'Resize', 'boost');
 			this.boost({ atk: 1, spe: 1 }, pokemon);
  },
      flags: {},
