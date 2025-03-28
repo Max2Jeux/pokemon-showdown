@@ -11254,7 +11254,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	queenscouter: {
 		num: -636,
-		name: "Queen-Scout",
+		name: "Queen-Scouter",
 		types: ["Bug", "Steel"],
 		baseStats: { hp: 80, atk: 100, def: 80, spa: 100, spd: 80, spe: 140 },
 		abilities: { 0: "Swarm", 1: "Speed Boost", H: "Truant" },
