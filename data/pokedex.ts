@@ -3159,7 +3159,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	snorlax: {
 		num: 143,
 		name: "Snorlax",
-		types: ["Normal", "Fight"],
+		types: ["Normal", "Fighting"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 160, atk: 100, def: 75, spa: 65, spd: 110, spe: 30 },
 		abilities: { 0: "Gluttony", 1: "Thick Fat", H: "Grizzly" },
@@ -8029,7 +8029,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	munchlax: {
 		num: 446,
 		name: "Munchlax",
-		types: ["Normal", "Fight"],
+		types: ["Normal", "Fighting"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 135, atk: 85, def: 50, spa: 40, spd: 85, spe: 35 },
 		abilities: { 0: "Gluttony", 1: "Thick Fat", H: "Grizzly" },
@@ -13120,7 +13120,7 @@ tyruntkappa: {
 		types: ["Ground", "Ghost"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 88, atk: 112, def: 80, spa: 105, spd: 95, spe: 60 },
-		abilities: { 0: "Compund Eyes", H: "Scrappy" },
+		abilities: { 0: "Compound Eyes", H: "Scrappy" },
 		heightm: 1.6,
 		weightkg: 37,
 		color: "Brown",
@@ -17279,7 +17279,7 @@ tyruntkappa: {
 	ceruledge: {
 		num: 937,
 		name: "Ceruledge",
-		types: ["Fight", "Flying"],
+		types: ["Fighting", "Flying"],
 		baseStats: { hp: 80, atk: 125, def: 85, spa: 60, spd: 100, spe: 125 },
 		abilities: { 0: "Moxie", H: "Weak Armor" },
 		heightm: 1.6,
@@ -18435,7 +18435,7 @@ tyruntkappa: {
 		changesFrom: "Ogerpon",
 		forceTeraType: "Water",
 	},
-	ogerponhearthflame: {
+	ogerponheartflame: {
 		num: 1017,
 		name: "Ogerpon-Heartflame",
 		baseSpecies: "Ogerpon",
@@ -18460,7 +18460,7 @@ tyruntkappa: {
 		types: ["Grass", "Dragon"],
 		gender: "F",
 		baseStats: { hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110 },
-		abilities: { 0: "Dragon Maw" },
+		abilities: { 0: "Dragon's Maw" },
 		heightm: 1.2,
 		weightkg: 39.8,
 		color: "Gray",
