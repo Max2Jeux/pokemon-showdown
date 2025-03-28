@@ -65823,7 +65823,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["8M", "8L32", "7M", "7L41", "6M", "6L51", "5M", "5L51"],
 		},
 	},
-	  queenscout: {
+	  queenscouter: {
 		learnset: {
 			aerialace: ["7M", "6M", "5M"],
 			agility: ["8M", "8L24", "7L6", "6L16", "5L16"],
