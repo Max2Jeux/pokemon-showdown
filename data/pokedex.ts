@@ -18435,9 +18435,9 @@ tyruntkappa: {
 		changesFrom: "Ogerpon",
 		forceTeraType: "Water",
 	},
-	ogerponheartflame: {
+	ogerponhearthflame: {
 		num: 1017,
-		name: "Ogerpon-Heartflame",
+		name: "Ogerpon-Hearthflame",
 		baseSpecies: "Ogerpon",
 		forme: "Hearthflame",
 		types: ["Grass","Poison"],
