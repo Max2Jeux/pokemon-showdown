@@ -11232,7 +11232,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	queenfighter: {
 		num: -634,
-		name: "Queen-Figter",
+		name: "Queen-Fighter",
 		types: ["Bug", "Steel"],
 		baseStats: { hp: 90, atk: 140, def: 80, spa: 140, spd: 80, spe: 110 },
 		abilities: { 0: "Swarm", 1: "Hustle", H: "Truant" },
