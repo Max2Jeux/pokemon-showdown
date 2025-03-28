@@ -10418,7 +10418,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	gothita: {
 		num: 574,
 		name: "Gothita",
-		types: ["Darkc"],
+		types: ["Dark"],
 		genderRatio: { M: 0.25, F: 0.75 },
 		baseStats: { hp: 45, atk: 55, def: 65, spa: 30, spd: 50, spe: 45 },
 		abilities: { 0: "Frisk", 1: "Defiant", H: "Shadow Tag" },
