@@ -71980,7 +71980,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			scaleshot: ["8L53"],
 		},
 	},
-		tyruntdiony: {
+		tyruntkappa: {
 		learnset: {
 			aerialace: ["7M", "6M"],
 			assurance: ["8M"],
