@@ -10334,6 +10334,40 @@ overcharged: {
 		target: "normal",
 		type: "Grass",
 	},
+		corruptcudgel: {
+		num: -438,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Corrupt Cudgel",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,	secondary: {
+			chance: 50,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Poison",
+		contestType: "Tough",
+	},
+icycudgel: {
+		num: -438,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Icy Cudgel",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 50,
+			status: 'frz',
+		},
+		target: "normal",
+		type: "Poison",
+		contestType: "Tough",
+	},
 	jawlock: {
 		num: 746,
 		accuracy: 100,
@@ -21100,6 +21134,48 @@ curtainsrepair: {
 		pseudoWeather: 'trickroom',
 		condition: {
 			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', '[move] Trick Room');
+					return 7;
+				}
+				return 5;
+			},
+			onFieldStart(target, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-fieldstart', 'move: Trick Room', `[of] ${source}`, '[persistent]');
+				} else {
+					this.add('-fieldstart', 'move: Trick Room', `[of] ${source}`);
+				}
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('trickroom');
+			},
+			// Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 1,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Trick Room');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Psychic",
+		zMove: { boost: { accuracy: 1 } },
+		contestType: "Clever",
+	},
+   lunarclimate: {
+		num: 433,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Lunar Climate",
+		pp: 5,
+		priority: 3,
+		flags: { mirror: 1, metronome: 1 },
+		pseudoWeather: 'trickroom',
+		condition: {
+			duration: 10,
 			durationCallback(source, effect) {
 				if (source?.hasAbility('persistent')) {
 					this.add('-activate', source, 'ability: Persistent', '[move] Trick Room');
