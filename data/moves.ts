@@ -21164,18 +21164,18 @@ curtainsrepair: {
 		zMove: { boost: { accuracy: 1 } },
 		contestType: "Clever",
 	},
-   lunarclimate: {
+   lunareffects: {
 		num: 433,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Lunar Climate",
+		name: "Lunar Effects",
 		pp: 5,
 		priority: 3,
 		flags: { mirror: 1, metronome: 1 },
 		pseudoWeather: 'trickroom',
 		condition: {
-			duration: 10,
+			duration: 6,
 			durationCallback(source, effect) {
 				if (source?.hasAbility('persistent')) {
 					this.add('-activate', source, 'ability: Persistent', '[move] Trick Room');
