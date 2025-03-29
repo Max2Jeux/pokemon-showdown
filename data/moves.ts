@@ -10343,7 +10343,7 @@ overcharged: {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		secondary: null,	secondary: {
+      secondary: {
 			chance: 50,
 			status: 'psn',
 		},
