@@ -21170,7 +21170,7 @@ curtainsrepair: {
 		basePower: 0,
 		category: "Status",
 		name: "Lunar Effects",
-		pp: 5,
+		pp: 10,
 		priority: 3,
 		flags: { mirror: 1, metronome: 1 },
 		pseudoWeather: 'trickroom',
@@ -21200,6 +21200,7 @@ curtainsrepair: {
 				this.add('-fieldend', 'move: Trick Room');
 			},
 		},
+      selfSwitch: true,
 		secondary: null,
 		target: "all",
 		type: "Psychic",
