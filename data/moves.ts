@@ -9971,7 +9971,7 @@ overcharged: {
 	sharpsplitter: {
 		num: 400,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 90,
 		category: "Physical",
 		name: "Sharp Splitter",
 		pp: 15,
@@ -9979,7 +9979,7 @@ overcharged: {
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1 },
 		willCrit: true,
 		secondary: null,
-		target: "normal",
+		target: "allAdjacentFoes",
 		type: "Rock",
 		contestType: "Cool",
 	},
@@ -9990,7 +9990,7 @@ overcharged: {
 		category: "Status",
 		name: "Master's Stance",
 		pp: 30,
-		priority: 0,
+		priority: 1,
 		flags: { protect: 1, reflectable: 1, mirror: 1, metronome: 1 },
 		boosts: {
 			def: -1,
