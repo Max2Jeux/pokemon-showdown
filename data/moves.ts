@@ -9971,7 +9971,7 @@ overcharged: {
 	sharpsplitter: {
 		num: 400,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 70,
 		category: "Physical",
 		name: "Sharp Splitter",
 		pp: 15,
@@ -9997,7 +9997,7 @@ overcharged: {
 			spd: -1,
 		},
 		secondary: null,
-		target: "normal",
+	   target: "allAdjacentFoes",
 		type: "Fighting",
 		zMove: { boost: { def: 1 } },
 		contestType: "Tough",
