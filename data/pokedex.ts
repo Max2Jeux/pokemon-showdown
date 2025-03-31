@@ -3110,7 +3110,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.5,
 		weightkg: 11.5,
 		color: "Brown",
-		evos: ["Kabutops"],
+		evos: ["Kabutops-Shraider"],
 		eggGroups: ["Water 1", "Water 3"],
 	},
    kabutopsshraider: {
@@ -3123,7 +3123,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 1.3,
 		weightkg: 40.5,
 		color: "Brown",
-		prevo: "Kabuto",
+		prevo: "Kabuto-Shraider",
 		evoLevel: 40,
 		eggGroups: ["Water 1", "Water 3"],
 	},

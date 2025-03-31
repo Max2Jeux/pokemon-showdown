@@ -1120,7 +1120,17 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
+	kabutoshraider: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "LC",
+	},
 	kabutops: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	kabutopsshraider: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
