@@ -3101,7 +3101,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Water 1", "Water 3"],
 	},
    kabutoshraider: {
-		num: -202,
+		num: 140,
 		name: "Kabuto-Shraider",
 		types: ["Steel"],
 		genderRatio: { M: 0.875, F: 0.125 },
