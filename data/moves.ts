@@ -21207,6 +21207,23 @@ curtainsrepair: {
 		zMove: { boost: { accuracy: 1 } },
 		contestType: "Clever",
 	},
+  solareffects: {
+		num: -394,
+		accuracy: 100,
+		basePower: 110,
+		category: "Physical",
+		name: "Solar Effects",
+		pp: 15,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, defrost: 1, metronome: 1 },
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
+		contestType: "Cool",
+	},
 	triplearrows: {
 		num: 843,
 		accuracy: 100,
