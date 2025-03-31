@@ -3047,7 +3047,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Water 1", "Water 3"],
 	},
   omanytesayan: {
-		num: -200,
+		num: 138,
 		name: "Omanyte-Sayan",
 		types: ["Psychic"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -3060,7 +3060,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Water 1", "Water 3"],
 	},
    omastarsayan: {
-		num: -201,
+		num: 139,
 		name: "Omastar-Sayan",
 		types: ["Psychic"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -3114,7 +3114,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Water 1", "Water 3"],
 	},
    kabutopsshraider: {
-		num: -203,
+		num: 141,
 		name: "Kabutops-Shraider",
 		types: ["Steel"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -6343,7 +6343,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Water 3"],
 	},
 	lileeplucid: {
-		num: -204,
+		num: 345,
 		name: "Lileep-Lucid",
 		types: ["Poison"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -6356,7 +6356,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Water 3"],
 	},
 	cradilylucid: {
-		num: -205,
+		num: 346,
 		name: "Cradily-Lucid",
 		types: ["Poison"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12472,7 +12472,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Monster", "Dragon"],
 },
 tyruntkappa: {
-		num: -205,
+		num: 696,
 		name: "Tyrunt-Kappa",
 		types: ["Dragon"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12485,7 +12485,7 @@ tyruntkappa: {
 		eggGroups: ["Monster", "Dragon"],
 	},
 	tyrantrumkappa: {
-		num: -206,
+		num: 697,
 		name: "Tyrantrum-Kappa",
 		types: ["Dragon"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12528,7 +12528,7 @@ tyruntkappa: {
 		eggGroups: ["Monster"],
 	},
   amaurafabio: {
-		num: -207,
+		num: 698,
 		name: "Amaura-Fabio",
 		types: ["Fairy"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12541,7 +12541,7 @@ tyruntkappa: {
 		eggGroups: ["Monster"],
 	},
 	aurorusfabio: {
-		num: -208,
+		num: 699,
 		name: "Aurorus-Fabio",
 		types: ["Fairy"],
 		genderRatio: { M: 0.875, F: 0.125 },
