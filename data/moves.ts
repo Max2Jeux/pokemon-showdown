@@ -9596,11 +9596,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 20,
 		priority: 0,
 		flags: { protect: 1, reflectable: 1, mirror: 1, metronome: 1 },
-   	drain: [1, 2],
-		onTryImmunity(target) {
-			return target.status === 'slp' || target.hasAbility('comatose');
-		},
-		status: 'slp',
+      onHit(pokemon, source) {
+				this.add('-start', pokemon, 'Curse', `[of] ${source}`);
+			},
+			onResidualOrder: 12,
+			onResidual(pokemon) {
+				this.damage(pokemon.baseMaxhp / 4);
+			},
 		target: "normal",
 		type: "Ghost",
 		zMove: { boost: { spe: 1 } },
