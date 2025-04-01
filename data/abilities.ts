@@ -438,29 +438,29 @@ onTryHit(target, source, move) {
 			this.SetStatus('brn', source);
 		},
         flags: {},
-        name: "Mineral Gas 1",
+        name: "Mineral Gas 2",
         rating: 3,
-        num: -170,
+        num: -171,
 	},
 mineralgas3: {
 		onStart(pokemon) {
 			if (pokemon.swordBoost) return;
 			pokemon.swordBoost = true;
-			this.boost({ evasion: -1 }, pokemon);
+			this.boost({ acc: -2 }, pokemon);
 		},
         flags: {},
         name: "Mineral Gas 3",
         rating: 3,
-        num: -170,
+        num: -172,
 	},
  mineralgas4: {
         onStart(pokemon, source) {
 			this.SetStatus('slp', source);
 		},
         flags: {},
-        name: "Mineral Gas 1",
+        name: "Mineral Gas 4",
         rating: 3,
-        num: -170,
+        num: -173,
 	},
  benedictionofspeed: {
  onResidualOrder: 28,
