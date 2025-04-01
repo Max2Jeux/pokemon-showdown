@@ -12504,7 +12504,7 @@ tyruntkappa: {
 		name: "Amaura",
 		types: ["Fairy"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 56, def: 60, spa: 56, spd: 52, spe: 46 },
+		baseStats: { hp: 90, atk: 56, def: 80, spa: 66, spd: 62, spe: 66 },
 		abilities: { 0: "Fairy Curtain" },
 		heightm: 1.3,
 		weightkg: 25.2,
