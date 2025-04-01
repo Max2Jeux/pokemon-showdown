@@ -424,6 +424,44 @@ onTryHit(target, source, move) {
         rating: 3,
         num: -153,
 	},
+ mineralgas1: {
+        onStart(pokemon, source) {
+			this.SetStatus('par', source);
+		},
+        flags: {},
+        name: "Mineral Gas 1",
+        rating: 3,
+        num: -170,
+	},
+ mineralgas2: {
+        onStart(pokemon, source) {
+			this.SetStatus('brn', source);
+		},
+        flags: {},
+        name: "Mineral Gas 1",
+        rating: 3,
+        num: -170,
+	},
+mineralgas3: {
+		onStart(pokemon) {
+			if (pokemon.swordBoost) return;
+			pokemon.swordBoost = true;
+			this.boost({ atk: 1 }, pokemon);
+		},
+        flags: {},
+        name: "Mineral Gas 3",
+        rating: 3,
+        num: -170,
+	},
+ mineralgas4: {
+        onStart(pokemon, source) {
+			this.SetStatus('slp', source);
+		},
+        flags: {},
+        name: "Mineral Gas 1",
+        rating: 3,
+        num: -170,
+	},
  benedictionofspeed: {
  onResidualOrder: 28,
 		onResidualSubOrder: 2,
