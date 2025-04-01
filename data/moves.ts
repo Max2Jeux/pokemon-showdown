@@ -9587,6 +9587,25 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spe: 1 } },
 		contestType: "Clever",
 	},
+	spirittrap: {
+		num: 95,
+		accuracy: 90,
+		basePower: 95,
+		category: "Special",
+		name: "Spirit Trap",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, reflectable: 1, mirror: 1, metronome: 1 },
+   	drain: [1, 2],
+		onTryImmunity(target) {
+			return target.status === 'slp' || target.hasAbility('comatose');
+		},
+		status: 'slp',
+		target: "normal",
+		type: "Ghost",
+		zMove: { boost: { spe: 1 } },
+		contestType: "Clever",
+	},
 	iceball: {
 		num: 301,
 		accuracy: 90,
