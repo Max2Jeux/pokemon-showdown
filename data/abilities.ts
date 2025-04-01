@@ -446,7 +446,7 @@ mineralgas3: {
 		onStart(pokemon) {
 			if (pokemon.swordBoost) return;
 			pokemon.swordBoost = true;
-			this.boost({ acc: -2 }, pokemon);
+			this.boost({ accuracy: -2 }, pokemon);
 		},
         flags: {},
         name: "Mineral Gas 3",
