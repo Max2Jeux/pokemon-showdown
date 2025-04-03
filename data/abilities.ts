@@ -417,7 +417,7 @@ onTryHit(target, source, move) {
 	},
  toxicplace: {
         onStart(pokemon, source) {
-			this.SetStatus('tox', source);
+			this.SetStatus('tox', source, pokemon);
 		},
         flags: {},
         name: "Toxic Place",
