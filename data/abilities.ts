@@ -417,7 +417,7 @@ onTryHit(target, source, move) {
 	},
  toxicplace: {
         onStart(pokemon) {
-			pokemon.trySetStatus('pzn', pokemon);
+			pokemon.trySetStatus('tox', pokemon);
 		},
         flags: {},
         name: "Toxic Place",
