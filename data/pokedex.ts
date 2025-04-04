@@ -12476,7 +12476,7 @@ tyruntkappa: {
 		name: "Tyrunt-Kappa",
 		types: ["Dragon"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 53, atk: 89, def: 60, spa: 30, spd: 45, spe: 53 },
+		baseStats: { hp: 73, atk: 99, def: 70, spa: 30, spd: 65, spe: 73 },
 		abilities: { 0: "Feared Hunter" },
 		heightm: 0.8,
 		weightkg: 26,
