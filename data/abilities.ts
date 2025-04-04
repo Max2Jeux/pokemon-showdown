@@ -417,7 +417,7 @@ onTryHit(target, source, move) {
 	},
  toxicplace: {
         onStart(pokemon) {
-			pokemon.trySetStatus('brn', pokemon);
+			pokemon.trySetStatus('pzn', pokemon);
 		},
         flags: {},
         name: "Toxic Place",
@@ -425,8 +425,8 @@ onTryHit(target, source, move) {
         num: -153,
 	},
  mineralgas1: {
-        onStart(pokemon, source) {
-			this.SetStatus('par', source);
+         onStart(pokemon) {
+			pokemon.trySetStatus('par', pokemon);
 		},
         flags: {},
         name: "Mineral Gas 1",
@@ -434,8 +434,8 @@ onTryHit(target, source, move) {
         num: -170,
 	},
  mineralgas2: {
-        onStart(pokemon, source) {
-			this.SetStatus('brn', source);
+        onStart(pokemon) {
+			pokemon.trySetStatus('brn', pokemon);
 		},
         flags: {},
         name: "Mineral Gas 2",
@@ -454,8 +454,8 @@ mineralgas3: {
         num: -172,
 	},
  mineralgas4: {
-        onStart(pokemon, source) {
-			this.SetStatus('slp', source);
+       onStart(pokemon) {
+			pokemon.trySetStatus('slp', pokemon);
 		},
         flags: {},
         name: "Mineral Gas 4",
