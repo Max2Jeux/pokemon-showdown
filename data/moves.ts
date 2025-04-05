@@ -9992,7 +9992,7 @@ overcharged: {
 	sharpsplitter: {
 		num: 400,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 70,
 		category: "Physical",
 		name: "Sharp Splitter",
 		pp: 15,
