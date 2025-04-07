@@ -54399,7 +54399,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 	},
 	pignite: {
 		learnset: {
-			armthrust: ["9L0", "7L1", "6L17", "5L17"],
 			assurance: ["9L36", "7L36", "6L36", "5L36"],
 			attract: ["7M", "6M", "5M"],
 			bodyslam: ["9M"],
@@ -54458,7 +54457,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			roar: ["9M", "9L47", "7M", "7L47", "6M", "6L47", "5M", "5L47"],
 			rockslide: ["9M", "7M", "6M", "5M"],
 			rocksmash: ["6M", "5M"],
-			rocktomb: ["9M", "7M", "6M", "5M"],
+			rocktomb: ["9L15", "7M", "6M", "5M"],
 			rollout: ["9L23", "7L23", "6L23", "5L23"],
 			round: ["7M", "6M", "5M"],
 			scaryface: ["9M"],
@@ -54491,7 +54490,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 	},
 	emboar: {
 		learnset: {
-			armthrust: ["9L1", "7L1", "6L17", "5L17"],
 			assurance: ["9L38", "7L38", "6L38", "5L38"],
 			attract: ["7M", "6M", "5M"],
 			blastburn: ["9M", "7T", "6T", "5T"],
@@ -54560,7 +54558,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			roar: ["9M", "9L55", "7M", "7L55", "6M", "6L55", "5M", "5L55"],
 			rockslide: ["9M", "7M", "6M", "5M"],
 			rocksmash: ["6M", "5M"],
-			rocktomb: ["9M", "7M", "6M", "5M"],
+			rocktomb: ["9L15", "7M", "6M", "5M"],
 			rollout: ["9L23", "7L23", "6L23", "5L23"],
 			round: ["7M", "6M", "5M"],
 			scald: ["9M", "7M", "6M", "5M"],
