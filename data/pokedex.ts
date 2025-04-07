@@ -3105,7 +3105,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Kabuto-Shraider",
 		types: ["Steel"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 35, atk: 75, def: 90, spa: 35, spd: 45, spe: 50 },
+		baseStats: { hp: 55, atk: 90, def: 95, spa: 35, spd: 65, spe: 70 },
 		abilities: { 0: "Silver Claws" },
 		heightm: 0.5,
 		weightkg: 11.5,
