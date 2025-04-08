@@ -3601,6 +3601,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			voltswitch: ["9M", "8M", "7M", "6M", "5M"],
 			wildcharge: ["9M", "8M", "7M", "6M", "5M"],
 			zapcannon: ["7V"],
+			overcharged: ["7M"],
+
 		},
 	},
 	raichualola: {
@@ -11946,6 +11948,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			voltswitch: ["9M", "8M", "7M", "6M", "5M"],
 			wildcharge: ["9M", "8M", "7M", "6M", "5M"],
 			zapcannon: ["9L52", "8L52", "7L49", "7V", "6L49", "5L57", "4L54", "3L50"],
+			overcharged: ["7M"],
 		},
 		encounters: [
 			{generation: 1, level: 16},
@@ -12031,6 +12034,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			voltswitch: ["9M", "8M", "7M", "6M", "5M"],
 			wildcharge: ["9M", "8M", "7M", "6M", "5M"],
 			zapcannon: ["9L64", "8L64", "7L1", "7V", "6L1", "5L66", "4L60", "3L62"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
+			overcharged: ["7M"],
 		},
 		eventData: [
 			{generation: 3, level: 30, moves: ["refresh", "doubleedge", "raindance", "thunder"]},
@@ -12124,6 +12129,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			voltswitch: ["9M", "8M", "7M", "6M", "5M"],
 			wildcharge: ["9M", "8M", "7M", "6M", "5M"],
 			zapcannon: ["9L64", "8L64", "7L1", "6L1", "5L66", "4L60"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
+			overcharged: ["7M"],
 		},
 	},
 	farfetchd: {
@@ -13763,6 +13770,13 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			toxic: ["8V", "7M", "7V", "6M", "5M", "4M", "3M"],
 			twister: ["4T"],
 			wideguard: ["8E", "7E"],
+			solarbeam: ["8M"],
+			synthesis: ["8M"],
+			leechseed: ["8M"],
+			powerwhip: ["8L40"],
+			gigadrain: ["8M"],
+			energyball: ["8M"],
+			leafstorm: ["8L61"],
 		},
 		encounters: [
 			{generation: 1, level: 13},
@@ -13801,7 +13815,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			endure: ["8M", "7V", "4M", "3T"],
 			explosion: ["7M", "6M", "5M", "4M", "3T"],
 			facade: ["8M", "7M", "6M", "5M", "4M", "3M"],
-			firefang: ["8M", "8L1", "7L1", "6L1", "5L1", "4L1"],
 			flashcannon: ["8M", "7M", "6M", "5M", "4M"],
 			frustration: ["7M", "7V", "6M", "5M", "4M", "3M"],
 			gigaimpact: ["8M", "7M", "6M", "5M", "4M"],
@@ -13866,6 +13879,14 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			torment: ["7M", "6M", "5M", "4M", "3M"],
 			toxic: ["7M", "7V", "6M", "5M", "4M", "3M"],
 			twister: ["4T"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
+			solarbeam: ["8M"],
+			synthesis: ["8M"],
+			leechseed: ["8M"],
+			powerwhip: ["8L40"],
+			gigadrain: ["8M"],
+			energyball: ["8M"],
+			leafstorm: ["8L61"],
 		},
 	},
 	drowzee: {
@@ -18887,6 +18908,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			voltswitch: ["9M", "8M", "7M", "6M", "5M"],
 			wildcharge: ["9M", "8M", "7M", "6M", "5M"],
 			zapcannon: ["7V"],
+			overcharged: ["7M"],
 		},
 		eventData: [
 			{generation: 3, level: 10, gender: "M", moves: ["quickattack", "leer", "thunderpunch"], pokeball: "pokeball"},
@@ -18997,6 +19019,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			voltswitch: ["9M", "8M", "7M", "6M", "5M"],
 			weatherball: ["9M", "8M"],
 			wildcharge: ["9M", "8M", "7M", "6M", "5M"],
+			overcharged: ["7M"],
 		},
 		eventData: [
 			{generation: 4, level: 50, gender: "M", nature: "Adamant", moves: ["thunderpunch", "icepunch", "crosschop", "earthquake"], pokeball: "pokeball"},
@@ -45378,6 +45401,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			trailblaze: ["9M"],
 			trick: ["9M", "8M", "7T", "6T", "5T", "4T"],
 			zenheadbutt: ["9M", "9L6", "8M", "8L6", "7T", "7L32", "6T", "6L29", "5T", "5L29", "4T", "4L52"],
+			sensofduty: ["9M"],
 		},
 		eventData: [
 			{generation: 3, level: 30, moves: ["takedown", "confusion", "metalclaw", "refresh"], pokeball: "pokeball"},
@@ -45488,6 +45512,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			trailblaze: ["9M"],
 			trick: ["9M", "8M", "7T", "6T", "5T", "4T"],
 			zenheadbutt: ["9M", "9L6", "8M", "8L6", "7T", "7L32", "6T", "6L29", "5T", "5L29", "5S2", "5S3", "4T", "4L62", "4S0"],
+			sensofduty: ["9M"],
 		},
 		eventData: [
 			{generation: 4, level: 62, nature: "Brave", moves: ["bulletpunch", "meteormash", "hammerarm", "zenheadbutt"], pokeball: "cherishball"},
@@ -48590,6 +48615,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			submission: ["9L23"],
 			irondefense: ["9L28"],
 			firefang: ["9L35"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
 		},
 		eventData: [
 			{generation: 5, level: 15, gender: "M", moves: ["metalsound", "takedown", "bodyslam", "protect"], pokeball: "cherishball"},
@@ -48679,6 +48705,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			heatcrash: ["9L44"],
 			heavyslam: ["9L44"],
 			flareblitz: ["9L51"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
 		},
 	},
 	burmy: {
@@ -50636,6 +50663,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			weatherball: ["9M", "9L1", "8M", "8L1"],
 			wonderroom: ["8M", "7T", "6T", "5T"],
 			zenheadbutt: ["9M", "8M", "7T", "6T", "5T", "4T"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
 		},
 		eventData: [
 			{generation: 9, level: 50, nature: "Relaxed", ivs: {hp: 31, atk: 31, def: 31, spa: 22, spd: 31, spe: 0}, moves: ["bodypress", "irondefense", "protect", "trickroom"], pokeball: "cherishball"},
@@ -51273,6 +51301,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			waterpulse: ["9M", "7T", "6T", "4M", "4S0"],
 			workup: ["9L16", "8M", "8L1", "7M", "7L42", "5M"],
 			zenheadbutt: ["9M", "8M", "7T", "6T", "5T", "4T"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
 		},
 		eventData: [
 			{generation: 4, level: 50, gender: "M", nature: "Modest", abilities: ["steadfast"], moves: ["aurasphere", "darkpulse", "dragonpulse", "waterpulse"], pokeball: "cherishball"},
@@ -60138,8 +60167,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			dragonpulse: ["8M", "7T", "6T", "5T"],
 			dragontail: ["7M", "6M", "5M"],
 			dualwingbeat: ["8T"],
-			earthpower: ["8M", "7T", "6T", "5T"],
-			earthquake: ["8M", "7M", "6M", "5M"],
 			endeavor: ["8L51", "7T", "7L40", "6T", "6L40", "5T", "5L40"],
 			endure: ["8M"],
 			facade: ["8M", "7M", "6M", "5M"],
@@ -60180,6 +60207,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			skyattack: ["7T", "6T", "5T"],
 			sleeptalk: ["8M", "7M", "6M", "5T"],
 			smackdown: ["7M", "6M", "5M"],
+			suckerpunch: ["7M", "6M", "5M"],
 			snore: ["8M", "7T", "6T", "5T"],
 			stealthrock: ["8M", "7T", "6T", "5T"],
 			steelwing: ["8M", "7M", "6M"],
@@ -60196,6 +60224,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			uturn: ["8M", "8L21", "7M", "7L45", "6M", "6L45", "5M", "5L45"],
 			wingattack: ["8L1", "7L1", "6L1", "5L1"],
 			zenheadbutt: ["8M", "7T", "6T"],
+			closecombat: ["9M", "5M"],
 		},
 	},
 	trubbish: {
@@ -61917,6 +61946,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			uturn: ["8M", "7M", "6M", "5M"],
 			voltswitch: ["8M", "8L40", "7M", "7L42", "6M", "6L42", "5M", "5L42"],
 			wildcharge: ["8M", "7M", "6M", "5M"],
+			overcharged: ["7M"],
 		},
 	},
 	karrablast: {
@@ -62049,6 +62079,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			toxic: ["7M", "6M", "5M"],
 			twineedle: ["7L1", "6L1", "5L1"],
 			xscissor: ["8M", "8L32", "7M", "7L44", "6M", "6L44", "5M", "5L44"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
 		},
 	},
 	foongus: {
@@ -62625,6 +62656,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			thunderwave: ["8M", "7M", "6M", "5M"],
 			toxic: ["8E", "7M", "6M", "5M"],
 			worryseed: ["7T", "7E", "6T", "6E", "5T", "5E"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
 		},
 	},
 	ferrothorn: {
@@ -62703,6 +62735,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			thunderwave: ["8M", "7M", "6M", "5M"],
 			toxic: ["7M", "6M", "5M"],
 			worryseed: ["7T", "6T", "5T"],
+			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
 		},
 	},
 	klink: {
