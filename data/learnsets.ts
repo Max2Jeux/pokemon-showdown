@@ -28208,6 +28208,28 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 6, level: 32},
 		],
 	},
+	unowngolem1: {
+		learnset: {
+			hiddenpower: ["7M", "7L1", "7V", "6L1", "5L1", "4L1", "3L1"],
+		},
+		encounters: [
+			{generation: 2, level: 5},
+			{generation: 3, level: 25},
+			{generation: 4, level: 5},
+			{generation: 6, level: 32},
+		],
+	},
+	unowngolem2: {
+		learnset: {
+			hiddenpower: ["7M", "7L1", "7V", "6L1", "5L1", "4L1", "3L1"],
+		},
+		encounters: [
+			{generation: 2, level: 5},
+			{generation: 3, level: 25},
+			{generation: 4, level: 5},
+			{generation: 6, level: 32},
+		],
+	},
 	wynaut: {
 		learnset: {
 			amnesia: ["8M", "8L1"],
