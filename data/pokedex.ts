@@ -6375,7 +6375,7 @@ unowngolem2: {
 		name: "Lileep-Lucid",
 		types: ["Poison"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 60, def: 50, spa: 60, spd: 38, spe: 72 },
+		baseStats: { hp: 70, atk: 80, def: 70, spa: 60, spd: 43, spe: 87 },
 		abilities: { 0: "Predatory" },
 		heightm: 1,
 		weightkg: 23.8,
