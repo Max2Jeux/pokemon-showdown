@@ -1110,7 +1110,17 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
+	omanytesayan: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
 	omastar: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	omastarsayan: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
@@ -1126,6 +1136,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	kabutops: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	kabutopsjuni: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
@@ -2196,7 +2211,17 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
+	lileeplucid: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
 	cradily: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	cradilylucid: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
@@ -3259,6 +3284,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
+	carracostalucien: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
 	archen: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -3906,7 +3936,22 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
+	tyruntkappa: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
 	tyrantrum: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	tyrantrumkappa: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	tyrantrumdiony: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
@@ -3916,7 +3961,22 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
+	amaurafabio: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
 	aurorus: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	aurorusfabio: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	auroruskai: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
