@@ -21488,7 +21488,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		],
 	},
 	kabutopsjuni: {
-		learnset: {
+			learnset: {
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			ancientpower: ["8L30", "7L54", "7V", "6L54", "5L54", "4T", "4L54", "3L65"],
 			aquajet: ["8L15", "8V", "7L31", "6L31", "5L31", "4L31"],
@@ -21742,15 +21742,15 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			thief: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			toxic: ["8V", "7M", "7V", "6M", "5M", "4M", "3M"],
 			wringout: ["7L50", "6L50", "5L51", "4L51"],
-			metalsound: ["8M"],
-			irondefense: ["8M"],
-			irontail: ["8M"],
-			metalclaw: ["8L9"],
-			rapidspin: ["8L14"],
-			rockblast: ["8L19"],
-			honeclaws: ["8L25"],
-			smartstrike: ["8L30"],
-			screech: ["8L35"],
+			metalsound: ["9M"],
+			irondefense: ["9M"],
+			irontail: ["9M"],
+			metalclaw: ["9L9"],
+			rapidspin: ["9L14"],
+			rockblast: ["9L19"],
+			honeclaws: ["9L25"],
+			smartstrike: ["9L30"],
+			screech: ["9L35"],
 		},
 		eventData: [
 			{generation: 5, level: 15, gender: "M", abilities: ["battlearmor"], moves: ["confuseray", "dig", "scratch", "harden"], pokeball: "cherishball"},
