@@ -21188,7 +21188,7 @@ curtainsrepair: {
    lunareffects: {
 		num: 433,
 		accuracy: 100,
-		basePower: 120,
+		basePower: 110,
 		category: "Special",
 		name: "Lunar Effects",
 		pp: 10,
@@ -21221,7 +21221,10 @@ curtainsrepair: {
 				this.add('-fieldend', 'move: Trick Room');
 			},
 		},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'frz',
+		},
 		target: "all",
 		type: "Water",
 		zMove: { boost: { accuracy: 1 } },
@@ -21230,7 +21233,7 @@ curtainsrepair: {
   solareffects: {
 		num: -394,
 		accuracy: 100,
-		basePower: 120,
+		basePower: 110,
 		category: "Physical",
 		name: "Solar Effects",
       weather: 'sunnyday',
