@@ -3087,7 +3087,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Water 1", "Water 3"],
 	},
 kabutops: {
-		num: 140,
+		num: -1040,
 		name: "Kabutops",
 		types: ["Rock", "Water"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12497,9 +12497,9 @@ unowngolem2: {
 		evos: ["Tyrantrum"],
 		eggGroups: ["Monster", "Dragon"],
 	},
-	tyrantrumkappa: {
+	tyrantrum: {
 		num: 697,
-		name: "Tyrantrum-Kappa",
+		name: "Tyrantrum",
 		types: ["Dragon"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 82, atk: 121, def: 119, spa: 69, spd: 59, spe: 71 },
@@ -12551,6 +12551,21 @@ tyruntkappa: {
 		weightkg: 25.2,
 		color: "Blue",
 		evos: ["Aurorus"],
+		eggGroups: ["Monster"],
+	},
+	aurorus: {
+		num: -99,
+		name: "Aurorus",
+		types: ["Fairy"],
+		genderRatio: { M: 0.875, F: 0.125 },
+		baseStats: { hp: 90, atk: 80, def: 105, spa: 80, spd: 105, spe: 80 },
+		abilities: { 0: "Fairy Curtain" },
+		heightm: 2.7,
+		weightkg: 225,
+		color: "Blue",
+		prevo: "Amaura",
+		evoLevel: 39,
+		evoCondition: "at night",
 		eggGroups: ["Monster"],
 	},
 	auroruskai: {
