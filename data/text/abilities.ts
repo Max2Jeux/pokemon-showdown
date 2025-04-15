@@ -43,13 +43,13 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
    fullmoon: {
 		name: "Full Moon",
-		desc: "This Pokemon is immune to Ground-type moves and raises its Special Attack if it by a Water-type move. This Pokemon's offensive stat is multiplied by 1.5 while using a Ice-type attack.",
-		shortDesc: "Immune to Ground. Raises Sp. Atk if hits by Water. This Pokemon's offensive stat is multiplied by 1.5 while using a Ice-type attack.",
+		desc: "This Pokemon is immune to Physical moves. This Pokemon's offensive stat is doubled while using a Water-type attack.",
+		shortDesc: "Immune to Physical. Power doubled while using a Water-type attack.",
 	},
    sunshine: {
 		name: "Sunshine",
-		desc: "This Pokemon is immune to Ground-type moves and raises its Attack if it by a Grass-type move. This Pokemon's offensive stat is multiplied by 1.5 while using a Fire-type attack.",
-		shortDesc: "Immune to Ground. Raises tk if hits by Grass. This Pokemon's offensive stat is multiplied by 1.5 while using a Fire-type attack.",
+		desc: "This Pokemon is immune to Special moves. This Pokemon's offensive stat is doubled while using a Fire-type attack.",
+		shortDesc: "Immune to Specizal. Power doubled while using a Water-type attack.",
 	},
    spiritruler: {
 		name: "Spirit Ruler",
