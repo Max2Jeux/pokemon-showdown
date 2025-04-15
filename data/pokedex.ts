@@ -3086,8 +3086,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		evos: ["Kabutops"],
 		eggGroups: ["Water 1", "Water 3"],
 	},
-kabutops: {
-		num: -1040,
+	kabutops: {
+		num: 141,
 		name: "Kabutops",
 		types: ["Rock", "Water"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -3096,11 +3096,10 @@ kabutops: {
 		heightm: 0.5,
 		weightkg: 11.5,
 		color: "Brown",
-		evos: ["Kabutops"],
 		eggGroups: ["Water 1", "Water 3"],
 	},
    kabutopsjuni: {
-		num: -141,
+		num: 141,
 		name: "Kabutops-Juni",
 		types: ["Steel"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12513,7 +12512,7 @@ unowngolem2: {
 		eggGroups: ["Monster", "Dragon"],
 },
 tyruntkappa: {
-		num: -6096,
+		num: 696,
 		name: "Tyrunt-Kappa",
 		types: ["Dragon"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12526,7 +12525,7 @@ tyruntkappa: {
 		eggGroups: ["Monster", "Dragon"],
 	},
 	tyrantrumkappa: {
-		num: -6097,
+		num: 697,
 		name: "Tyrantrum-Kappa",
 		types: ["Dragon", "Rock"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12554,7 +12553,7 @@ tyruntkappa: {
 		eggGroups: ["Monster"],
 	},
 	aurorus: {
-		num: -1099,
+		num: 699,
 		name: "Aurorus",
 		types: ["Fairy"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12569,7 +12568,7 @@ tyruntkappa: {
 		eggGroups: ["Monster"],
 	},
 	auroruskai: {
-		num: -6099,
+		num: 699,
 		name: "Aurorus-Kai",
 		types: ["Fairy"],
 		genderRatio: { M: 0.875, F: 0.125 },
