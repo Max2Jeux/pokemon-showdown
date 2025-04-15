@@ -250,7 +250,7 @@ ecoshell: {
 			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
 			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
 			this.debug('Full Moon immunity: ' + move.id);
-			if (target.runSpecial(move) <= 0) {
+			if (move.category === 'Physical') {
 				if (move.smartTarget) {
 					move.smartTarget = false;
 				} else {
@@ -276,7 +276,7 @@ ecoshell: {
 			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
 			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
 			this.debug('Sunshine immunity: ' + move.id);
-			if (target.runPhysical(move) <= 0) {
+			if (move.category === 'Special') {
 				if (move.smartTarget) {
 					move.smartTarget = false;
 				} else {
