@@ -21196,7 +21196,7 @@ curtainsrepair: {
 		flags: { mirror: 1, metronome: 1 },
 		pseudoWeather: 'trickroom',
 		condition: {
-			duration: 6,
+			duration: 7,
 			durationCallback(source, effect) {
 				if (source?.hasAbility('persistent')) {
 					this.add('-activate', source, 'ability: Persistent', '[move] Trick Room');
