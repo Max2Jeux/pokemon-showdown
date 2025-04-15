@@ -6360,7 +6360,7 @@ unowngolem2: {
 		name: "Lileep",
 		types: ["Poison"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 60, def: 50, spa: 60, spd: 38, spe: 72 },
+		baseStats: { hp: 70, atk: 60, def: 70, spa: 75, spd: 58, spe: 77 },
 		abilities: { 0: "Predatory" },
 		heightm: 1,
 		weightkg: 23.8,
