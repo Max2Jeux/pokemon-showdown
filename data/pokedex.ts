@@ -3086,12 +3086,12 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		evos: ["Kabutops"],
 		eggGroups: ["Water 1", "Water 3"],
 	},
-   kabutops: {
+   kabutopsjuni: {
 		num: 141,
-		name: "Kabutops",
+		name: "Kabutops-Juni",
 		types: ["Steel"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 115, def: 105, spa: 65, spd: 70, spe: 80 },
+		baseStats: { hp: 80, atk: 105, def: 100, spa: 45, spd: 100, spe: 110 },
 		abilities: { 0: "Silver Claws" },
 		heightm: 1.3,
 		weightkg: 40.5,
@@ -10272,12 +10272,12 @@ unowngolem2: {
 		evos: ["Carracosta"],
 		eggGroups: ["Water 1", "Water 3"],
 	},
-	carracosta: {
+	carracostalucien: {
 		num: 565,
-		name: "Carracosta",
-		types: ["Grass"],
+		name: "Carracosta-Lucien",
+		types: ["Grass", "Steel"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 74, atk: 108, def: 133, spa: 83, spd: 65, spe: 32 },
+		baseStats: { hp: 90, atk: 100, def: 130, spa: 70, spd: 105, spe: 45 },
 		abilities: { 0: "Eco-Shell" },
 		heightm: 1.2,
 		weightkg: 81,
@@ -12540,12 +12540,12 @@ tyruntkappa: {
 		evos: ["Aurorus"],
 		eggGroups: ["Monster"],
 	},
-	aurorus: {
+	auroruskai: {
 		num: 699,
-		name: "Aurorus",
+		name: "Aurorus-Kai",
 		types: ["Fairy"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 123, atk: 77, def: 72, spa: 99, spd: 92, spe: 58 },
+		baseStats: { hp: 90, atk: 80, def: 105, spa: 80, spd: 105, spe: 80 },
 		abilities: { 0: "Fairy Curtain" },
 		heightm: 2.7,
 		weightkg: 225,
