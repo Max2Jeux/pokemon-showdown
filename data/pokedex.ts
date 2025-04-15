@@ -12484,9 +12484,9 @@ unowngolem2: {
 		evos: ["Tyrantrum"],
 		eggGroups: ["Monster", "Dragon"],
 	},
-	tyrantrum: {
+	tyrantrumkappa: {
 		num: 697,
-		name: "Tyrantrum",
+		name: "Tyrantrum-Kappa",
 		types: ["Dragon"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 82, atk: 121, def: 119, spa: 69, spd: 59, spe: 71 },
@@ -12515,9 +12515,9 @@ tyruntkappa: {
 	tyrantrumkappa: {
 		num: 697,
 		name: "Tyrantrum-Kappa",
-		types: ["Dragon"],
+		types: ["Dragon", "Rock"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 82, atk: 121, def: 119, spa: 69, spd: 59, spe: 71 },
+		baseStats: { hp: 73, atk: 140, def: 100, spa: 76, spd: 51, spe: 100 },
 		abilities: { 0: "Feared Hunter" },
 		heightm: 2.5,
 		weightkg: 270,
