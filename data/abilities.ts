@@ -246,27 +246,24 @@ ecoshell: {
 		num: -99,
 	},
  fullmoon: {
-		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Water') {
-				if (!this.boost({ spa: 1 })) {
+	onTryHit(target, source, move) {
+			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
+			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+			this.debug('Full Moon immunity: ' + move.id);
+			if (target.runSpecial(move) <= 0) {
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
 					this.add('-immune', target, '[from] ability: Full Moon');
-}
 				}
 				return null;
-			},
-	   	onModifyAtkPriority: 5,
-		onModifyAtk(atk, attacker, defender, move) {
-			if (move.type === 'Ice') {
-				this.debug('Full Moon boost');
-				return this.chainModify(1.5);
 			}
 		},
 		onModifySpAPriority: 5,
 		onModifySpA(atk, attacker, defender, move) {
-			if (move.type === 'Ice') {
+			if (move.type === 'Water') {
 				this.debug('Full Moon boost');
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		flags: { breakable: 1 },
@@ -275,27 +272,24 @@ ecoshell: {
 		num: -62,
 	},
   sunshine: {
-		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
 		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Grass') {
-				if (!this.boost({ atk: 1 })) {
+			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
+			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+			this.debug('Sunshine immunity: ' + move.id);
+			if (target.runPhysical(move) <= 0) {
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
 					this.add('-immune', target, '[from] ability: Sunshine');
-}
 				}
 				return null;
-				},
-			onModifyAtkPriority: 5,
-		onModifyAtk(atk, attacker, defender, move) {
-			if (move.type === 'Fire') {
-				this.debug('Sunshine boost');
-				return this.chainModify(1.5);
 			}
 		},
 		onModifySpAPriority: 5,
 		onModifySpA(atk, attacker, defender, move) {
 			if (move.type === 'Fire') {
 				this.debug('Sunshine boost');
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		flags: { breakable: 1 },
