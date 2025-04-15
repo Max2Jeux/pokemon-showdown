@@ -21225,7 +21225,7 @@ curtainsrepair: {
 			chance: 20,
 			status: 'frz',
 		},
-		target: "all",
+		target: "normal",
 		type: "Water",
 		zMove: { boost: { accuracy: 1 } },
 		contestType: "Clever",
