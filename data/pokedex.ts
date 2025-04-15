@@ -12513,7 +12513,7 @@ unowngolem2: {
 		eggGroups: ["Monster", "Dragon"],
 },
 tyruntkappa: {
-		num: 696,
+		num: -6096,
 		name: "Tyrunt-Kappa",
 		types: ["Dragon"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12526,7 +12526,7 @@ tyruntkappa: {
 		eggGroups: ["Monster", "Dragon"],
 	},
 	tyrantrumkappa: {
-		num: 697,
+		num: -6097,
 		name: "Tyrantrum-Kappa",
 		types: ["Dragon", "Rock"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12554,7 +12554,7 @@ tyruntkappa: {
 		eggGroups: ["Monster"],
 	},
 	aurorus: {
-		num: -99,
+		num: -1099,
 		name: "Aurorus",
 		types: ["Fairy"],
 		genderRatio: { M: 0.875, F: 0.125 },
@@ -12569,7 +12569,7 @@ tyruntkappa: {
 		eggGroups: ["Monster"],
 	},
 	auroruskai: {
-		num: 699,
+		num: -6099,
 		name: "Aurorus-Kai",
 		types: ["Fairy"],
 		genderRatio: { M: 0.875, F: 0.125 },
