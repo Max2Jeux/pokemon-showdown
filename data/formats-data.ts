@@ -1121,7 +1121,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "LC",
 	},
 	kabutoshraider: {
-		
+		isNonstandard: "Past",
+		tier: "Illegal",
 		natDexTier: "LC",
 	},
 	kabutops: {
@@ -1130,7 +1131,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	kabutopsshraider: {
-		
+		isNonstandard: "Past",
+		tier: "Illegal",
 		natDexTier: "RU",
 	},
 	aerodactyl: {
