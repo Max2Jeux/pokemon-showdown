@@ -71964,7 +71964,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 6, level: 10, isHidden: true, moves: ["tailwhip", "tackle", "roar", "stomp"], pokeball: "cherishball"},
 		],
 	},
-	tyrantrum: {
+	tyrantrumkappa: {
 		learnset: {
 			aerialace: ["7M", "6M"],
 			assurance: ["8M"],
@@ -71981,7 +71981,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			crunch: ["8M", "8L32", "7L34", "6L34"],
 			dig: ["8M", "6M"],
 			doubleteam: ["7M", "6M"],
-			dragonclaw: ["8M", "8L36", "7M", "7L37", "6M", "6L37"],
 			dragonpulse: ["8M", "7T", "6T"],
 			dragontail: ["8L20", "7M", "7L30", "6M", "6L30"],
 			earthquake: ["8M", "8L48", "7M", "7L47", "6M", "6L47"],
@@ -71989,7 +71988,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			facade: ["8M", "7M", "6M"],
 			frustration: ["7M", "6M"],
 			gigaimpact: ["8M", "8L60", "7M", "7L68", "6M", "6L75"],
-			headsmash: ["8L66", "7L1", "6L1"],
 			hiddenpower: ["7M", "6M"],
 			highhorsepower: ["8M"],
 			honeclaws: ["6M"],
@@ -72016,7 +72014,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			snore: ["8M", "7T", "6T"],
 			stomp: ["8L24", "7L1", "6L10"],
 			stompingtantrum: ["8M", "7T"],
-			stoneedge: ["8M", "7M", "6M"],
 			strength: ["6M"],
 			substitute: ["8M", "7M", "6M"],
 			sunnyday: ["8M", "7M", "6M"],
@@ -72031,8 +72028,10 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			thunderfang: ["8L13"],
 			firefang: ["8L16"],
 			breakingswipe: ["8L28"],
-			dragondance: ["8L48"],
-			scaleshot: ["8L53"],
+			dragonclaw: ["8L40"],
+			stoneedge: ["8L50"],
+			scaleshot: ["8L56"],
+			headsmash: ["8L66"],
 		},
 	},
 		tyruntkappa: {
