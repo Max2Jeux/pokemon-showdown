@@ -1121,9 +1121,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "LC",
 	},
 	kabutoshraider: {
-		tier: "OU",
-		doublesTier: "DOU",
-		natDexTier: "OU",
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
 	},
 	kabutops: {
 		isNonstandard: "Past",
