@@ -21487,7 +21487,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 1, level: 30},
 		],
 	},
-	kabutops: {
+	kabutopsjuni: {
 		learnset: {
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			ancientpower: ["8L30", "7L54", "7V", "6L54", "5L54", "4T", "4L54", "3L65"],
@@ -21563,7 +21563,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			substitute: ["8M", "8V", "7M", "7V", "6M", "5M", "4M", "3T"],
 			superpower: ["8M", "8V", "7T", "6T", "5T", "4T"],
 			swagger: ["7M", "7V", "6M", "5M", "4M", "3T"],
-			swordsdance: ["8M", "8V", "7M", "7V", "6M", "5M", "4M", "3T"],
 			takedown: ["7V"],
 			thief: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			toxic: ["8V", "7M", "7V", "6M", "5M", "4M", "3M"],
@@ -21578,9 +21577,9 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			screech: ["8L35"],
 			knockoff: ["8L39"],
 			sideslicer: ["8L44"],
-			knockoff: ["8L48"],
+			swordsdance: ["8L48", "8V", "7M", "7V", "6M", "5M", "4M", "3T"],
 			ironhead: ["8M"],
-			metalsound: ["8L53"],
+			autotomize: ["8L53"],
 			stoneedge: ["8L58"],
 			},
 		},
@@ -60024,7 +60023,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 5, level: 15, gender: "M", abilities: ["sturdy"], moves: ["bite", "protect", "aquajet", "bodyslam"], pokeball: "cherishball"},
 		],
 	},
-	carracosta: {
+	carracostalucien: {
 		learnset: {
 			ancientpower: ["8L12", "7L18", "6L18", "5L18"],
 			aquajet: ["8L6", "7L15", "6L15", "5L15", "5S0"],
@@ -72241,7 +72240,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 6, level: 10, isHidden: true, moves: ["growl", "powdersnow", "thunderwave", "rockthrow"], pokeball: "cherishball"},
 		],
 	},
-	aurorus: {
+	auroruskai: {
 		learnset: {
 			ancientpower: ["8L8", "7L26", "6L26"],
 			attract: ["8M", "7M", "6M"],
