@@ -266,7 +266,7 @@ ecoshell: {
 				return this.chainModify(2);
 			}
 		},
-		flags: { breakable: 1 },
+		flags: {},
 		name: "Full Moon",
 		rating: 3,
 		num: -62,
@@ -292,7 +292,7 @@ ecoshell: {
 				return this.chainModify(2);
 			}
 		},
-		flags: { breakable: 1 },
+		flags: {},
 		name: "Sunshine",
 		rating: 3,
 		num: -61,
