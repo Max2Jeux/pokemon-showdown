@@ -3075,7 +3075,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	omastarvahe: {
 		num: 139,
-		name: "Omastar-Vahé",
+		name: "Omastar-Vahe",
 		types: ["Psychic"],
 		genderRatio: { M: 0.875, F: 0.125 },
 		baseStats: { hp: 70, atk: 60, def: 125, spa: 115, spd: 70, spe: 55 },
