@@ -3083,7 +3083,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.5,
 		weightkg: 11.5,
 		color: "Brown",
-		evos: ["Kabutops"],
+		evos: ["Kabutops","Kabutops-Juni"],
 		eggGroups: ["Water 1", "Water 3"],
 	},
 	kabutops: {
