@@ -1131,9 +1131,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	kabuto: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "LC",
+		tier: "OU",
+		doublesTier: "DOU",
+		natDexTier: "OU",
 	},
 	kabutoshraider: {
 		isNonstandard: "Past",
@@ -1146,9 +1146,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	kabutopsjuni: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "RU",
+		tier: "OU",
+		doublesTier: "DOU",
+		natDexTier: "OU",
 	},
 	kabutopsshraider: {
 		isNonstandard: "Past",
