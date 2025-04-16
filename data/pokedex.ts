@@ -10281,7 +10281,7 @@ unowngolem2: {
 		heightm: 0.7,
 		weightkg: 16.5,
 		color: "Blue",
-		evos: ["Carracosta"],
+		evos: ["Carracosta-Lucien"],
 		eggGroups: ["Water 1", "Water 3"],
 	},
 	carracostalucien: {
