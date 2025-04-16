@@ -1125,6 +1125,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
+	omastarvahe: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
 	kabuto: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -2226,6 +2231,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
+	cradilyhero: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
 	anorith: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -2575,6 +2585,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	bastiodon: {
+		tier: "ZU",
+		doublesTier: "(DUU)",
+		natDexTier: "RU",
+	},
+	bastiodonkenny: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
@@ -3279,12 +3294,22 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
+	tirtougabrayz: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "LC",
+	},
 	carracosta: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
 	carracostalucien: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	carracostabrayz: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
