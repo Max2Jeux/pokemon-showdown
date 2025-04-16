@@ -3029,7 +3029,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.4,
 		weightkg: 7.5,
 		color: "Blue",
-		evos: ["Omastar"],
+		evos: ["Omastar-Vahé"],
 		eggGroups: ["Water 1", "Water 3"],
 	},
    omastar: {
@@ -3097,7 +3097,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.5,
 		weightkg: 11.5,
 		color: "Brown",
-		evos: ["Kabutops","Kabutops-Juni"],
+		evos: ["Kabutops-Juni"],
 		eggGroups: ["Water 1", "Water 3"],
 	},
 	kabutops: {
@@ -6379,7 +6379,7 @@ unowngolem2: {
 		heightm: 1,
 		weightkg: 23.8,
 		color: "Purple",
-		evos: ["Cradily"],
+		evos: ["Cradily-Herosabis"],
 		eggGroups: ["Water 3"],
 	},
 	cradily: {
@@ -12563,7 +12563,7 @@ unowngolem2: {
 		heightm: 0.8,
 		weightkg: 26,
 		color: "Brown",
-		evos: ["Tyrantrum"],
+		evos: ["Tyrantrum-Diony"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	tyrantrum: {
@@ -12591,7 +12591,7 @@ tyruntkappa: {
 		heightm: 0.8,
 		weightkg: 26,
 		color: "Brown",
-		evos: ["Tyrantrum"],
+		evos: ["Tyrantrum-Kappa"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	tyrantrumkappa: {
@@ -12633,7 +12633,7 @@ tyruntkappa: {
 		heightm: 1.3,
 		weightkg: 25.2,
 		color: "Blue",
-		evos: ["Aurorus"],
+		evos: ["Aurorus-Kai"],
 		eggGroups: ["Monster"],
 	},
 	aurorus: {
@@ -12676,7 +12676,7 @@ tyruntkappa: {
 		heightm: 1.3,
 		weightkg: 25.2,
 		color: "Blue",
-		evos: ["Aurorus"],
+		evos: ["Aurorus-Fabio"],
 		eggGroups: ["Monster"],
 	},
 	aurorusfabio: {
@@ -12689,7 +12689,7 @@ tyruntkappa: {
 		heightm: 2.7,
 		weightkg: 225,
 		color: "Blue",
-		prevo: "Amaura",
+		prevo: "Amaura-Fabio",
 		evoLevel: 39,
 		evoCondition: "at night",
 		eggGroups: ["Monster"],
