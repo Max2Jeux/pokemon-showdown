@@ -12623,6 +12623,7 @@ tyruntkappa: {
 		evoLevel: 39,
 		evoCondition: "during the day",
 		eggGroups: ["Monster", "Dragon"],
+		},
 	amaura: {
 		num: 698,
 		name: "Amaura",
