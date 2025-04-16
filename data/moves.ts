@@ -11308,7 +11308,7 @@ profiling: {
 		name: "Sides Slicer",
 		pp: 16,
 		priority: 0,
-		flags: {},
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
 		self: {
 			onHit(source) {
 				for (const side of source.side.foeSidesWithConditions()) {
