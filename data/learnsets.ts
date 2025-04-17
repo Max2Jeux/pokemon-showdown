@@ -72674,7 +72674,7 @@ kabuto: {
 			sunnyday: ["8M", "7M", "6M"],
 			superpower: ["8M", "7T", "6T"],
 			swagger: ["7M", "6M"],
-			tackle: ["8L1", "7L1", "6L1", "6S0"],
+			tackle: ["9L2","8L1", "7L1", "6L1", "6S0"],
 			tailwhip: ["8L1", "7L1", "6L1", "6S0"],
 			thrash: ["8L40", "7L40", "6L40"],
 			toxic: ["7M", "6M"],
