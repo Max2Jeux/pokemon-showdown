@@ -72619,6 +72619,7 @@ kabuto: {
 	},
 		tyruntkappa: {
 		learnset: {
+			celebrate: ["9L99"],
 			aerialace: ["7M", "6M"],
 			assurance: ["8M"],
 			attract: ["8M", "7M", "6M"],
