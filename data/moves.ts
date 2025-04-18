@@ -10372,6 +10372,23 @@ overcharged: {
 		type: "Poison",
 		contestType: "Tough",
 	},
+	dragoncudgel: {
+		num: -439,
+		accuracy: 100,
+		basePower: 110,
+		category: "Physical",
+		name: "Corrupt Cudgel",
+		pp: 16,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+      secondary: {
+			chance: 40,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Dragon",
+		contestType: "Tough",
+	},
 icycudgel: {
 		num: -438,
 		accuracy: 100,
