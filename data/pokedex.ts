@@ -18583,7 +18583,7 @@ tyruntkappa: {
 		types: ["Grass","Dragon"],
 		gender: "F",
 		baseStats: { hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110 },
-		abilities: { 0: "Toxic Chain" },
+		abilities: { 0: "Dragon's Maw" },
 		heightm: 1.2,
 		weightkg: 39.8,
 		color: "Red",
