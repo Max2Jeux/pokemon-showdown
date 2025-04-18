@@ -1327,6 +1327,26 @@ benedictionofattack: {
 		rating: 3,
 		num: 186,
 	},
+	evilentity: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Dark') {
+				this.debug('Evil Entity boost');
+				return this.chainModify(2);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Dragon') {
+				this.debug('Evil Entity boost');
+				return this.chainModify(2);
+			}
+		},
+		flags: {},
+		name: "Evil Entity",
+		rating: 3.5,
+		num: 269,
+	},
 	dauntlessshield: {
 		onStart(pokemon) {
 			if (pokemon.shieldBoost) return;
