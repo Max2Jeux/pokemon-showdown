@@ -10377,7 +10377,7 @@ overcharged: {
 		accuracy: 100,
 		basePower: 110,
 		category: "Physical",
-		name: "Corrupt Cudgel",
+		name: "Dragon Cudgel",
 		pp: 16,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
