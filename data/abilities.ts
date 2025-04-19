@@ -4873,7 +4873,7 @@ benedictionofattack: {
 		num: 3,
 	},
 schemednight: {
-		onDamage(damage, target, source, pokemon) {
+		onSourceDamagingHit(damage, source, pokemon) {
 				source.trySetStatus('slp', target);
 				},
 			onResidual(pokemon) {
