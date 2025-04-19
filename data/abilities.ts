@@ -241,7 +241,7 @@ ecoshell: {
 			}
 		},
 		flags: {},
-		name: "Norma-blesssing",
+		name: "Norma-Blessing",
 		rating: 0,
 		num: -99,
 	},
