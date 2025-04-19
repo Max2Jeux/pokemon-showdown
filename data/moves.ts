@@ -11831,7 +11831,7 @@ curtainsrepair: {
       	}
 			},
 		target: "normal",
-		type: "Poison",
+		type: "Steel",
 	},
 	matblock: {
 		num: 561,
