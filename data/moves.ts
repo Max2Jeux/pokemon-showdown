@@ -11826,7 +11826,6 @@ curtainsrepair: {
 			onHit(target, source, move) {
 				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 			},
-		chance: 100,
 			boosts: {
 				def: -1,
       	}
