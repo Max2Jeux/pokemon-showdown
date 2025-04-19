@@ -11812,19 +11812,25 @@ curtainsrepair: {
 		type: "Dark",
 		contestType: "Cool",
 	},
-	malignantchain: {
+	puritainchain: {
 		num: 919,
 		accuracy: 100,
 		basePower: 100,
-		category: "Special",
-		name: "Malignant Chain",
-		pp: 5,
+		category: "Physical",
+		name: "Puritain Chain",
+		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
-			chance: 50,
-			status: 'tox',
-		},
+     	chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		chance: 100,
+			boosts: {
+				def: -1,
+      	}
+			},
 		target: "normal",
 		type: "Poison",
 	},
