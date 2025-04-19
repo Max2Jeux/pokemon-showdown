@@ -11833,6 +11833,22 @@ curtainsrepair: {
 		target: "normal",
 		type: "Steel",
 	},
+	malignantchain: {
+		num: 919,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Malignant Chain",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+			secondary: {
+			chance: 50,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Poison",
+	},
 	matblock: {
 		num: 561,
 		accuracy: true,
