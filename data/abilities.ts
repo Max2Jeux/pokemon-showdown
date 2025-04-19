@@ -4875,12 +4875,13 @@ benedictionofattack: {
 schemednight: {
 		onDamage(damage, target, source, pokemon) {
 				source.trySetStatus('slp', target);
+				},
+			onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
 				if (target.status === 'slp' || target.hasAbility('comatose')) {
 					this.damage(target.baseMaxhp / 8, target, pokemon);
 				}
-			}
 			}
 		},
 		flags: {},
