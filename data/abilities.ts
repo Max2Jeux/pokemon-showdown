@@ -4878,16 +4878,12 @@ schemednight: {
 		onResidual(pokemon) {
 			if (pokemon.activeTurns) {
 				source.trySetStatus('slp', target);
-			}
-		},
-	onResidualOrder: 28,
-		onResidualSubOrder: 2,
-		onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
 				if (target.status === 'slp' || target.hasAbility('comatose')) {
 					this.damage(target.baseMaxhp / 8, target, pokemon);
 				}
+			}
 			}
 		},
 		flags: {},
