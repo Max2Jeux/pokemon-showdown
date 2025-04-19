@@ -4873,10 +4873,7 @@ benedictionofattack: {
 		num: 3,
 	},
 schemednight: {
-		onResidualOrder: 28,
-		onResidualSubOrder: 2,
-		onResidual(pokemon, source, target) {
-			if (pokemon.activeTurns) {
+		onDamage(damage, target, source, pokemon) {
 				source.trySetStatus('slp', target);
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
