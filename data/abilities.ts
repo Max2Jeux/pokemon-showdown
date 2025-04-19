@@ -4875,7 +4875,7 @@ benedictionofattack: {
 schemednight: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
-		onResidual(pokemon, source) {
+		onResidual(pokemon, source, target) {
 			if (pokemon.activeTurns) {
 				source.trySetStatus('slp', target);
 			if (!pokemon.hp) return;
