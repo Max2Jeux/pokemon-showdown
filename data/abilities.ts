@@ -4872,6 +4872,19 @@ benedictionofattack: {
 		rating: 4.5,
 		num: 3,
 	},
+schemednight: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				source.trySetStatus('slp', target);
+			}
+		},
+		flags: {},
+		name: "Schemed Night",
+		rating: 4.5,
+		num: 3,
+	},
 	stakeout: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender) {
