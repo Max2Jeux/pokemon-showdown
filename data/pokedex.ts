@@ -1887,7 +1887,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Slowbro-Mega",
 		baseSpecies: "Slowbro",
 		forme: "Mega",
-		types: ["Water", "Psychic"],
+		types: ["Water", "Grass"],
 		baseStats: { hp: 95, atk: 75, def: 180, spa: 130, spd: 80, spe: 30 },
 		abilities: { 0: "Shell Armor" },
 		heightm: 2,
@@ -4091,7 +4091,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	slowking: {
 		num: 199,
 		name: "Slowking",
-		types: ["Water", "Psychic"],
+		types: ["Water", "Grass"],
 		baseStats: { hp: 95, atk: 75, def: 80, spa: 100, spd: 110, spe: 30 },
 		abilities: { 0: "Oblivious", 1: "Own Tempo", H: "Regenerator" },
 		heightm: 2,
@@ -16107,8 +16107,8 @@ tyruntkappa: {
 	runerigus: {
 		num: 867,
 		name: "Runerigus",
-		types: ["Ground", "Ghost"],
-		baseStats: { hp: 58, atk: 125, def: 145, spa: 50, spd: 105, spe: 30 },
+		types: ["Fighting", "Ghost"],
+		baseStats: { hp: 108, atk: 145, def: 145, spa: 50, spd: 105, spe: 30 },
 		abilities: { 0: "Intrepid Sword" },
 		heightm: 1.6,
 		weightkg: 66.6,
