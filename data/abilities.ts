@@ -4874,8 +4874,10 @@ benedictionofattack: {
 	},
 schemednight: {
 		onSourceDamagingHit(damage, target, source, move) {
-				source.trySetStatus('slp', target);
+				source.trySetStatus('slp', source);
 				},
+	   onResidualOrder: 28,
+		onResidualSubOrder: 2,
 			onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
