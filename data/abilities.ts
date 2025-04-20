@@ -4874,7 +4874,7 @@ benedictionofattack: {
 	},
 schemednight: {
 		onSourceDamagingHit(damage, target, source, move) {
-				source.trySetStatus('slp', source);
+				target.trySetStatus('slp', source);
 				},
 	   onResidualOrder: 28,
 		onResidualSubOrder: 2,
