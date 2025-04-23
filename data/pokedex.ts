@@ -3142,9 +3142,9 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
    kabutopsshraider: {
 		num: 141,
 		name: "Kabutops-Shraider",
-		types: ["Steel"],
+		types: ["Steel", "Dragon"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 105, def: 100, spa: 45, spd: 100, spe: 110 },
+		baseStats: { hp: 80, atk: 125, def: 105, spa: 65, spd: 80, spe: 85 },
 		abilities: { 0: "Silver Claws" },
 		heightm: 1.3,
 		weightkg: 40.5,
@@ -13299,9 +13299,9 @@ tyruntkappa: {
 	incineroar: {
 		num: 727,
 		name: "Incineroar",
-		types: ["Fire", "Dark"],
+		types: ["Fire", "Fighting"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 95, atk: 115, def: 90, spa: 80, spd: 90, spe: 60 },
+		baseStats: { hp: 95, atk: 125, def: 110, spa: 80, spd: 90, spe: 92 },
 		abilities: { 0: "Blaze", H: "Intimidate" },
 		heightm: 1.8,
 		weightkg: 83,
