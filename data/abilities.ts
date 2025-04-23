@@ -370,13 +370,14 @@ spiritruler: {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
 				if (target.status === 'brn' || target.hasAbility('comatose')) {
-					this.damage(target.baseMaxhp / 4, target, pokemon);
+					this.damage(target.baseMaxhp / 2, target, pokemon);
 				}
 			}
 		},
 onTryHit(target, source, move) {
             if (target !== source && move.type === 'Grass'|| move.type === 'Bug'|| move.type === 'Ice'|| move.type === 'Steel') {
-                this.damage(source.baseMaxhp / 4, source, target);
+this.add('-immune', target, '[from] ability: The Arsonist');               
+this.damage(source.baseMaxhp / 4, source, target);
             }
 },
 		flags: {},
@@ -4829,6 +4830,52 @@ benedictionofattack: {
 		},
 		flags: { breakable: 1 },
 		name: "Solid Rock",
+		rating: 3,
+		num: 116,
+	},
+	naturalreign: {
+      onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Natural Reign');
+		},
+		onAnyBasePowerPriority: 20,
+		onAnyBasePower(basePower, source, target, move) {
+			if (target === source || move.category === 'Status' || move.type !== 'Fairy') return;
+			if (!move.auraBooster?.hasAbility('Natural Reign')) move.auraBooster = this.effectState.target;
+			if (move.auraBooster !== this.effectState.target) return;
+			return this.chainModify([move.hasAuraBreak ? 3072 : 5448, 4096]);
+      },
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Natural Reign neutralize');
+				return this.chainModify(0.5);
+			}
+		},
+		flags: {},
+		name: "Natural Reign",
+		rating: 3,
+		num: 116,
+	},
+	metalreign: {
+      onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Metal Reign');
+		},
+		onAnyBasePowerPriority: 20,
+		onAnyBasePower(basePower, source, target, move) {
+			if (target === source || move.category === 'Status' || move.type !== 'Steel') return;
+			if (!move.auraBooster?.hasAbility('Metal Reign')) move.auraBooster = this.effectState.target;
+			if (move.auraBooster !== this.effectState.target) return;
+			return this.chainModify([move.hasAuraBreak ? 3072 : 5448, 4096]);
+      },
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Metal Reign neutralize');
+				return this.chainModify(0.5);
+			}
+		},
+		flags: {},
+		name: "Metal Reign",
 		rating: 3,
 		num: 116,
 	},
