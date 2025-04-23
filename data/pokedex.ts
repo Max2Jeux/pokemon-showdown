@@ -3330,7 +3330,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		num: 149,
 		name: "Dragonite",
 		types: ["Dragon", "Normal"],
-		baseStats: { hp: 100, atk: 144, def: 100, spa: 100, spd: 110, spe: 90 },
+		baseStats: { hp: 95, atk: 140, def: 105, spa: 90, spd: 105, spe: 90 },
 		abilities: { 0: "Inner Focus", H: "Multiscale" },
 		heightm: 2.2,
 		weightkg: 210,
