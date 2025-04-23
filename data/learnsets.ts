@@ -21915,31 +21915,13 @@ kabuto: {
 			honeclaws: ["8L25"],
 			smartstrike: ["8L30"],
 			screech: ["8L35"],
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-			knockoff: ["8L39"],
-			sideslicer: ["8L44"],
-			swordsdance: ["8L48", "8V", "7M", "7V", "6M", "5M", "4M", "3T"],
-			ironhead: ["8M"],
-			autotomize: ["8L53"],
-			stoneedge: ["8L58"],
-=======
 			dragonclaw: ["8L44"],
-			dragondance: ["8L50"],
+			dragondance: ["8L51"],
 			ironhead: ["8M"],
-=======
-			dragonclaw: ["8L44"],
-			dragondance: ["8L50"],
-			ironhead: ["8M"],
->>>>>>> Stashed changes
 			outrage: ["8L58"],
 			stoneedge: ["8L64"],
 			scaleshot: ["8M"],
 			breakingswipe: ["8M"],
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 			},
 		},
 	aerodactyl: {
