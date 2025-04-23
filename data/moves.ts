@@ -3531,6 +3531,23 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Fairy",
 	},
+	devotion: {
+		num: 777,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Decorate",
+		pp: 15,
+		priority: 0,
+		flags: { allyanim: 1 },
+		secondary: null,
+		boosts: {
+			def: 1,
+			spd: 1,
+		},
+		target: "normal",
+		type: "Fairy",
+	},
 	defendorder: {
 		num: 455,
 		accuracy: true,
