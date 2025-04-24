@@ -6467,6 +6467,7 @@ if (type === 'Flying') return 1;
 			boosts: {
 				spa: -1,
 			},
+},
 		target: "normal",
 		type: "Fire",
 		contestType: "Beautiful",
@@ -6499,6 +6500,7 @@ if (type === 'Flying') return 1;
 			boosts: {
 				atk: -1,
 			},
+},
 		target: "normal",
 		type: "Fire",
 		contestType: "Beautiful",
