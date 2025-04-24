@@ -5260,12 +5260,12 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		contestType: "Cute",
 	},
-flametrap: {
+burneddesire: {
 		num: 263,
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
-		name: "Facade",
+		name: "Burned Desire",
 		pp: 20,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
