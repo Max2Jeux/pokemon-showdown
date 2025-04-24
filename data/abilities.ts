@@ -1086,6 +1086,12 @@ benedictionofattack: {
 			return false;
 		},
 		// Permanent burned "status" implemented in the relevant burned-checking effects
+      onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+					this.add('-immune', target, '[from] ability: As Lava');
+				}
+				return null;
+				},
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
 		name: "As Lava",
 		rating: 4,
