@@ -1075,6 +1075,22 @@ benedictionofattack: {
 		rating: 4,
 		num: 213,
 	},
+	aslava: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'As Lava');
+		},
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: As Lava');
+			}
+			return false;
+		},
+		// Permanent burned "status" implemented in the relevant burned-checking effects
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
+		name: "As Lava",
+		rating: 4,
+		num: 213,
+	},
 	commander: {
 		onAnySwitchInPriority: -2,
 		onAnySwitchIn() {
