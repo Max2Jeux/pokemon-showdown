@@ -5260,6 +5260,25 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		contestType: "Cute",
 	},
+flametrap: {
+		num: 263,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Facade",
+		pp: 20,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		onBasePower(basePower, pokemon) {
+			if (pokemon.status && pokemon.status !== 'slp') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Cute",
+	},
 	fairylock: {
 		num: 587,
 		accuracy: true,
