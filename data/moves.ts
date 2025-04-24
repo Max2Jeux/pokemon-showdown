@@ -6420,6 +6420,70 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Ice",
 		contestType: "Beautiful",
 	},
+	evaporate: {
+		num: 573,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Solar Flare",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onEffectiveness(typeMod, target, type) {
+if (type === 'Water') return 1;
+if (type === 'Dragon') return 1;
+if (type === 'Fighting') return 1;
+if (type === 'Electric') return 1;
+if (type === 'Rock') return 1;
+if (type === 'Ground') return 1;
+if (type === 'Fairy') return 1;
+if (type === 'Normal') return 1;
+if (type === 'Psychic') return 1;
+if (type === 'Ghost') return 1;
+if (type === 'Dark') return 1;
+if (type === 'Flying') return 1;
+		},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spa: -1,
+			},
+		target: "normal",
+		type: "Fire",
+		contestType: "Beautiful",
+	},
+	solarflare: {
+		num: 573,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Solar Flare",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onEffectiveness(typeMod, target, type) {
+if (type === 'Water') return 1;
+if (type === 'Dragon') return 1;
+if (type === 'Fighting') return 1;
+if (type === 'Electric') return 1;
+if (type === 'Rock') return 1;
+if (type === 'Ground') return 1;
+if (type === 'Fairy') return 1;
+if (type === 'Normal') return 1;
+if (type === 'Psychic') return 1;
+if (type === 'Ghost') return 1;
+if (type === 'Dark') return 1;
+if (type === 'Flying') return 1;
+		},
+		secondary: {
+			chance: 100,
+			boosts: {
+				atk: -1,
+			},
+		target: "normal",
+		type: "Fire",
+		contestType: "Beautiful",
+	},
 	freezeshock: {
 		num: 553,
 		accuracy: 90,
@@ -10074,7 +10138,7 @@ overcharged: {
 	devotionsflare: {
 		num: 53,
 		accuracy: 100,
-		basePower: 110,
+		basePower: 130,
 		category: "Special",
 		name: "Devotion's Flare",
 		pp: 8,
