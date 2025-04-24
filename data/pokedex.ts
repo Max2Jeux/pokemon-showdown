@@ -4642,8 +4642,8 @@ unowngolem2: {
 	kingdra: {
 		num: 230,
 		name: "Kingdra",
-		types: ["Grass"],
-		baseStats: { hp: 75, atk: 95, def: 95, spa: 95, spd: 95, spe: 85 },
+		types: ["Grass", "Fairy"],
+		baseStats: { hp: 75, atk: 110, def: 95, spa: 95, spd: 95, spe: 85 },
 		abilities: { 0: "Chlorophyll", 1: "Leaf Guard", H: "Regenerator" },
 		heightm: 1.8,
 		weightkg: 152,
