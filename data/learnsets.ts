@@ -57354,6 +57354,7 @@ kabuto: {
 			workup: ["8M", "7M", "5M"],
 			yawn: ["8E", "7E", "6E", "5E", "5D"],
 			zenheadbutt: ["8M", "8L20", "7T", "6T", "5T"],
+			puritainchain: ["7M"],
 		},
 		eventData: [
 			{generation: 5, level: 30, gender: "F", nature: "Calm", abilities: ["healer"], moves: ["healpulse", "helpinghand", "refresh", "doubleslap"], pokeball: "cherishball"},
@@ -62565,6 +62566,7 @@ kabuto: {
 			twineedle: ["7L1", "6L1", "5L1"],
 			xscissor: ["8M", "8L32", "7M", "7L44", "6M", "6L44", "5M", "5L44"],
 			sensofduty: ["9M", "8M", "7T", "6T", "5T", "4T"],
+			puritainchain: ["7M"],
 		},
 	},
 	foongus: {
@@ -74873,6 +74875,7 @@ kabuto: {
 			toxic: ["7M", "6M"],
 			trickroom: ["9M", "8M", "7M", "7L46", "6M", "6L46"],
 			wonderroom: ["8M", "7T", "6T"],
+			puritainchain: ["7M"],
 		},
 		eventData: [
 			{generation: 6, level: 50, moves: ["diamondstorm", "reflect", "return", "moonblast"], pokeball: "cherishball"},
@@ -80488,6 +80491,7 @@ kabuto: {
 			toxic: ["7M"],
 			whirlpool: ["8M", "8L32", "7L27"],
 			wrap: ["8L8", "7L9"],
+			puritainchain: ["7M"],
 		},
 	},
 	jangmoo: {
