@@ -682,6 +682,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M", "8M", "8V", "7M", "6M", "5M", "4M"],
 			wingattack: ["8V", "7L1", "7V", "6L36", "5L36", "4L36", "3L36", "3S0"],
 			workup: ["8M", "7M"],
+			devotion: ["8M"],
 		},
 		eventData: [
 			{generation: 3, level: 70, moves: ["wingattack", "slash", "dragonrage", "firespin"], pokeball: "pokeball"},
@@ -2550,6 +2551,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wish: ["8S51"],
 			yawn: ["4S19"],
 			zapcannon: ["7V"],
+			devotion: ["8M"],
 		},
 		eventData: [
 			{generation: 3, level: 50, moves: ["thunderbolt", "agility", "thunder", "lightscreen"], pokeball: "pokeball"},
@@ -17455,6 +17457,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			dazzlinggleam: ["9L38"],
 			leafstorm: ["9L40"],
 			chloroblast: ["9L50"],
+			purebliss: ["9M"],
 		},
 		eventData: [
 			{generation: 3, level: 50, abilities: ["swiftswim"], moves: ["leer", "watergun", "twister", "agility"], pokeball: "pokeball"},
@@ -20227,6 +20230,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whirlpool: ["9M", "8M", "7V", "4M"],
 			workup: ["8M", "7M", "5M"],
 			yawn: ["8V"],
+			purebliss: ["9M"],
 		},
 		eventData: [
 			{generation: 5, level: 10, gender: "M", isHidden: true, moves: ["tailwhip", "tackle", "helpinghand", "sandattack"]},
@@ -20334,6 +20338,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["8M", "7M", "5M"],
 			yawn: ["8V"],
 			zapcannon: ["7V"],
+			purebliss: ["9M"],
 		},
 		eventData: [
 			{generation: 5, level: 10, gender: "M", isHidden: true, moves: ["tailwhip", "tackle", "helpinghand", "sandattack"]},
@@ -20438,6 +20443,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["8M", "7M", "5M"],
 			yawn: ["8V"],
 			zapcannon: ["7V"],
+			purebliss: ["9M"],
 		},
 		eventData: [
 			{generation: 5, level: 10, gender: "M", isHidden: true, moves: ["tailwhip", "tackle", "helpinghand", "sandattack"]},
@@ -34480,6 +34486,7 @@ kabuto: {
 			weatherball: ["9M"],
 			whirlpool: ["9M", "8M", "4M"],
 			workup: ["8M", "7M"],
+			devotion: ["8M"],
 		},
 		eventData: [
 			{generation: 5, level: 50, shiny: 1, moves: ["earthquake", "icebeam", "hydropump", "hammerarm"], pokeball: "cherishball"},
@@ -36448,6 +36455,8 @@ kabuto: {
 			wish: ["9L28", "8L28", "7L14", "6L14", "5L17", "4L17"],
 			wonderroom: ["8M", "7T", "6T", "5T"],
 			zenheadbutt: ["9M", "8M", "7T", "6T", "5T", "4T"],
+			purebliss: ["9M"],
+			devotion: ["8M"],
 		},
 		eventData: [
 			{generation: 5, level: 50, shiny: 1, abilities: ["trace"], moves: ["hypnosis", "thunderbolt", "focusblast", "psychic"], pokeball: "cherishball"},
@@ -47914,6 +47923,7 @@ kabuto: {
 			weatherball: ["9M"],
 			whirlpool: ["9M", "9L39", "7L39", "6L39", "5L39", "4M", "4L39"],
 			workup: ["7M"],
+			devotion: ["8M"],
 		},
 		eventData: [
 			{generation: 5, level: 100, gender: "M", moves: ["hydropump", "icebeam", "aquajet", "grassknot"], pokeball: "cherishball"},
@@ -48122,6 +48132,7 @@ kabuto: {
 			whirlwind: ["9L23", "7L23", "6L23", "5L23", "4L23"],
 			wingattack: ["9L1", "7L1", "6L1", "5L1", "4L1"],
 			workup: ["7M", "5M"],
+			devotion: ["8M"],
 		},
 	},
 	bidoof: {
@@ -48591,6 +48602,7 @@ kabuto: {
 			iciclecrash: ["9L32"],
 			closecombat: ["9L38"],
 			tripleaxel: ["9L45"],
+			devotion: ["8M"],
 		},
 	},
 	cranidos: {
@@ -50460,6 +50472,7 @@ kabuto: {
 			uturn: ["8M"],
 			waterpulse: ["7T", "6T", "4M"],
 			workup: ["8M", "7M", "5M"],
+			purebliss: ["8M"],
 		},
 	},
 	glameow: {
@@ -50613,6 +50626,8 @@ kabuto: {
 			uturn: ["7M", "6M", "5M", "4M"],
 			waterpulse: ["7T", "6T", "4M"],
 			workup: ["7M", "5M"],
+			purebliss: ["7M"],
+			devotion: ["7M"],
 		},
 		encounters: [
 			{generation: 6, level: 32, maxEggMoves: 1},
@@ -54686,6 +54701,7 @@ kabuto: {
 			poisontail: ["9L24"],
 			sludgebomb: ["9L40"],
 			powerwhip: ["9L48"],
+			devotion: ["8M"],
 		},
 		eventData: [
 			{generation: 5, level: 100, gender: "M", moves: ["leafstorm", "substitute", "gigadrain", "leechseed"], pokeball: "cherishball"},
@@ -55631,6 +55647,7 @@ kabuto: {
 			uproar: ["8M", "7T", "6T", "5T"],
 			wildcharge: ["8M", "7M", "6M", "5M"],
 			workup: ["8M", "8L1", "7M", "7L20", "6L20", "5M", "5L20"],
+			devotion: ["8M"],
 		},
 		encounters: [
 			{generation: 5, level: 23},
@@ -62910,6 +62927,7 @@ kabuto: {
 			wideguard: ["9L13", "7L1", "6L1", "5L53"],
 			wish: ["9L37", "7L37", "6L37", "5L37"],
 			zenheadbutt: ["9M"],
+			purebliss: ["9M"],
 		},
 	},
 	joltik: {
@@ -65719,6 +65737,7 @@ kabuto: {
 			wingattack: ["9L1", "8L1", "7L1", "6L1", "5L1", "5S0"],
 			workup: ["8M", "7M", "5M"],
 			zenheadbutt: ["9M", "8M", "7T", "6T"],
+			devotion: ["8M"],
 		},
 		eventData: [
 			{generation: 5, level: 25, gender: "M", isHidden: true, moves: ["wingattack", "honeclaws", "scaryface", "aerialace"]},
@@ -68660,6 +68679,7 @@ kabuto: {
 			workup: ["7M"],
 			worryseed: ["7T", "6T"],
 			zenheadbutt: ["9M", "7T", "6T"],
+			devotion: ["8M"],
 		},
 	},
 	fennekin: {
@@ -68934,6 +68954,7 @@ kabuto: {
 			wonderroom: ["7T", "6T"],
 			workup: ["7M"],
 			zenheadbutt: ["9M", "7T", "6T"],
+			purebliss: ["9M"],
 		},
 	},
 	froakie: {
@@ -69659,6 +69680,7 @@ kabuto: {
 			uturn: ["9M", "8M", "7M", "6M"],
 			willowisp: ["9M", "8M", "7M", "6M"],
 			workup: ["8M", "7M"],
+			devotion: ["8M"],
 		},
 		eventData: [
 			{generation: 9, level: 50, gender: "M", nature: "Adamant", isHidden: true, perfectIVs: 6, moves: ["acrobatics", "tailwind", "protect", "quickguard"], pokeball: "cherishball"},
@@ -70331,6 +70353,7 @@ kabuto: {
 			trick: ["9M"],
 			wish: ["9L1", "7L1", "6L1"],
 			worryseed: ["7T", "6T"],
+			purebliss: ["9M"],
 		},
 	},
 	skiddo: {
@@ -71149,6 +71172,7 @@ kabuto: {
 			swordsdance: ["8M", "8L50", "7M", "7L1", "6M", "6L1"],
 			tackle: ["8L1", "7L1", "6L1"],
 			toxic: ["7M", "6M"],
+			devotion: ["8M"],
 		},
 	},
 	aegislash: {
@@ -71216,6 +71240,7 @@ kabuto: {
 			tackle: ["8L1"],
 			toxic: ["7M", "6M"],
 			wideguard: ["6S0"],
+			devotion: ["8M"],
 		},
 		eventData: [
 			{generation: 6, level: 50, gender: "F", nature: "Quiet", moves: ["wideguard", "kingsshield", "shadowball", "flashcannon"], pokeball: "cherishball"},
@@ -71487,6 +71512,7 @@ kabuto: {
 			thunderbolt: ["8M", "7M", "6M"],
 			toxic: ["7M", "6M"],
 			wish: ["8L30", "7L45", "6L45"],
+			purebliss: ["8M"],
 		},
 	},
 	inkay: {
@@ -73082,6 +73108,7 @@ kabuto: {
 			trailblaze: ["9M"],
 			weatherball: ["9M", "8M"],
 			workup: ["8M", "7M"],
+			purebliss: ["9M"],
 		},
 		eventData: [
 			{generation: 6, level: 10, moves: ["celebrate", "helpinghand", "sandattack", "fairywind"], pokeball: "cherishball"},
@@ -85790,6 +85817,7 @@ kabuto: {
 			terablast: ["9M"],
 			triattack: ["8M"],
 			wonderroom: ["8M"],
+			purebliss: ["9M"],
 		},
 	},
 	falinks: {
@@ -88124,6 +88152,7 @@ kabuto: {
 			uproar: ["9M", "9L50"],
 			weatherball: ["9M"],
 			zenheadbutt: ["9M"],
+			purebliss: ["9M"],
 		},
 		eventData: [
 			{generation: 8, level: 70, perfectIVs: 3, moves: ["extrasensory", "moonblast", "springtidestorm"], pokeball: "strangeball"}, // Legends: Arceus
