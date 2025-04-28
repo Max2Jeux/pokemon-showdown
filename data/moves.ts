@@ -5263,17 +5263,14 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 burneddesire: {
 		num: 263,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 160,
 		category: "Physical",
 		name: "Burned Desire",
 		pp: 20,
 		priority: 0,
+      breaksProtect: true,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
-		onBasePower(basePower, pokemon) {
-			if (pokemon.status && pokemon.status !== 'slp') {
-				return this.chainModify(2);
-			}
-		},
+      ignoreAbility: true,
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -6480,6 +6477,7 @@ if (type === 'Flying') return 1;
 		name: "Solar Flare",
 		pp: 20,
 		priority: 0,
+      ignoreAbility: true,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onEffectiveness(typeMod, target, type) {
 if (type === 'Water') return 1;
@@ -10166,6 +10164,7 @@ overcharged: {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 ,bypasssub: 1 },
       breaksProtect: true,
+      ignoreAbility: true,
 		secondary: {
 			chance: 100,
 			status: 'brn',
