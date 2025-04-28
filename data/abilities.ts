@@ -1085,7 +1085,7 @@ benedictionofattack: {
 			}
 			return false;
 		},
-		// Permanent burned "status" implemented in the relevant burned-checking effects
+		// Permanent burned "status" implemented in the relevant sleep-checking effects
       onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Water') {
 					this.add('-immune', target, '[from] ability: As Lava');
