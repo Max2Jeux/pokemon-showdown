@@ -10164,7 +10164,7 @@ overcharged: {
 		name: "Devotion's Flare",
 		pp: 8,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1 ,bypasssub: 1 },
+		flags: { mirror: 1, metronome: 1 ,bypasssub: 1 },
       breaksProtect: true,
       ignoreAbility: true,
 		secondary: {
