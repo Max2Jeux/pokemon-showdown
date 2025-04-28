@@ -1,4 +1,4 @@
-// List of flags and their descriptions can be found in sim/dex-moves.ts
+]{"loggedIn":false,"teams":[]}// List of flags and their descriptions can be found in sim/dex-moves.ts
 
 export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	"10000000voltthunderbolt": {
@@ -6447,6 +6447,7 @@ burneddesire: {
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onEffectiveness(typeMod, target, type) {
 if (type === 'Water') return 1;
+if (type === 'Fire') return 1;
 if (type === 'Dragon') return 1;
 if (type === 'Fighting') return 1;
 if (type === 'Electric') return 1;
@@ -6481,6 +6482,7 @@ if (type === 'Flying') return 1;
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onEffectiveness(typeMod, target, type) {
 if (type === 'Water') return 1;
+if (type === 'Fire') return 1;
 if (type === 'Dragon') return 1;
 if (type === 'Fighting') return 1;
 if (type === 'Electric') return 1;
