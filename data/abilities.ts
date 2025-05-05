@@ -222,40 +222,48 @@ ecoshell: {
 		rating: 3,
 		num: -34,
 	},
-  normablessing: {
-			onStart(pokemon) {
-			let activated = false;
-			for (const target of pokemon.adjacentFoes()) {
-				if (!activated) {
-					this.add('-ability', pokemon, 'Norma-blessing', 'boost');
-					activated = true;
-				}		
-			const oldAbility = target.setAbility('normalize');
-			if (oldAbility) {
-				this.add('-ability', target, 'Normalize', '[from] ability: Norma-blessing');
-            this.add('-activate', target, 'ability: Normalize');
-				return;
-			}
-			return oldAbility as false | null;			
-			}
-   	onTryHit(target, source, move) {
-			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
-			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
-			this.debug('Norma-Blessing immunity: ' + move.id);
-			if (target.runEffectiveness(move) <= 0) {
-				if (move.smartTarget) {
-					move.smartTarget = false;
-				} else {
-					this.add('-immune', target, '[from] ability: Norma-Blessing');
-				}
-				return null;
-			}
-		},
-		flags: {},
-		name: "Norma-Blessing",
-		rating: 0,
-		num: -99,
-	},
+ normablessing: {
+    onStart(pokemon) {
+        let activated = false;
+        for (const target of pokemon.adjacentFoes()) {
+            if (!activated) {
+                this.add('-ability', pokemon, 'Norma-blessing', 'boost');
+                activated = true;
+            }
+            const oldAbility = target.setAbility('normalize');
+            if (oldAbility) {
+                this.add('-ability', target, 'Normalize', '[from] ability: Norma-blessing');
+                this.add('-activate', target, 'ability: Normalize');
+                return;
+            }
+            return oldAbility as false | null;
+        }
+    },
+    onTryHit(target, source, move) {
+        if (
+            target === source ||
+            move.category === 'Status' ||
+            move.type === '???' ||
+            move.id === 'struggle'
+        ) return;
+
+        if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+
+        this.debug('Norma-Blessing immunity: ' + move.id);
+        if (target.runEffectiveness(move) <= 0) {
+            if (move.smartTarget) {
+                move.smartTarget = false;
+            } else {
+                this.add('-immune', target, '[from] ability: Norma-Blessing');
+            }
+            return null;
+        }
+    },
+    flags: {},
+    name: "Norma-Blessing",
+    rating: 0,
+    num: -99,
+},
  fullmoon: {
 	onTryHit(target, source, move) {
 			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
