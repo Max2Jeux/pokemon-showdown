@@ -229,8 +229,7 @@ ecoshell: {
 				if (!activated) {
 					this.add('-ability', pokemon, 'Norma-blessing', 'boost');
 					activated = true;
-				}
-				
+				}		
 			const oldAbility = target.setAbility('normalize');
 			if (oldAbility) {
 				this.add('-ability', target, 'Normalize', '[from] ability: Norma-blessing');
@@ -238,6 +237,18 @@ ecoshell: {
 				return;
 			}
 			return oldAbility as false | null;			
+			}
+   	onTryHit(target, source, move) {
+			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
+			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+			this.debug('Norma-Blessing immunity: ' + move.id);
+			if (target.runEffectiveness(move) <= 0) {
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-immune', target, '[from] ability: Norma-Blessing');
+				}
+				return null;
 			}
 		},
 		flags: {},
