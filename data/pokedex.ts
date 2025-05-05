@@ -8811,7 +8811,7 @@ unowngolem2: {
 		name: "Heatran",
 		types: ["Fire", "Dark"],
 		baseStats: { hp: 91, atk: 90, def: 106, spa: 130, spd: 106, spe: 77 },
-		abilities: { 0: "Flash Fire", H: "Flame Body" },
+		abilities: { 0: "Earth Eater", H: "Flame Body" },
 		heightm: 1.7,
 		weightkg: 430,
 		color: "Brown",
