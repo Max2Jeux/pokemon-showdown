@@ -2846,7 +2846,7 @@ benedictionofattack: {
 	},
 bravespirit: {
 		onTryHit(target, source, move) {
-			if (target !== source && move.type === ['Dark', 'Bug', 'Ghost']) {
+			   if (target !== source && move.type === 'Bug'|| move.type === 'Ghost'|| move.type === 'Dark') {
 				if (!this.boost({ def: 1 })) {
 					this.add('-immune', target, '[from] ability: Brave Spirit');
 				}
