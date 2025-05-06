@@ -5017,6 +5017,19 @@ bravespirit: {
 		rating: 4.5,
 		num: 3,
 	},
+annihilator: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({ spe: 1 });
+			}
+		},
+		flags: {},
+		name: "Annihilator",
+		rating: 4.5,
+		num: 3,
+	},
 schemednight: {
 		onSourceDamagingHit(damage, target, source, move) {
 				target.trySetStatus('slp', source);
