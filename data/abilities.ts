@@ -5022,7 +5022,7 @@ annihilator: {
 		onResidualSubOrder: 2,
 		onResidual(pokemon) {
 			if (pokemon.activeTurns) {
-				this.boost({ spe: 1 });
+				target.faint();
 			}
 		},
 		flags: {},
