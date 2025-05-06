@@ -3536,7 +3536,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Decorate",
+		name: "Devotion",
 		pp: 15,
 		priority: 0,
 		flags: { allyanim: 1 },
