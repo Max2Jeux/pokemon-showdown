@@ -9798,7 +9798,7 @@ if (type === 'Flying') return 1;
 	icegrave: {
 		num: 58,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 120,
 		category: "Special",
 		name: "Ice Grave",
 		pp: 15,
@@ -9812,17 +9812,20 @@ if (type === 'Flying') return 1;
 		type: "Ice",
 		contestType: "Beautiful",
 	},
-	iceglaze: {
+      subzero: {
 		num: 58,
 		accuracy: 100,
 		basePower: 100,
 		category: "Physical",
-		name: "Ice Glaze",
+		name: "Subzero",
 		pp: 15,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
+    	onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: {
-			chance: 70,
+			chance: 50,
 			status: 'frz',
 		},
 		target: "normal",
