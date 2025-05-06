@@ -2844,6 +2844,20 @@ benedictionofattack: {
 		rating: 3,
 		num: 31,
 	},
+bravespirit: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === ['Dark', 'Bug', 'Ghost']) {
+				if (!this.boost({ def: 1 })) {
+					this.add('-immune', target, '[from] ability: Brave Spirit');
+				}
+				return null;
+			}
+		},
+		flags: {},
+		name: "Brave Spirit",
+		rating: 3,
+		num: 31,
+	},
 	limber: {
 		onUpdate(pokemon) {
 			if (pokemon.status === 'par') {
