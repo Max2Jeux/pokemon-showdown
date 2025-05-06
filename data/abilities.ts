@@ -5020,7 +5020,7 @@ bravespirit: {
 annihilator: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
-		onResidual(pokemon) {
+		onResidual(pokemon, target) {
 			if (pokemon.activeTurns) {
 				target.faint();
 			}
