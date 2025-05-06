@@ -5018,11 +5018,12 @@ bravespirit: {
 		num: 3,
 	},
 annihilator: {
-		onResidualOrder: 28,
-		onResidualSubOrder: 2,
-		onResidual(pokemon, target) {
-			if (pokemon.activeTurns) {
-				target.faint();
+		onResidual(pokemon) {
+            if (!pokemon.hp) return;
+            for (const target of pokemon.foes()) {
+	         if (pokemon.activeTurns) {		
+            target.faint();
+                }
 			}
 		},
 		flags: {},
