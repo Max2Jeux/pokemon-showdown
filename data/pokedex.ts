@@ -20044,7 +20044,7 @@ tyruntkappa: {
 		gen: 5,
 	},
 	revenantdark: {
-		num: -5007,
+		num: -5107,
 		name: "Revenant-Dark",
 		types: ["Dark"],
 		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
@@ -20057,7 +20057,7 @@ tyruntkappa: {
 		gen: 5,
 	},
 revenantfight: {
-		num: -5007,
+		num: -5108,
 		name: "Revenant-Fight",
 		types: ["Fighting"],
 		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
@@ -20070,7 +20070,7 @@ revenantfight: {
 		gen: 5,
 	},
 revenantwater: {
-		num: -5007,
+		num: -5109,
 		name: "Revenant-Water",
 		types: ["Water"],
 		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
@@ -20083,7 +20083,7 @@ revenantwater: {
 		gen: 5,
 	},
 revenantfire: {
-		num: -5007,
+		num: -5110,
 		name: "Revenant-Fire",
 		types: ["Fire"],
 		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
@@ -20096,7 +20096,7 @@ revenantfire: {
 		gen: 5,
 	},
 revenantfly: {
-		num: -5007,
+		num: -5111,
 		name: "Revenant-Fly",
 		types: ["Flying"],
 		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
@@ -20109,7 +20109,7 @@ revenantfly: {
 		gen: 5,
 	},
 revenantdragon: {
-		num: -5007,
+		num: -5112,
 		name: "Revenant-Dragon",
 		types: ["Dragon"],
 		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
