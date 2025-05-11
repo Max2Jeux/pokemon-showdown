@@ -20048,7 +20048,7 @@ tyruntkappa: {
 		name: "Revenant-Dark",
 		types: ["Dark"],
 		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Cursed Body" },
+		abilities: { 0: "Dark Aura" },
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -20069,9 +20069,9 @@ revenantfight: {
 		cosmeticFormes: ["Pokestar Humanoid-Prop"],
 		gen: 5,
 	},
-revenante: {
+revenantwater: {
 		num: -5007,
-		name: "Revenant-E",
+		name: "Revenant-Water",
 		types: ["Water"],
 		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
 		abilities: { 0: "Volt Absorb" },
