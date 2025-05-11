@@ -8721,7 +8721,7 @@ unowngolem2: {
 		name: "Mesprit",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 105, def: 105, spa: 105, spd: 105, spe: 80 },
+		baseStats: { hp: 150, atk: 115, def: 105, spa: 115, spd: 105, spe: 95 },
 		abilities: { 0: "Levitate" },
 		heightm: 0.3,
 		weightkg: 0.3,
