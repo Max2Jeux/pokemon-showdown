@@ -2858,6 +2858,20 @@ bravespirit: {
 		rating: 3,
 		num: 31,
 	},
+emotionalspirit: {
+		onTryHit(target, source, move) {
+			   if (target !== source && move.type === 'Fighting'|| move.type === 'Ground'|| move.type === 'Psychic') {
+				if (!this.boost({ spd: 1 })) {
+					this.add('-immune', target, '[from] ability: Emotional Spirit');
+				}
+				return null;
+			}
+		},
+		flags: {},
+		name: "Brave Spirit",
+		rating: 3,
+		num: 31,
+	},
 	limber: {
 		onUpdate(pokemon) {
 			if (pokemon.status === 'par') {
