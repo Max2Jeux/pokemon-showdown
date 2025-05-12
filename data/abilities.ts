@@ -2858,7 +2858,7 @@ bravespirit: {
 		rating: 3,
 		num: 31,
 	},
-sagepirit: {
+sagespirit: {
 		onTryHit(target, source, move) {
 			   if (target !== source && move.type === 'Fairy'|| move.type === 'Dragon'|| move.type === 'Ice') {
 				if (!this.boost({ def: 2 })) {
@@ -2868,7 +2868,7 @@ sagepirit: {
 			}
 		},
 		flags: {},
-		name: "Brave Spirit",
+		name: "Sage Spirit",
 		rating: 3,
 		num: 31,
 	},
