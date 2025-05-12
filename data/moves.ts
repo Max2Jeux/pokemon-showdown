@@ -559,6 +559,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Fire",
 	},
+	blindedcannon: {
+		num: 890,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Blinded Cannon",
+		pp: 12,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, pulse: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
 	armthrust: {
 		num: 292,
 		accuracy: 100,
@@ -22735,7 +22748,7 @@ giantscythe: {
 		name: "Zap Cannon",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, bullet: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, bullet: 1, pulse: 1 },
 		secondary: {
 			chance: 100,
 			status: 'par',
