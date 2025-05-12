@@ -4915,6 +4915,34 @@ emotionalspirit: {
 		rating: 4,
 		num: 117,
 	},
+	omniice: {
+		onStart(source) {
+			this.field.setWeather('snowscape');
+		},
+    onImmunity(type, pokemon) {
+			if (type === 'hail') return false;
+		},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			if (this.field.isWeather(['hail', 'snowscape'])) {
+				this.debug('Snow Cloak - decreasing accuracy');
+				return this.chainModify([3277, 4096]);
+			}
+		},
+   	onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of pokemon.foes()) {
+				if (target.status === 'frz' || target.hasAbility('comatose')) {
+					this.damage(target.baseMaxhp / 3, target, pokemon);
+				}
+			}
+		},
+		flags: {},
+		name: "Omni-Ice",
+		rating: 4,
+		num: 117,
+	},
 	solarpower: {
 		onModifySpAPriority: 5,
 		onModifySpA(spa, pokemon) {
