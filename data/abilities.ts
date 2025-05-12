@@ -2847,7 +2847,21 @@ benedictionofattack: {
 bravespirit: {
 		onTryHit(target, source, move) {
 			   if (target !== source && move.type === 'Bug'|| move.type === 'Ghost'|| move.type === 'Dark') {
-				if (!this.boost({ def: 1 })) {
+				if (!this.boost({ atk: 2 })) {
+					this.add('-immune', target, '[from] ability: Brave Spirit');
+				}
+				return null;
+			}
+		},
+		flags: {},
+		name: "Brave Spirit",
+		rating: 3,
+		num: 31,
+	},
+sagepirit: {
+		onTryHit(target, source, move) {
+			   if (target !== source && move.type === 'Fairy'|| move.type === 'Dragon'|| move.type === 'Ice') {
+				if (!this.boost({ def: 2 })) {
 					this.add('-immune', target, '[from] ability: Brave Spirit');
 				}
 				return null;
@@ -2861,7 +2875,7 @@ bravespirit: {
 emotionalspirit: {
 		onTryHit(target, source, move) {
 			   if (target !== source && move.type === 'Fighting'|| move.type === 'Ground'|| move.type === 'Psychic') {
-				if (!this.boost({ spd: 1 })) {
+				if (!this.boost({ spd: 2 })) {
 					this.add('-immune', target, '[from] ability: Emotional Spirit');
 				}
 				return null;
@@ -3059,6 +3073,28 @@ emotionalspirit: {
 		},
 		flags: {},
 		name: "Mega Launcher",
+		rating: 3,
+		num: 178,
+	},
+omegalauncher: {
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['pulse']) {
+				return this.chainModify(2);
+			}
+		},
+	onAnyInvulnerabilityPriority: 1,
+		onAnyInvulnerability(target, source, move) {
+			if (move && (source === this.effectState.target || target === this.effectState.target)) return 0;
+		},
+		onAnyAccuracy(accuracy, target, source, move) {
+			if (move && (source === this.effectState.target || target === this.effectState.target)) {
+				return true;
+			}
+			return accuracy;
+		},
+		flags: {},
+		name: "Omega Launcher",
 		rating: 3,
 		num: 178,
 	},
