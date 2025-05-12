@@ -19786,22 +19786,24 @@ curtainsrepair: {
 		type: "Steel",
 		contestType: "Cool",
 	},
-braveinspiration: {
+memoryswift: {
 		num: 713,
 		accuracy: 100,
 		basePower: 0,
 		category: "Statut",
-		name: "Brave Inspiration",
+		name: "Memory Swift",
 		pp: 12,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, allyanim: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		boosts: {
-			atk: 2,
-			spa: 2,
-         spe: 2,
+			atk: -2,
+			spa: -2,
+         spe: -1,
+         def: -1,
+         spd: -1,
 		},
-		target: "allies",
+		target: "allAdjacentFoes",
 		type: "Psychic",
 		contestType: "Cool",
 	},
@@ -19815,10 +19817,10 @@ emotiveblush: {
 		priority: 0,
 		flags: { contact: 1, protect: 1, heal: 1, allyanim: 1 },
 	  	onHit(target, source, move) {
-	   target.heal(target.maxhp);
 	   target.clearStatus();
 		},
 		secondary: null,
+      heal: [1, 2],
 		target: "allies",
 		type: "Psychic",
 		contestType: "Cool",
