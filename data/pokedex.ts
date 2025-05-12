@@ -8604,7 +8604,7 @@ unowngolem2: {
 		name: "Froslass",
 		types: ["Ice", "Ghost"],
 		gender: "F",
-		baseStats: { hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 110 },
+		baseStats: { hp: 100, atk: 80, def: 70, spa: 160, spd: 70, spe: 120 },
 		abilities: { 0: "Snow Cloak", H: "Cursed Body" },
 		heightm: 1.3,
 		weightkg: 26.6,
