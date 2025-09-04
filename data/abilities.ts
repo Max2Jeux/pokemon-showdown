@@ -3261,6 +3261,29 @@ omegalauncher: {
 		rating: 5,
 		num: 141,
 	},
+	Stemcell: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			let stats: BoostID[] = [];
+			const boost: SparseBoostsTable = {};
+			let statPlus: BoostID;
+			for (statPlus in pokemon.boosts) {
+				if (statPlus === 'accuracy' || statPlus === 'evasion') continue;
+				if (pokemon.boosts[statPlus] < 6) {
+					stats.push(statPlus);
+				}
+			}
+			let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = 1;
+			this.boost(boost, pokemon, pokemon);
+      	pokemon.heal(pokemon.baseMaxhp / 4);
+		},
+		flags: {},
+		name: "Stem Cell",
+		rating: 5,
+		num: 141,
+	},
 	motordrive: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Electric') {
