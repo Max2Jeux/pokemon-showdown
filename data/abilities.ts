@@ -4066,6 +4066,108 @@ omegalauncher: {
 		rating: 4,
 		num: 168,
 	},
+	SunMonarch: {
+		onStart(pokemon) {
+			if (this.field.setWeather('desolateland')) {
+				this.add('-activate', pokemon, 'Sun-Monarch', '[source]');
+			} else if (this.field.isWeather('desolateland')) {
+				this.add('-activate', pokemon, 'ability: Sun-Monarch');
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				this.debug('Monarch boost');
+				return this.chainModify([5461, 4096]);
+			}
+	},
+	   onModifySpePriority: 5,
+		onModifySpe(spe, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				this.debug('Monarch boost');
+				return this.chainModify([5461, 4096]);
+			}
+    },
+	   onModifyDefPriority: 5,
+		onModifyDef(def, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				this.debug('Monarch boost');
+				return this.chainModify([5461, 4096]);
+			}
+		},
+		flags: {},
+		name: "Sun-Monarch",
+		rating: 4.5,
+		num: 190,
+},
+SandMonarch: {
+		onStart(pokemon) {
+			if (this.field.setWeather('sandstorm')) {
+				this.add('-activate', pokemon, 'Sand-Monarch', '[source]');
+			} else if (this.field.isWeather('sandstorm')) {
+				this.add('-activate', pokemon, 'ability: Sand-Monarch');
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (['sandstorm'].includes(pokemon.effectiveWeather())) {
+				this.debug('Monarch boost');
+				return this.chainModify([5461, 4096]);
+			}
+	},
+	   onModifySpdPriority: 5,
+		onModifySpd(spd, pokemon) {
+			if (['sandstorm'].includes(pokemon.effectiveWeather())) {
+				this.debug('Monarch boost');
+				return this.chainModify([5461, 4096]);
+			}
+    },
+	   onModifyDefPriority: 5,
+		onModifyDef(def, pokemon) {
+			if (['sandstorm'].includes(pokemon.effectiveWeather())) {
+				this.debug('Monarch boost');
+				return this.chainModify([5461, 4096]);
+			}
+		},
+		flags: {},
+		name: "Sand-Monarch",
+		rating: 4.5,
+		num: 190,
+},
+SnowMonarch: {
+		onStart(pokemon) {
+			if (this.field.setWeather('snowscape')) {
+				this.add('-activate', pokemon, 'Snow-Monarch', '[source]');
+			} else if (this.field.isWeather('snowscape')) {
+				this.add('-activate', pokemon, 'ability: Snow-Monarch');
+			}
+		},
+		onModifySpaPriority: 5,
+		onModifySpa(spa, pokemon) {
+			if (['snowscape'].includes(pokemon.effectiveWeather())) {
+				this.debug('Monarch boost');
+				return this.chainModify([5461, 4096]);
+			}
+	},
+	   onModifySpdPriority: 5,
+		onModifySpd(spd, pokemon) {
+			if (['snowscape'].includes(pokemon.effectiveWeather())) {
+				this.debug('Monarch boost');
+				return this.chainModify([5461, 4096]);
+			}
+    },
+	   onModifySpePriority: 5,
+		onModifySpe(spe, pokemon) {
+			if (['snowscape'].includes(pokemon.effectiveWeather())) {
+				this.debug('Monarch boost');
+				return this.chainModify([5461, 4096]);
+			}
+		},
+		flags: {},
+		name: "Snow-Monarch",
+		rating: 4.5,
+		num: 190,
+},
 	protosynthesis: {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {
