@@ -4101,21 +4101,21 @@ omegalauncher: {
 		onModifyAtk(atk, pokemon) {
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify(1.5);
 			}
 	},
 	   onModifySpePriority: 5,
 		onModifySpe(spe, pokemon) {
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify(1.5);
 			}
     },
 	   onModifyDefPriority: 5,
 		onModifyDef(def, pokemon) {
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify(1.5);
 			}
 		},
 		flags: {},
@@ -4135,21 +4135,21 @@ SandMonarch: {
 		onModifyAtk(atk, pokemon) {
 			if (['sandstorm'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify([1.5]);
 			}
 	},
 	   onModifySpdPriority: 5,
 		onModifySpd(spd, pokemon) {
 			if (['sandstorm'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify([1.5]);
 			}
     },
 	   onModifyDefPriority: 5,
 		onModifyDef(def, pokemon) {
 			if (['sandstorm'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify([1.5]);
 			}
 		},
 		flags: {},
@@ -4169,21 +4169,21 @@ SnowMonarch: {
 		onModifySpa(spa, pokemon) {
 			if (['snowscape'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify(1.5);
 			}
 	},
 	   onModifySpdPriority: 5,
 		onModifySpd(spd, pokemon) {
 			if (['snowscape'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify(1.5);
 			}
     },
 	   onModifySpePriority: 5,
 		onModifySpe(spe, pokemon) {
 			if (['snowscape'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify(1.5);
 			}
 		},
 		flags: {},
