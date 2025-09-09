@@ -10260,7 +10260,7 @@ overcharged: {
 			}
 		},
 		secondary: {
-			chance: 30,
+			chance: 40,
 			status: 'psn',
 		},
 		target: "normal",
