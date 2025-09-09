@@ -4856,7 +4856,7 @@ unowngolem2: {
 	larvitar: {
 		num: 246,
 		name: "Larvitar",
-		types: c
+		types: ["Rock", "Ground"],
 		baseStats: { hp: 50, atk: 64, def: 50, spa: 45, spd: 50, spe: 41 },
 		abilities: { 0: "Guts", H: "Sand Veil" },
 		heightm: 0.6,
