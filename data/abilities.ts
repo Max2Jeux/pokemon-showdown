@@ -2862,7 +2862,7 @@ sagespirit: {
 		onTryHit(target, source, move) {
 			   if (target !== source && move.type === 'Fairy'|| move.type === 'Dragon'|| move.type === 'Ice') {
 				if (!this.boost({ def: 2 })) {
-					this.add('-immune', target, '[from] ability: Brave Spirit');
+					this.add('-immune', target, '[from] ability: Sage Spirit');
 				}
 				return null;
 			}
@@ -2882,7 +2882,7 @@ emotionalspirit: {
 			}
 		},
 		flags: {},
-		name: "Brave Spirit",
+		name: "Emotional Spirit",
 		rating: 3,
 		num: 31,
 	},
