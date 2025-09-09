@@ -5123,6 +5123,25 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Fire",
 		contestType: "Beautiful",
 	},
+	obliter: {
+		num: 284,
+		accuracy: 100,
+		basePower: 250,
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+			this.debug(`BP: ${bp}`);
+			return bp;
+		},
+		category: "Special",
+		name: "Obliter",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Dark",
+		contestType: "Beautiful",
+	},
 	esperwing: {
 		num: 840,
 		accuracy: 100,
