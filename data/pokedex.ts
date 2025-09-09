@@ -4843,9 +4843,9 @@ unowngolem2: {
 	suicune: {
 		num: 245,
 		name: "Suicune",
-		types: ["Water"],
+		types: ["Water", "Ice"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 75, def: 115, spa: 90, spd: 115, spe: 85 },
+		baseStats: { hp: 130, atk: 75, def: 125, spa: 120, spd: 125, spe: 95 },
 		abilities: { 0: "Pressure", H: "Inner Focus" },
 		heightm: 2,
 		weightkg: 187,
@@ -4856,7 +4856,7 @@ unowngolem2: {
 	larvitar: {
 		num: 246,
 		name: "Larvitar",
-		types: ["Rock", "Ground"],
+		types: c
 		baseStats: { hp: 50, atk: 64, def: 50, spa: 45, spd: 50, spe: 41 },
 		abilities: { 0: "Guts", H: "Sand Veil" },
 		heightm: 0.6,
