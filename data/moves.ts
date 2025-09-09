@@ -10269,31 +10269,6 @@ overcharged: {
 		maxMove: { basePower: 130 },
 		contestType: "Cool",
 	},
-   naturalvibe: {
-		num: 483,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Natural Vibe",
-		pp: 1,
-		priority: 1,
-		flags: { snatch: 1, dance: 1, metronome: 1 },
-		  onHit(target) {
-		if (this.field.isWeather(['snowscape'])) 
-         this.boost({ spe: 2, spa: 2 }, target);
-      if (this.field.isWeather(['sunnyday'])) {
-         this.boost({ spe: 2, atk: 2 }, target);
-      if (this.field.isWeather(['sandstorm'])) {
-         this.boost({ spe: 2, def: 1, spd: 1 }, target);
-     	}
-     	}
-      },
-		secondary: null,
-		target: "self",
-		type: "Normal",
-		zMove: { effect: 'clearnegativeboost' },
-		contestType: "Beautiful",
-	},
 	inferno: {
 		num: 517,
 		accuracy: 50,
