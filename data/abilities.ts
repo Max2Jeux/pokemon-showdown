@@ -4092,9 +4092,9 @@ omegalauncher: {
 	SunMonarch: {
 		onStart(pokemon) {
 			if (this.field.setWeather('desolateland')) {
-				this.add('-activate', pokemon, 'Sun-Monarch', '[source]');
+				this.add('-activate', pokemon, 'Sun Monarch', '[source]');
 			} else if (this.field.isWeather('desolateland')) {
-				this.add('-activate', pokemon, 'ability: Sun-Monarch');
+				this.add('-activate', pokemon, 'ability: Sun Monarch');
 			}
 		},
 		onModifyAtkPriority: 5,
@@ -4119,16 +4119,16 @@ omegalauncher: {
 			}
 		},
 		flags: {},
-		name: "Sun-Monarch",
+		name: "Sun Monarch",
 		rating: 4.5,
 		num: 190,
 },
 SandMonarch: {
 		onStart(pokemon) {
 			if (this.field.setWeather('sandstorm')) {
-				this.add('-activate', pokemon, 'Sand-Monarch', '[source]');
+				this.add('-activate', pokemon, 'Sand Monarch', '[source]');
 			} else if (this.field.isWeather('sandstorm')) {
-				this.add('-activate', pokemon, 'ability: Sand-Monarch');
+				this.add('-activate', pokemon, 'ability: Sand Monarch');
 			}
 		},
 		onModifyAtkPriority: 5,
@@ -4153,16 +4153,16 @@ SandMonarch: {
 			}
 		},
 		flags: {},
-		name: "Sand-Monarch",
+		name: "Sand Monarch",
 		rating: 4.5,
 		num: 190,
 },
 SnowMonarch: {
 		onStart(pokemon) {
 			if (this.field.setWeather('snowscape')) {
-				this.add('-activate', pokemon, 'Snow-Monarch', '[source]');
+				this.add('-activate', pokemon, 'Snow Monarch', '[source]');
 			} else if (this.field.isWeather('snowscape')) {
-				this.add('-activate', pokemon, 'ability: Snow-Monarch');
+				this.add('-activate', pokemon, 'ability: Snow Monarch');
 			}
 		},
 		onModifySpaPriority: 5,
@@ -4187,7 +4187,7 @@ SnowMonarch: {
 			}
 		},
 		flags: {},
-		name: "Snow-Monarch",
+		name: "Snow Monarch",
 		rating: 4.5,
 		num: 190,
 },
