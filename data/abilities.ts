@@ -3277,8 +3277,7 @@ omegalauncher: {
 			let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
 			if (randomStat) boost[randomStat] = 1;
 			this.boost(boost, pokemon, pokemon);
-},
-      	pokemon.heal(pokemon.baseMaxhp / 4);
+      	this.heal(target.baseMaxhp / 4)
 		},
 		flags: {},
 		name: "Stem Cell",
