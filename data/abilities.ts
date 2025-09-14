@@ -3261,7 +3261,7 @@ omegalauncher: {
 		rating: 5,
 		num: 141,
 	},
-	Stemcell: {
+	stemcell: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
 		onResidual(pokemon) {
@@ -4089,7 +4089,7 @@ omegalauncher: {
 		rating: 4,
 		num: 168,
 	},
-	SunMonarch: {
+	sunmonarch: {
 		onStart(pokemon) {
 			if (this.field.setWeather('desolateland')) {
 				this.add('-activate', pokemon, 'Sun Monarch', '[source]');
@@ -4123,7 +4123,7 @@ omegalauncher: {
 		rating: 4.5,
 		num: 1042,
 },
-SandMonarch: {
+sandmonarch: {
 		onStart(pokemon) {
 			if (this.field.setWeather('sandstorm')) {
 				this.add('-activate', pokemon, 'Sand Monarch', '[source]');
@@ -4157,7 +4157,7 @@ SandMonarch: {
 		rating: 4.5,
 		num: 1043,
 },
-SnowMonarch: {
+snowmonarch: {
 		onStart(pokemon) {
 			if (this.field.setWeather('snowscape')) {
 				this.add('-activate', pokemon, 'Snow Monarch', '[source]');
