@@ -3282,7 +3282,7 @@ omegalauncher: {
 		flags: {},
 		name: "Stem Cell",
 		rating: 5,
-		num: 141,
+		num: 1041,
 	},
 	motordrive: {
 		onTryHit(target, source, move) {
@@ -4121,7 +4121,7 @@ omegalauncher: {
 		flags: {},
 		name: "Sun Monarch",
 		rating: 4.5,
-		num: 190,
+		num: 1042,
 },
 SandMonarch: {
 		onStart(pokemon) {
@@ -4155,7 +4155,7 @@ SandMonarch: {
 		flags: {},
 		name: "Sand Monarch",
 		rating: 4.5,
-		num: 190,
+		num: 1043,
 },
 SnowMonarch: {
 		onStart(pokemon) {
@@ -4189,7 +4189,7 @@ SnowMonarch: {
 		flags: {},
 		name: "Snow Monarch",
 		rating: 4.5,
-		num: 190,
+		num: 1044,
 },
 	protosynthesis: {
 		onSwitchInPriority: -2,
