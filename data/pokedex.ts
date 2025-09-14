@@ -14942,7 +14942,7 @@ tyruntkappa: {
 		name: "Naganadel",
 		types: ["Poison", "Grass"],
 		gender: "N",
-		baseStats: { hp: 73, atk: 73, def: 73, spa: 127, spd: 73, spe: 121 },
+		baseStats: { hp: 73, atk: 73, def: 93, spa: 137, spd: 93, spe: 131 },
 		abilities: { 0: "Adaptability" },
 		heightm: 3.6,
 		weightkg: 150,
