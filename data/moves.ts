@@ -5975,6 +5975,25 @@ burneddesire: {
 		type: "Steel",
 		contestType: "Beautiful",
 	},
+steelwave: {
+		num: 430,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Steelwave",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Beautiful",
+	},
 	flatter: {
 		num: 260,
 		accuracy: 100,
