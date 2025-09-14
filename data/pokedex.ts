@@ -13090,7 +13090,7 @@ tyruntkappa: {
 		baseForme: "50%",
 		types: ["Dragon", "Ground"],
 		gender: "N",
-		baseStats: { hp: 108, atk: 100, def: 121, spa: 81, spd: 95, spe: 95 },
+		baseStats: { hp: 128, atk: 130, def: 121, spa: 81, spd: 105, spe: 100 },
 		abilities: { 0: "Aura Break", S: "Power Construct" },
 		heightm: 5,
 		weightkg: 305,
