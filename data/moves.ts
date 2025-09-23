@@ -6512,7 +6512,7 @@ if (type === 'Dark') return 1;
 if (type === 'Flying') return 1;
 		},
 		secondary: {
-			chance: 100,
+			chance: 30,
 			boosts: {
 				spa: -1,
 			},
@@ -6547,7 +6547,7 @@ if (type === 'Dark') return 1;
 if (type === 'Flying') return 1;
 		},
 		secondary: {
-			chance: 100,
+			chance: 30,
 			boosts: {
 				atk: -1,
 			},
