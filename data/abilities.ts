@@ -3275,9 +3275,9 @@ omegalauncher: {
 				}
 			}
 			let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
-			if (randomStat) boost[randomStat] = 1;
+			if (randomStat) boost[randomStat] = 2;
 			this.boost(boost, pokemon, pokemon);
-		   if (randomStat) boost[randomStat] = 1;
+		   if (randomStat) boost[randomStat] = 2;
       	this.heal(pokemon.baseMaxhp / 3);
 		},
 		flags: {},
