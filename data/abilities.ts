@@ -4102,7 +4102,7 @@ omegalauncher: {
 		onModifyAtk(atk, pokemon) {
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 	},
 	   onModifySpePriority: 5,
@@ -4136,7 +4136,7 @@ sandmonarch: {
 		onModifyAtk(atk, pokemon) {
 			if (['sandstorm'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify([1.5]);
+				return this.chainModify([2]);
 			}
 	},
 	   onModifySpdPriority: 5,
@@ -4170,7 +4170,7 @@ snowmonarch: {
 		onModifySpa(spa, pokemon) {
 			if (['snowscape'].includes(pokemon.effectiveWeather())) {
 				this.debug('Monarch boost');
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 	},
 	   onModifySpdPriority: 5,
