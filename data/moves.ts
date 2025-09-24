@@ -10266,7 +10266,7 @@ overcharged: {
 		num: 331,
 		accuracy: 100,
 		basePower: 40,
-		category: "Physical",
+		category: "Special",
 		name: "Omnivenom",
 		pp: 30,
 		priority: 0,
@@ -17914,6 +17914,25 @@ curtainsrepair: {
 		target: "normal",
 		type: "Bug",
 	},
+		snakeslit: {
+		num: 806,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Snake Slit",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		status: 'par',
+		secondary: {
+			chance: 100,
+			boosts: {
+				spa: -1,
+			},
+		},
+		target: "normal",
+		type: "Bug",
+	},
 	skullbash: {
 		num: 130,
 		accuracy: 100,
@@ -20762,32 +20781,6 @@ emotiveblush: {
 		contestType: "Tough",
 	},
 	thousandarrows: {
-		num: 614,
-		accuracy: 100,
-		basePower: 90,
-		category: "Physical",
-		isNonstandard: "Past",
-		name: "Thousand Arrows",
-		pp: 10,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, nonsky: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			if (move.type !== 'Ground') return;
-			if (!target) return; // avoid crashing when called from a chat plugin
-			// ignore effectiveness if the target is Flying type and immune to Ground
-			if (!target.runImmunity('Ground')) {
-				if (target.hasType('Flying')) return 0;
-			}
-		},
-		volatileStatus: 'smackdown',
-		ignoreImmunity: { 'Ground': true },
-		secondary: null,
-		target: "allAdjacentFoes",
-		type: "Ground",
-		zMove: { basePower: 180 },
-		contestType: "Beautiful",
-	},
-		judgmentarrows: {
 		num: 614,
 		accuracy: 100,
 		basePower: 110,
