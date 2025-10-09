@@ -1483,25 +1483,25 @@ benedictionofattack: {
 		rating: 4,
 		num: 191,
 	},
-		adnreloadd: {
+		adnreloada: {
 		onStart(source) {
 			this.field.setTerrain('psychicterrain');
 		},
 		onSourceModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod > 0) {
-				this.debug('ADN Reload D neutralize');
+				this.debug('ADN Reload A neutralize');
 				return this.chainModify(0.45);
 			}
 		},
 		flags: {},
-		name: "ADN Reload D",
+		name: "ADN Reload A",
 		rating: 4,
 		num: 1191,
 	},
 		adnreloadv: {
 			onModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod < 0) {
-				this.debug('Tinted Lens boost');
+				this.debug('ADN Reload V boost');
 				return this.chainModify(2);
 			}
 			if (move && target.getMoveHitData(move).typeMod > 0) {
@@ -1513,18 +1513,33 @@ benedictionofattack: {
 		rating: 4,
 		num: 1191,
 	},
-		adnreloada: {
-		onStart(source) {
-			this.field.setTerrain('psychicterrain');
-		},
-		onSourceModifyDamage(damage, source, target, move) {
-			if (target.getMoveHitData(move).typeMod > 0) {
-				this.debug('ADN Reload D neutralize');
-				return this.chainModify(0.45);
+		adnreloadd: {
+	onTryHitPriority: 1,
+		onTryHit(target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['reflectable'] || target.isSemiInvulnerable()) {
+				return;
 			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			newMove.pranksterBoosted = false;
+			this.actions.useMove(newMove, target, { target: source });
+			return null;
 		},
+		onAllyTryHitSide(target, source, move) {
+			if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable'] || target.isSemiInvulnerable()) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			newMove.pranksterBoosted = false;
+			this.actions.useMove(newMove, this.effectState.target, { target: source });
+			return null;
+			},
+			onDamagingHit(damage, target, source, move) {
+				this.damage(source.baseMaxhp / 8, source, target);
+			},
 		flags: {},
-		name: "ADN Reload A",
+		name: "ADN Reload D",
 		rating: 4,
 		num: 1191,
 	},
