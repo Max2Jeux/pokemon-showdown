@@ -1483,6 +1483,51 @@ benedictionofattack: {
 		rating: 4,
 		num: 191,
 	},
+		adnreloadd: {
+		onStart(source) {
+			this.field.setTerrain('psychicterrain');
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('ADN Reload D neutralize');
+				return this.chainModify(0.45);
+			}
+		},
+		flags: {},
+		name: "ADN Reload D",
+		rating: 4,
+		num: 1191,
+	},
+		adnreloadv: {
+			onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod < 0) {
+				this.debug('Tinted Lens boost');
+				return this.chainModify(2);
+			}
+			if (move && target.getMoveHitData(move).typeMod > 0) {
+			return this.chainModify([5120, 4096]);
+			}
+		},
+		flags: {},
+		name: "ADN Reload V",
+		rating: 4,
+		num: 1191,
+	},
+		adnreloada: {
+		onStart(source) {
+			this.field.setTerrain('psychicterrain');
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('ADN Reload D neutralize');
+				return this.chainModify(0.45);
+			}
+		},
+		flags: {},
+		name: "ADN Reload A",
+		rating: 4,
+		num: 1191,
+	},
 	desolateland: {
 		onStart(source) {
 			this.field.setWeather('desolateland');
