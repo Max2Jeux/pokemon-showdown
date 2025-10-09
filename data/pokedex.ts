@@ -4151,7 +4151,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		num: -201,
 		name: "Unown Golem 1",
 		types: ["Psychic", "Fire"],
-		baseStats: { hp: 100, atk: 160, def: 68, spa: 33, spd: 68, spe: 100 },
+		baseStats: { hp: 100, atk: 160, def: 78, spa: 33, spd: 88, spe: 115 },
 		abilities: { 0: "Desolate Land" },
 		heightm: 1.3,
 		weightkg: 28.5,
