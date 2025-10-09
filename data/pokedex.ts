@@ -8337,9 +8337,9 @@ unowngolem2: {
 	weavile: {
 		num: 461,
 		name: "Weavile",
-		types: ["Dark", "Ice"],
+		types: ["Poison", "Fight"],
 		baseStats: { hp: 70, atk: 120, def: 65, spa: 45, spd: 85, spe: 125 },
-		abilities: { 0: "Pressure", H: "Pickpocket" },
+		abilities: { 0: "Toxic Chain", H: "Pickpocket" },
 		heightm: 1.1,
 		weightkg: 34,
 		color: "Black",
