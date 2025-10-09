@@ -1487,10 +1487,10 @@ benedictionofattack: {
 		onStart(source) {
 			this.field.setTerrain('psychicterrain');
 		},
-		onSourceModifyDamage(damage, source, target, move) {
-			if (target.getMoveHitData(move).typeMod > 0) {
-				this.debug('ADN Reload A neutralize');
-				return this.chainModify(0.45);
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
 			}
 		},
 		flags: {},
