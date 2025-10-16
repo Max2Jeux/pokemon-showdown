@@ -14405,6 +14405,52 @@ curtainsrepair: {
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Beautiful",
 	},
+	lastwords: {
+		num: 195,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Last Words",
+		pp: 5,
+		priority: 0,
+		flags: { sound: 1, distance: 1, bypasssub: 1, metronome: 1 },
+		onHitField(target, source, move) {
+			let result = false;
+			let message = false;
+			for (const pokemon of this.getAllActive()) {
+				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+					this.add('-miss', source, pokemon);
+					result = true;
+				} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
+					result = true;
+				} else if (!pokemon.volatiles['lastwords']) {
+					pokemon.addVolatile('lastwords');
+					this.add('-start', pokemon, 'perish3', '[silent]');
+					result = true;
+					message = true;
+				}
+			}
+			if (!result) return false;
+			if (message) this.add('-fieldactivate', 'move: Perish Song');
+		},
+		condition: {
+			duration: 2,
+			onEnd(target) {
+				this.add('-start', target, 'perish0');
+				target.faint();
+			},
+			onResidualOrder: 24,
+			onResidual(pokemon) {
+				const duration = pokemon.volatiles['perishsong'].duration;
+				this.add('-start', pokemon, `perish${duration}`);
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Normal",
+		zMove: { effect: 'clearnegativeboost' },
+		contestType: "Beautiful",
+	},
 	petalblizzard: {
 		num: 572,
 		accuracy: 100,
