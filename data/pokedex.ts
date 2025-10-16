@@ -16702,13 +16702,13 @@ tyruntkappa: {
 		tags: ["Sub-Legendary"],
 		eggGroups: ["Undiscovered"],
 	},
-	glastrier: {
+	rockstrier: {
 		num: 896,
-		name: "Glastrier",
-		types: ["Steel"],
+		name: "Rockstrier",
+		types: ["Rock", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 145, def: 130, spa: 65, spd: 110, spe: 30 },
-		abilities: { 0: "Chilling Neigh" },
+		baseStats: { hp: 100, atk: 145, def: 180, spa: 65, spd: 110, spe: 80 },
+		abilities: { 0: "Unbreakable Neigh" },
 		heightm: 2.2,
 		weightkg: 800,
 		color: "White",
