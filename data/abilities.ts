@@ -1869,6 +1869,15 @@ benedictionofattack: {
 		rating: 2,
 		num: 49,
 	},
+		flaming: {
+		onDamagingHit(damage, target, source, move) {
+					source.trySetStatus('brn', target);
+		},
+		flags: {},
+		name: "Flaming",
+		rating: 2,
+		num: 49,
+	},
 	flareboost: {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
