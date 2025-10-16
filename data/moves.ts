@@ -14431,7 +14431,7 @@ curtainsrepair: {
 				}
 			}
 			if (!result) return false;
-			if (message) this.add('-fieldactivate', 'move: Perish Song');
+			if (message) this.add('-fieldactivate', 'move: Last Words');
 		},
 		condition: {
 			duration: 2,
@@ -14446,7 +14446,7 @@ curtainsrepair: {
 			},
 		},
 		secondary: null,
-		target: "all",
+		target: "normal",
 		type: "Normal",
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Beautiful",
