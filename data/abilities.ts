@@ -991,14 +991,14 @@ benedictionofattack: {
 		rating: 2,
 		num: 167,
 	},
-	chillingneigh: {
+	unbreakableneigh: {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
-				this.boost({ atk: length }, source);
+				this.boost({ def: length }, { spd: length }, source);
 			}
 		},
 		flags: {},
-		name: "Chilling Neigh",
+		name: "Unbreakable Neigh",
 		rating: 3,
 		num: 264,
 	},
