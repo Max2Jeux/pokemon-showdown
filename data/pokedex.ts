@@ -17830,9 +17830,9 @@ tyruntkappa: {
 	orthworm: {
 		num: 968,
 		name: "Orthworm",
-		types: ["Steel"],
-		baseStats: { hp: 70, atk: 85, def: 145, spa: 60, spd: 55, spe: 65 },
-		abilities: { 0: "Earth Eater", H: "Sand Veil" },
+		types: ["Dragon", "Poison"],
+		baseStats: { hp: 80, atk: 100, def: 145, spa: 100, spd: 55, spe: 66 },
+		abilities: { 0: "Earth Eater", H: "Rough Skin" },
 		heightm: 2.5,
 		weightkg: 310,
 		color: "Pink",
