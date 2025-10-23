@@ -16702,9 +16702,9 @@ tyruntkappa: {
 		tags: ["Sub-Legendary"],
 		eggGroups: ["Undiscovered"],
 	},
-	rockstrier: {
+	glastrier: {
 		num: 896,
-		name: "Rockstrier",
+		name: "Glastrier",
 		types: ["Rock", "Dragon"],
 		gender: "N",
 		baseStats: { hp: 100, atk: 145, def: 180, spa: 65, spd: 110, spe: 80 },
