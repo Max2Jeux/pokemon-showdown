@@ -8764,7 +8764,7 @@ unowngolem2: {
 		forme: "Origin",
 		types: ["Steel", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 120, spa: 150, spd: 120, spe: 90 },
+		baseStats: { hp: 100, atk: 100, def: 150, spa: 170, spd: 130, spe: 101 },
 		abilities: { 0: "Pressure", H: "Telepathy" },
 		heightm: 7,
 		weightkg: 850,
