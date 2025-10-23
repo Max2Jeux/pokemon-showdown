@@ -2107,25 +2107,18 @@ benedictionofattack: {
 		rating: 1.5,
 		num: 119,
 	},
-	fullmetalbody: {
-		onTryBoost(boost, target, source, effect) {
-			if (source && target === source) return;
-			let showMsg = false;
-			let i: BoostID;
-			for (i in boost) {
-				if (boost[i]! < 0) {
-					delete boost[i];
-					showMsg = true;
-				}
-			}
-			if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-				this.add("-fail", target, "unboost", "[from] ability: Full Metal Body", `[of] ${target}`);
+fullmetalbody: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Full Metal Body neutralize');
+				return this.chainModify(0.75);
+				this.boost({ atk: 2 }, { spe: 2 }, { spd: 2 });
 			}
 		},
 		flags: {},
 		name: "Full Metal Body",
-		rating: 2,
-		num: 230,
+		rating: 3,
+		num: 232,
 	},
 	furcoat: {
 		onModifyDefPriority: 6,
@@ -4899,6 +4892,7 @@ snowmonarch: {
 			if (target.hp >= target.maxhp) {
 				this.debug('Shadow Shield weaken');
 				return this.chainModify(0.5);
+				this.boost({ spe: 2 }, { spa: 2 }, { def: 2 });
 			}
 		},
 		flags: {},
@@ -6421,6 +6415,36 @@ schemednight: {
 		},
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1 },
 		name: "Wonder Guard",
+		rating: 5,
+		num: 25,
+	},
+	spacewarp: {
+		onTryHit(target, source, move) {
+			if (target === source || move.category === 'Statut' || move.type === '???' || move.id === 'struggle') return;
+			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+			this.debug('Wonder Guard immunity: ' + move.id);
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+				this.add('-immune', target, '[from] ability: Space Warp');
+				return null;
+			}
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1 },
+		name: "Space Warp",
+		rating: 5,
+		num: 25,
+	},
+	timewarp: {
+		onTryHit(target, source, move) {
+			if (target === source || move.category === 'Statut' || move.type === '???' || move.id === 'struggle') return;
+			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+			this.debug('Wonder Guard immunity: ' + move.id);
+			if (this.checkMoveMakesContact(move, source, target, false)) {
+				this.add('-immune', target, '[from] ability: Time Warp');
+				return null;
+			}
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1 },
+		name: "Time Warp",
 		rating: 5,
 		num: 25,
 	},
