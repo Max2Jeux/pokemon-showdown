@@ -87681,7 +87681,7 @@ kabuto: {
 		],
 		eventOnly: true,
 	},
-        rockstrier: {
+        glastrier: {
 		learnset: {
 			assurance: ["8M"],
 			avalanche: ["9M", "9L12", "8M", "8L12"],
