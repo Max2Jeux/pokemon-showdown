@@ -16447,9 +16447,6 @@ curtainsrepair: {
 		pp: 5,
 		priority: 0,
 		flags: { recharge: 1, protect: 1, mirror: 1, metronome: 1 },
-		self: {
-			volatileStatus: 'mustrecharge',
-		},
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -18719,7 +18716,7 @@ curtainsrepair: {
 	spacialrend: {
 		num: 460,
 		accuracy: 95,
-		basePower: 100,
+		basePower: 150,
 		category: "Special",
 		name: "Spacial Rend",
 		pp: 5,
