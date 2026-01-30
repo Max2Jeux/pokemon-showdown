@@ -6582,4 +6582,15 @@ schemednight: {
 		rating: 3,
 		num: -4,
 	},
+	chillingneigh: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({atk: length}, source);
+			}
+		},
+		flags: {},
+		name: "Chilling Neigh",
+		rating: 3,
+		num: -5,
+	},
 };
